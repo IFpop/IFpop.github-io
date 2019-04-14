@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.com/IFpop/"/>
-  <updated>2019-04-02T10:35:26.323Z</updated>
+  <updated>2019-04-14T12:06:11.665Z</updated>
   <id>http://github.com/IFpop/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My daily life</title>
+    <link href="http://github.com/IFpop/2019/04/14/My-daily-life/"/>
+    <id>http://github.com/IFpop/2019/04/14/My-daily-life/</id>
+    <published>2019-04-14T11:47:48.000Z</published>
+    <updated>2019-04-14T12:06:11.665Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p><strong>我曾常常感到惊异，每个人爱自己胜过爱别人，而对自己意见的估价却低于对别人的意见的估价。</strong></p><p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>——马可·奥勒利乌斯</strong></p></li></ul><blockquote><p>记录这句话，尚且是因为最近可能在意了太多的事情，弄得自己倒是无比累的，每个人都会有着自己特有的属性，我们姑且可以尝试利用好自己的特性，让自己活得更加出彩而不是让自己每天都处于别人眼中，为自己的行为而懊悔</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;我曾常常感到惊异，每个人爱自己胜过爱别人，而对自己意见的估价却低于对别人的意见的估价。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp
+      
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://github.com/IFpop/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="这就是生活" scheme="http://github.com/IFpop/tags/%E8%BF%99%E5%B0%B1%E6%98%AF%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
