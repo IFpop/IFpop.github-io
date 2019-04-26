@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.com/IFpop/"/>
-  <updated>2019-04-26T16:53:42.721Z</updated>
+  <updated>2019-04-26T16:56:43.327Z</updated>
   <id>http://github.com/IFpop/</id>
   
   <author>
@@ -17,20 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Daily life</title>
+    <title>Sat Apr 27 2019 00:00:00 GMT+0800 (GMT+08:00)</title>
     <link href="http://github.com/IFpop/2019/04/27/Daily-life/"/>
     <id>http://github.com/IFpop/2019/04/27/Daily-life/</id>
     <published>2019-04-26T16:17:33.000Z</published>
-    <updated>2019-04-26T16:53:42.721Z</updated>
+    <updated>2019-04-26T16:56:43.327Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="2019-04-27"><a href="#2019-04-27" class="headerlink" title="2019-04-27"></a>2019-04-27</h1><blockquote><p>今天星期五，我倒是比较迷茫，早上一大早就起来去上课，睡眼朦胧。</p></blockquote><h2 id="知识工程"><a href="#知识工程" class="headerlink" title="知识工程"></a>知识工程</h2><ul><li><p>在机器学习领域有三种梯度下降的方式：</p><ul><li><p>批量梯度下降法<code>BGD</code></p><blockquote><p>具体思路是：更新每一参数时都是用所有的样本进行更新</p></blockquote><ul><li>优点：全局最优解，易于并行实现</li><li>缺点： 当样本数目很多时，训练过程会很慢</li></ul></li></ul></li></ul><ul><li><p>随机梯度下降法<code>SGD</code></p><blockquote><p>具体思路： 在更新每一参数时都是用一个样本进行更新</p></blockquote><ul><li>优点：训练速度块</li><li>缺点： 准确度下降，并不是全局最优，不易于并行实现</li></ul></li></ul><ul><li><p>小批量梯度下降法<code>MBGD</code></p><blockquote><p>具体思路：在更新每一参数时都是用<strong>一部分</strong>样本进行更新</p></blockquote></li></ul><h2 id="通信基础"><a href="#通信基础" class="headerlink" title="通信基础"></a>通信基础</h2><ul><li><code>PCM</code>编码的基本过程：抽样，量化，编码</li><li>（11位）线性码与（7位）非线性码<code>PCM</code>的转换</li><li><code>PCM</code>编码的基本过程</li><li>抽样定理<ul><li>带通抽样</li><li>低通抽样定理</li><li>最小抽样频率（奈奎斯特速率）</li></ul></li></ul><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul><li><p><code>typedef</code> 自定义结构体，方便定义结构体</p></li><li><p>函数指针</p></li><li><p>函数变量传递的三种方式：</p><ul><li>值传递</li><li>地址传递（需要指针，重新要申请一个地址）</li><li>引用（相比指针，不需要申请地址，但是需要初始化）</li></ul></li><li><p>SCOPE关于作用域的描述</p></li><li><p>extern int i;  //这是一个全局变量，而且只是声明，并没有申请内存</p></li><li><p>文件操作头文件</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"file1.cpp"</span>)</span></span>;  <span class="comment">//open for reading</span></span><br><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"file.cpp"</span>)</span></span>; <span class="comment">//open for writing</span></span><br><span class="line"><span class="keyword">while</span>(getline(in,s))  <span class="comment">//按行进行读取</span></span><br></pre></td></tr></table></figure></li><li><p><code>enum</code> 可申明关键字</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> keyword&#123;ASM,AUTO,BREAK&#125;;</span><br><span class="line"><span class="comment">//此时三个默认从0开始初始化，以此0,1,2</span></span><br><span class="line"><span class="keyword">enum</span> keyword&#123;ASM=<span class="number">2</span>,AUTO=<span class="number">5</span>,BREAK&#125;;</span><br><span class="line"><span class="comment">//此时BREAK的值是6，接着前一个往后</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>今天星期五，我倒是比较迷茫，早上一大早就起来去上课，睡眼朦胧。</p></blockquote><h2 id="知识工程"><a href="#知识工程" class="headerlink" title="知识工程"></a>知识工程</h2><ul><li><p>在机器学习领域有三种梯度下降的方式：</p><ul><li><p>批量梯度下降法<code>BGD</code></p><blockquote><p>具体思路是：更新每一参数时都是用所有的样本进行更新</p></blockquote><ul><li>优点：全局最优解，易于并行实现</li><li>缺点： 当样本数目很多时，训练过程会很慢</li></ul></li></ul></li></ul><ul><li><p>随机梯度下降法<code>SGD</code></p><blockquote><p>具体思路： 在更新每一参数时都是用一个样本进行更新</p></blockquote><ul><li>优点：训练速度块</li><li>缺点： 准确度下降，并不是全局最优，不易于并行实现</li></ul></li></ul><ul><li><p>小批量梯度下降法<code>MBGD</code></p><blockquote><p>具体思路：在更新每一参数时都是用<strong>一部分</strong>样本进行更新</p></blockquote></li></ul><h2 id="通信基础"><a href="#通信基础" class="headerlink" title="通信基础"></a>通信基础</h2><ul><li><code>PCM</code>编码的基本过程：抽样，量化，编码</li><li>（11位）线性码与（7位）非线性码<code>PCM</code>的转换</li><li><code>PCM</code>编码的基本过程</li><li>抽样定理<ul><li>带通抽样</li><li>低通抽样定理</li><li>最小抽样频率（奈奎斯特速率）</li></ul></li></ul><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul><li><p><code>typedef</code> 自定义结构体，方便定义结构体</p></li><li><p>函数指针</p></li><li><p>函数变量传递的三种方式：</p><ul><li>值传递</li><li>地址传递（需要指针，重新要申请一个地址）</li><li>引用（相比指针，不需要申请地址，但是需要初始化）</li></ul></li><li><p>SCOPE关于作用域的描述</p></li><li><p>extern int i;  //这是一个全局变量，而且只是声明，并没有申请内存</p></li><li><p>文件操作头文件</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"file1.cpp"</span>)</span></span>;  <span class="comment">//open for reading</span></span><br><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"file.cpp"</span>)</span></span>; <span class="comment">//open for writing</span></span><br><span class="line"><span class="keyword">while</span>(getline(in,s))  <span class="comment">//按行进行读取</span></span><br></pre></td></tr></table></figure></li><li><p><code>enum</code> 可申明关键字</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> keyword&#123;ASM,AUTO,BREAK&#125;;</span><br><span class="line"><span class="comment">//此时三个默认从0开始初始化，以此0,1,2</span></span><br><span class="line"><span class="keyword">enum</span> keyword&#123;ASM=<span class="number">2</span>,AUTO=<span class="number">5</span>,BREAK&#125;;</span><br><span class="line"><span class="comment">//此时BREAK的值是6，接着前一个往后</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;2019-04-27&quot;&gt;&lt;a href=&quot;#2019-04-27&quot; class=&quot;headerlink&quot; title=&quot;2019-04-27&quot;&gt;&lt;/a&gt;2019-04-27&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;今天星期五，我倒是比较迷茫，早上一大早就起来去上课
+        &lt;blockquote&gt;
+&lt;p&gt;今天星期五，我倒是比较迷茫，早上一大早就起来去上课，睡眼朦胧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;知识工程&quot;&gt;&lt;a href=&quot;#知识工程&quot; class=&quot;headerlink&quot; title=&quot;知识工程&quot;&gt;&lt;/a&gt;知识工程&lt;/h2
       
     
     </summary>
