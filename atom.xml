@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.com/IFpop/"/>
-  <updated>2019-04-27T16:12:29.213Z</updated>
+  <updated>2019-04-29T15:56:00.691Z</updated>
   <id>http://github.com/IFpop/</id>
   
   <author>
@@ -17,13 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2019-4-29</title>
+    <link href="http://github.com/IFpop/2019/04/29/2019-4-29/"/>
+    <id>http://github.com/IFpop/2019/04/29/2019-4-29/</id>
+    <published>2019-04-29T15:29:21.000Z</published>
+    <updated>2019-04-29T15:56:00.691Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天周一，早上起的比较晚，还是不应该赖床，以后尽量在保证7个小时的基础上起床，不能太多也不能少。</p><p>今天做了哪些事情：</p><ul><li><p>复习了一下面向对象</p><ul><li><p>name decoration</p><blockquote><p>当函数需要对不同的数据类型进行处理的时候，我们可以多次定义一下这个函数</p></blockquote><p>比如这样</p><p><img src="C:\Users\X1TABLET\AppData\Roaming\Typora\typora-user-images\1556552051082.png" alt="1556552051082"></p></li><li><p>默认值</p><blockquote><p>像函数这样里面的参数，如果不进行赋值，而且没有默认值的化，就是出现调用出错的提示，但是如果在定义函数的时候自己加上默认值，就不会出现这种情况</p></blockquote></li><li><p>宏定义macro 与 const</p><blockquote><ol><li>宏定义只是一个替换式，他只是一个符号</li><li>const是有自己的变量类型的，只是不能改变,const 修饰的左边的值</li></ol></blockquote></li><li><p>static 静态变量</p><blockquote><p>在类里面定义一个静态变量，这个静态变量是被全局所共享的，也就是说，也就是可以用来对对象数进行计数，然后要注意的一点就是，static的定义需要在类的外面</p></blockquote></li><li><p>inline 函数</p><blockquote><p>内联函数相比宏定义的优点：</p><ol><li>宏调用并不执行类型检查，甚至连正常参数也不检查，但是函数调用却要检查</li><li>C语言的宏使用的是文本替换，可能导致无法预料的后果，因为需要重新计算参数和操作顺序</li><li>类中的函数几乎都是内联的，所以不会写内联的关键字</li></ol></blockquote></li></ul></li><li><p>上了一节概率论的课</p><ul><li>已知方差，求期望的区间估计</li><li>未知方差，求期望的区间估计</li><li>未知期望，求方差的区间估计</li><li>方差1已知，方差2已知，都是正态分布，求期望1-期望2的区间估计</li><li>若上一次的两个方差是相等的，但是却未知，用用另一个公式</li><li>u1,u2未知，求两个方差之比的分布</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天周一，早上起的比较晚，还是不应该赖床，以后尽量在保证7个小时的基础上起床，不能太多也不能少。&lt;/p&gt;
+&lt;p&gt;今天做了哪些事情：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;复习了一下面向对象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;name decoration&lt;/p&gt;
+&lt;blockquo
+      
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://github.com/IFpop/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="日记" scheme="http://github.com/IFpop/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2019-4-28</title>
     <link href="http://github.com/IFpop/2019/04/28/2019-4-28/"/>
     <id>http://github.com/IFpop/2019/04/28/2019-4-28/</id>
     <published>2019-04-27T16:02:36.000Z</published>
-    <updated>2019-04-27T16:12:29.213Z</updated>
+    <updated>2019-04-29T15:26:29.282Z</updated>
     
-    <content type="html"><![CDATA[<p>今天周日，因五一放假补周四的课程，今天任务还是比较重的，时间抓紧一点。</p><p>先来规划一下任务</p><ul><li style="list-style: none"><input type="checkbox"> 背英语单词</li><li style="list-style: none"><input type="checkbox"> 将组合数学问题不懂得那个问一下老师</li><li style="list-style: none"><input type="checkbox"> 组合数学课上记得做笔记</li><li style="list-style: none"><input type="checkbox"> 通信复习</li><li style="list-style: none"><input type="checkbox"> 面向对象复习</li><li style="list-style: none"><input type="checkbox"> 数字逻辑第五章作业</li><li style="list-style: none"><input type="checkbox"> 下午去学车晚上17点-21点</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>今天周日，因五一放假补周四的课程，今天任务还是比较重的，时间抓紧一点。</p><p>先来规划一下任务</p><ul><li style="list-style: none"><input type="checkbox"> 背英语单词</li><li style="list-style: none"><input type="checkbox" checked> 将组合数学问题不懂得那个问一下老师</li><li style="list-style: none"><input type="checkbox" checked> 组合数学课上记得做笔记</li><li style="list-style: none"><input type="checkbox"> 通信复习</li><li style="list-style: none"><input type="checkbox" checked> 面向对象复习</li><li style="list-style: none"><input type="checkbox"> 数字逻辑第四章作业</li></ul>]]></content>
     
     <summary type="html">
     
