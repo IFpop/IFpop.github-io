@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-04-02T10:35:26.323Z</updated>
+  <updated>2019-04-30T16:20:12.123Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019-4-30</title>
+    <link href="https://IFpop.github.io/2019/05/01/2019-4-30/"/>
+    <id>https://IFpop.github.io/2019/05/01/2019-4-30/</id>
+    <published>2019-04-30T16:05:41.000Z</published>
+    <updated>2019-04-30T16:20:12.123Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是周二，4-月30号，准备放假了。前面测一段时期可能自己在心态调整方便出现了诸多问题，这段时间好好调整一下，然后就是不要放松学习。</p><p>今天主要是复习了一下面向对象，然后好像就没了，学了一下组合数学，可想而知，自己一天的收获还是比较有限的，所以之后还是要抓紧一点</p><ul><li><p>面向对象</p><ul><li>引用，引用的优势我就不做赘述了，引用一般用于函数之中，可以在函数中改变函数外面的值，而且不用重新申请内存</li><li>第二个就是拷贝函数<ul><li>初始化对象时需要调用拷贝函数、</li><li>当函数中参数时对象时，需要调用拷贝函数</li><li>当返回值类型为对象时，也需要拷贝函数</li></ul></li><li>函数重载<ul><li>只有在与对象发生运算时，才会触发重载符的使用</li><li>易于理解</li><li>也可以用函数来实现相应的功能</li></ul></li><li>典型的重载</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">type <span class="keyword">operator</span>++()  <span class="comment">//prefix</span></span><br><span class="line">type <span class="keyword">operator</span>++(<span class="keyword">int</span>) <span class="comment">//postfix</span></span><br><span class="line">type <span class="keyword">operator</span>--()  <span class="comment">//prefix</span></span><br><span class="line">type <span class="keyword">operator</span>--(<span class="keyword">int</span>)  <span class="comment">//postfix</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//重载输出符号</span></span><br><span class="line"><span class="keyword">friend</span> ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; cou, <span class="keyword">const</span> <span class="keyword">complex</span>&amp; a)</span><br><span class="line">&#123;</span><br><span class="line">    cou&lt;&lt;<span class="string">""</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> cou;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//重载输入符号</span></span><br><span class="line"><span class="keyword">friend</span> istream&amp; <span class="keyword">operator</span>&gt;&gt;(istream&amp; ci,<span class="keyword">const</span> <span class="keyword">complex</span>&amp; a)</span><br><span class="line">&#123;</span><br><span class="line">    ci&gt;&gt;value;</span><br><span class="line">    <span class="keyword">return</span> ci;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天是周二，4-月30号，准备放假了。前面测一段时期可能自己在心态调整方便出现了诸多问题，这段时间好好调整一下，然后就是不要放松学习。&lt;/p&gt;
+&lt;p&gt;今天主要是复习了一下面向对象，然后好像就没了，学了一下组合数学，可想而知，自己一天的收获还是比较有限的，所以之后还是要抓紧一
+      
+    
+    </summary>
+    
+      <category term="日常生活" scheme="https://IFpop.github.io/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="日记" scheme="https://IFpop.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -42,7 +68,7 @@
     <link href="https://IFpop.github.io/2019/04/29/2019-4-29/"/>
     <id>https://IFpop.github.io/2019/04/29/2019-4-29/</id>
     <published>2019-04-29T15:29:21.000Z</published>
-    <updated>2019-04-30T09:25:49.930Z</updated>
+    <updated>2019-04-30T09:30:58.404Z</updated>
     
     <content type="html"><![CDATA[<p>今天周一，早上起的比较晚，还是不应该赖床，以后尽量在保证7个小时的基础上起床，不能太多也不能少。</p><p>今天做了哪些事情：</p><ul><li><p>复习了一下面向对象</p><ul><li><p>name decoration</p><blockquote><p>当函数需要对不同的数据类型进行处理的时候，我们可以多次定义一下这个函数</p></blockquote><p>比如这样</p><p><img src="/2019/04/29/2019-4-29/1556552051082.png" alt></p></li><li><p>默认值</p><blockquote><p>像函数这样里面的参数，如果不进行赋值，而且没有默认值的化，就是出现调用出错的提示，但是如果在定义函数的时候自己加上默认值，就不会出现这种情况</p></blockquote></li><li><p>宏定义macro 与 const</p><blockquote><ol><li>宏定义只是一个替换式，他只是一个符号</li><li>const是有自己的变量类型的，只是不能改变,const 修饰的左边的值</li></ol></blockquote></li><li><p>static 静态变量</p><blockquote><p>在类里面定义一个静态变量，这个静态变量是被全局所共享的，也就是说，也就是可以用来对对象数进行计数，然后要注意的一点就是，static的定义需要在类的外面</p></blockquote></li><li><p>inline 函数</p><blockquote><p>内联函数相比宏定义的优点：</p><ol><li>宏调用并不执行类型检查，甚至连正常参数也不检查，但是函数调用却要检查</li><li>C语言的宏使用的是文本替换，可能导致无法预料的后果，因为需要重新计算参数和操作顺序</li><li>类中的函数几乎都是内联的，所以不会写内联的关键字</li></ol></blockquote></li></ul></li><li><p>上了一节概率论的课</p><ul><li>已知方差，求期望的区间估计</li><li>未知方差，求期望的区间估计</li><li>未知期望，求方差的区间估计</li><li>方差1已知，方差2已知，都是正态分布，求期望1-期望2的区间估计</li><li>若上一次的两个方差是相等的，但是却未知，用用另一个公式</li><li>u1,u2未知，求两个方差之比的分布</li></ul><p><img src="/2019/04/29/2019-4-29/1556553473182.png" alt="图片1"></p></li></ul><p>  <img src="/2019/04/29/2019-4-29/1556553440751.png" alt="图片2"></p>]]></content>
     

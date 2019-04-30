@@ -264,6 +264,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://IFpop.github.io/2019/05/01/2019-4-30/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IFpop">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IFpop">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/01/2019-4-30/" itemprop="url">2019-4-30</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-01T00:05:41+08:00">
+                2019-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/日常生活/" itemprop="url" rel="index">
+                    <span itemprop="name">日常生活</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天是周二，4-月30号，准备放假了。前面测一段时期可能自己在心态调整方便出现了诸多问题，这段时间好好调整一下，然后就是不要放松学习。</p>
+<p>今天主要是复习了一下面向对象，然后好像就没了，学了一下组合数学，可想而知，自己一天的收获还是比较有限的，所以之后还是要抓紧一点</p>
+<ul>
+<li><p>面向对象</p>
+<ul>
+<li>引用，引用的优势我就不做赘述了，引用一般用于函数之中，可以在函数中改变函数外面的值，而且不用重新申请内存</li>
+<li>第二个就是拷贝函数<ul>
+<li>初始化对象时需要调用拷贝函数、</li>
+<li>当函数中参数时对象时，需要调用拷贝函数</li>
+<li>当返回值类型为对象时，也需要拷贝函数</li>
+</ul>
+</li>
+<li>函数重载<ul>
+<li>只有在与对象发生运算时，才会触发重载符的使用</li>
+<li>易于理解</li>
+<li>也可以用函数来实现相应的功能</li>
+</ul>
+</li>
+<li>典型的重载</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">type <span class="keyword">operator</span>++()  <span class="comment">//prefix</span></span><br><span class="line">type <span class="keyword">operator</span>++(<span class="keyword">int</span>) <span class="comment">//postfix</span></span><br><span class="line">type <span class="keyword">operator</span>--()  <span class="comment">//prefix</span></span><br><span class="line">type <span class="keyword">operator</span>--(<span class="keyword">int</span>)  <span class="comment">//postfix</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//重载输出符号</span></span><br><span class="line"><span class="keyword">friend</span> ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; cou, <span class="keyword">const</span> <span class="keyword">complex</span>&amp; a)</span><br><span class="line">&#123;</span><br><span class="line">    cou&lt;&lt;<span class="string">""</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> cou;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//重载输入符号</span></span><br><span class="line"><span class="keyword">friend</span> istream&amp; <span class="keyword">operator</span>&gt;&gt;(istream&amp; ci,<span class="keyword">const</span> <span class="keyword">complex</span>&amp; a)</span><br><span class="line">&#123;</span><br><span class="line">    ci&gt;&gt;value;</span><br><span class="line">    <span class="keyword">return</span> ci;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://IFpop.github.io/2019/04/30/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1262,7 +1426,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
