@@ -357,19 +357,80 @@
       
         
           
-            <p>今天是五月二号，也就是放假的第二天，稍微规划一下。</p>
+            <p>今天是五月二号，周四，稍微规划一下。</p>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 被英语单词</li>
-<li style="list-style: none"><input type="checkbox"> 学车（下午15点走）</li>
-<li style="list-style: none"><input type="checkbox"> 复习一下面向对象</li>
-<li style="list-style: none"><input type="checkbox"> 复习一下通信基础</li>
+<li style="list-style: none"><input type="checkbox" checked> 背英语单词</li>
+<li style="list-style: none"><input type="checkbox" checked> 学车（下午15点走）</li>
+<li style="list-style: none"><input type="checkbox" checked> 复习一下面向对象</li>
+<li style="list-style: none"><input type="checkbox" checked> 复习一下通信基础</li>
 <li style="list-style: none"><input type="checkbox"> 复习一下概率论</li>
-<li style="list-style: none"><input type="checkbox"> 开始写数字逻辑实验报告</li>
+<li style="list-style: none"><input type="checkbox" checked> 开始写数字逻辑实验报告</li>
 <li style="list-style: none"><input type="checkbox"> 有时间可以打一下比赛</li>
-<li style="list-style: none"><input type="checkbox"> 将锅交给别人</li>
-<li style="list-style: none"><input type="checkbox"> 去图书馆地下室拿一下自己水杯</li>
+<li style="list-style: none"><input type="checkbox" checked> 将锅交给别人</li>
+<li style="list-style: none"><input type="checkbox" checked> 去图书馆地下室拿一下自己水杯</li>
 </ul>
+<ul>
+<li><p>背了100个单词</p>
+</li>
+<li><p>面向对象</p>
+<ul>
+<li>c++中创建对象<ul>
+<li>静态内存地区</li>
+<li>栈（本地变量内存）</li>
+<li>堆（动态内存申请）</li>
+</ul>
+</li>
+<li>构造函数初始化这片空间</li>
+<li>c++用new和delete进行动态申请内存空间</li>
+<li>当函数溢出时，应该调用函数，重新生成内存空间</li>
+</ul>
+</li>
+<li><p>继承与组合</p>
+<ul>
+<li><p>组合就是类与类的相互嵌套</p>
+</li>
+<li><p>继承基类的属性</p>
+<ul>
+<li>public</li>
+<li>private</li>
+<li>protected</li>
+</ul>
+</li>
+<li><p>单继承</p>
+<ul>
+<li>只继承一个基类</li>
+</ul>
+</li>
+<li><p>多继承</p>
+<ul>
+<li>有多个基类</li>
+</ul>
+</li>
+<li><p>不会被继承的函数</p>
+<ul>
+<li>构造函数与析构函数不会被继承</li>
+<li>当初始化对象时，是递归初始化的</li>
+<li>被摧毁的顺序与上面相反</li>
+</ul>
+</li>
+<li><p>多继承</p>
+<ul>
+<li><p>当基类中出现两个相同的成员函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>:</span><span class="keyword">public</span> A,<span class="keyword">public</span> B</span><br><span class="line">&#123;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    C obj;</span><br><span class="line">    obj.fun();<span class="comment">//ambiguous</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>+ 单独标记
 
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    C obj;</span><br><span class="line">    obj.A::fun(); <span class="comment">//call A'fun()</span></span><br><span class="line">    obj.B::fun(); <span class="comment">//call B'fun()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
++ 定义一个新函数
+
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>:</span><span class="keyword">public</span> A,<span class="keyword">public</span> B</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		A::fun();</span><br><span class="line">		B::fun();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
           
         
       
