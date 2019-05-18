@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #be574e;
+  background: #50d7f6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2907,7 +2907,7 @@ hr {
 body {
   background: url("https://github.com/IFpop/IFpop.github.io/blob/master/images/background4.jpg");
   background-repeat: no-repeat;
-  background-attachment: fhexo ixed;
+  background-attachment: fixed;
   background-position: 50% 50%;
 }
 .main-inner {
