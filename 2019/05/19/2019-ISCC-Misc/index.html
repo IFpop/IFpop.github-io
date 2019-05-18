@@ -89,19 +89,19 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="隐藏的信息打开文件是一堆八进制码 10126 062 0126 0163 0142 0103 0102 0153 0142 062 065 0154 0111 0121 0157 0113 0111 0105 0132 0163 0131 0127 0143 066 0111 0105 0154 0124 0121 060 0116 067 0124 0152 0102 0146 0115 010">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558066372410.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E7%A2%8E%E7%BA%B8%E6%9C%BA.jpg">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197131121.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197231431.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197306018.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197932052.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558198553243.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558200582298.png">
-<meta property="og:updated_time" content="2019-05-18T17:43:27.231Z">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558066372410.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/平平无奇的碎纸机.jpg">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558197131121.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558197231431.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558197306018.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558197932052.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558198553243.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558200582298.png">
+<meta property="og:updated_time" content="2019-05-18T17:47:48.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019_ISCC_Misc">
 <meta name="twitter:description" content="隐藏的信息打开文件是一堆八进制码 10126 062 0126 0163 0142 0103 0102 0153 0142 062 065 0154 0111 0121 0157 0113 0111 0105 0132 0163 0131 0127 0143 066 0111 0105 0154 0124 0121 060 0116 067 0124 0152 0102 0146 0115 010">
-<meta name="twitter:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/Myblog/source/1558066372410.png">
+<meta name="twitter:image" content="https://ifpop.github.io/2019/05/19/2019-ISCC-Misc/1558066372410.png">
 
 
 
@@ -370,27 +370,27 @@
 <p>直接用python转成十进制，然后变为ASCII字符,脚本如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment">#open</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'message.txt'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f1:</span><br><span class="line">    s1 = f1.read()</span><br><span class="line">    s1 = re.split(<span class="string">' '</span>,s1)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> s1[<span class="number">0</span>:<span class="number">-1</span>]:</span><br><span class="line">        print(chr(int(i,<span class="number">8</span>)),end=<span class="string">''</span>)</span><br><span class="line">    f1.close()</span><br><span class="line"><span class="comment">#V2VsbCBkb25lIQoKIEZsYWc6IElTQ0N7TjBfMG5lX2Nhbl9zdDBwX3kwdX0K</span></span><br><span class="line"><span class="comment">#base64解码：ISCC&#123;N0_0ne_can_st0p_y0u&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h3><p>下载得到一个名为zip的文件，不可打开，看看文件类型</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558066372410.png" alt="1558066372410"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558066372410.png" alt="1558066372410"></p>
 <p>是一个压缩包文件，然后可以解压出50张二维码，发现一个jpg为其他都是png，查看文件二进制信息即可得到flag</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#flag&#123;15cC9012&#125;   提交格式应该是 15cC9012</span></span><br></pre></td></tr></table></figure>
 <h3 id="碎纸机"><a href="#碎纸机" class="headerlink" title="碎纸机"></a>碎纸机</h3><p>下载得到一个压缩包文件，可以直接解压，得到一个图片</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E7%A2%8E%E7%BA%B8%E6%9C%BA.jpg" alt="碎纸机"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/平平无奇的碎纸机.jpg" alt="碎纸机"></p>
 <p>真的是一个碎纸机，先看看文件类型</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197131121.png" alt="1558197131121"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558197131121.png" alt="1558197131121"></p>
 <p>用<code>binwalk</code>查看一下是否图片里藏有其他文件：</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197231431.png" alt="1558197231431"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558197231431.png" alt="1558197231431"></p>
 <p>用<code>binwalk -e 平平无奇的碎纸机.jpg</code>分离出文件，得到一些拼图和一个文档</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197306018.png" alt="1558197306018"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558197306018.png" alt="1558197306018"></p>
 <p>再看看文本里的内容：</p>
 <blockquote>
 <p>碎纸机中居然是一堆黑色和白色的碎片，但是这些碎片之中到底会有什么样的宝藏呢？<br>我去问了欧鹏·曦文同学，他说他有办法恢复拼图原貌，但是前提是要我把真正有用的东西给他。</p>
 </blockquote>
 <p>看起来是需要我们去里面得到相应的信息，可以需要拼图，对二进制进行操作，用<code>winhex</code>打开</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558197932052.png" alt="1558197932052"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558197932052.png" alt="1558197932052"></p>
 <p>现在就看有没有什么规律啥的，翻到最后，发现一个乱码是独立的而且就是由0和F组成，所以将其复制出来，在vscode中打开，然后查找0，可以得到</p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558198553243.png" alt="1558198553243"></p>
-<p><img src="/2019/05/19/2019-ISCC-Misc/Myblog/source/1558200582298.png" alt="1558200582298"></p>
-<p>其他几个文件也是类似，这里就不做赘述，所以flag为：`ISCC{ISCC_IS_int</p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558198553243.png" alt="1558198553243"></p>
+<p><img src="/2019/05/19/2019-ISCC-Misc/1558200582298.png" alt="1558200582298"></p>
+<p>其他几个文件也是类似，这里就不做赘述，所以flag为：<code>ISCC{ISCC_IS_interesting_!}</code></p>
 
       
     </div>
