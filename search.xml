@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[HITCON-train]]></title>
+    <url>%2F2019%2F07%2F11%2FHITCON-train%2F</url>
+    <content type="text"><![CDATA[lab1先看看保护机制 打开了部分可读，而就是可以进行溢出覆盖，打开了栈溢出保护，而且NX打开，不可执行，地址随机化没有打开 现在可以用ida打开看看文件，是32位的，所以就可以直接在ida.exe里面打开 找到mian函数，反编译以下： 看到关键函数get_flag(): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374v67 = __readgsdword(0x14u); v54 = 'y_oD'; v55 = 'k_uo'; v56 = '_won'; v57 = '_yhw'; v58 = 't_ym'; v59 = 'mmae'; v60 = '_eta'; v61 = 'narO'; v62 = 'i_eg'; v63 = 'os_s'; v64 = 'gna_'; v65 = '??yr'; v66 = '?'; v5 = 7; v6 = 59; v7 = 25; v8 = 2; v9 = 11; v10 = 16; v11 = 61; v12 = 30; v13 = 9; v14 = 8; v15 = 18; v16 = 45; v17 = 40; v18 = 89; v19 = 10; v20 = 0; v21 = 30; v22 = 22; v23 = 0; v24 = 4; v25 = 85; v26 = 22; v27 = 8; v28 = 31; v29 = 7; v30 = 1; v31 = 9; v32 = 0; v33 = 126; v34 = 28; v35 = 62; v36 = 10; v37 = 30; v38 = 11; v39 = 107; v40 = 4; v41 = 66; v42 = 60; v43 = 44; v44 = 91; v45 = 49; v46 = 85; v47 = 2; v48 = 30; v49 = 33; v50 = 16; v51 = 76; v52 = 30; v53 = 66; fd = open("/dev/urandom", 0); read(fd, &amp;buf, 4u); printf("Give me maigc :"); __isoc99_scanf("%d", &amp;v2); if ( buf == v2 ) &#123; for ( i = 0; i &lt;= 0x30; ++i ) putchar((char)(*(&amp;v5 + i) ^ *((_BYTE *)&amp;v54 + i))); &#125; return __readgsdword(0x14u) ^ v67;&#125; 根据这个可以直接进行逆向： 1234567#-*-encoding=utf-8-*-K = "Do_you_know_why_my_teammate_Orange_is_so_angry???"C = [7, 59, 25, 2, 11, 16, 61, 30, 9, 8, 18, 45, 40, 89, 10, 0, 30, 22, 0, 4, 85, 22, 8, 31, 7, 1, 9, 0, 126, 28, 62, 10, 30, 11, 107, 4, 66, 60, 44, 91, 49, 85, 2, 30, 33, 16, 76, 30, 66]print("sizeof(C):",len(C))print("sizeof(K):",len(K))for i in range(len(K)): print(chr(C[i]^ord(K[i])),end="") lab2]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>pwn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pytho推荐工具]]></title>
+    <url>%2F2019%2F05%2F19%2Fpytho%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[Anaconda介绍Anaconda就是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda包含了conda、Python在内的超过180个科学包及其依赖项。 特点 开源 安装过程简单 高性能使用Python和R语言 免费的社区支持 独立的环境依赖，使得诸多比较难装的库可以直接安装 安装 下载链接： https://www.anaconda.com/ Python2.7还有不到一年就要退休了，所以如果你没有什么特殊的工作要求，python3.7就足够满足所有要求 下载下来，点击安装，顺着流程走： 到这一步可以不用选择配置环境变量，以便后面安装什么东西冲突，会出现奇怪的bug 然后一直安装到这,点击install vscode，一个比较好用的编辑器 安装好后，安装一个插件，就差不多可以直接用了 pycharm安装 下载链接：https://www.jetbrains.com/zh/pycharm/specials/pycharm/pycharm.html?utm_source=baidu&amp;utm_medium=cpc&amp;utm_campaign=cn-bai-br-pycharm-ex-pc&amp;utm_content=pycharm-pure&amp;utm_term=pycharm&amp;gclid=CIesutOLqOICFQMpvAodTg4HGA&amp;gclsrc=ds 一路next就行 需要激活的地方停一下 申请学生账号 点击buy Pycharm 填信息 然后等着确认一下就行 之后就可以用了 pycharm中使用anaconda部署python环境 参考网站：https://www.cnblogs.com/pejsidney/p/9216470.html]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019_ISCC]]></title>
+    <url>%2F2019%2F05%2F19%2F2019-ISCC-Misc%2F</url>
+    <content type="text"><![CDATA[隐藏的信息打开文件是一堆八进制码 10126 062 0126 0163 0142 0103 0102 0153 0142 062 065 0154 0111 0121 0157 0113 0111 0105 0132 0163 0131 0127 0143 066 0111 0105 0154 0124 0121 060 0116 067 0124 0152 0102 0146 0115 0107 065 0154 0130 062 0116 0150 0142 0154 071 0172 0144 0104 0102 0167 0130 063 0153 0167 0144 0130 060 0113 直接用python转成十进制，然后变为ASCII字符,脚本如下： 12345678910import re#openwith open('message.txt', 'r') as f1: s1 = f1.read() s1 = re.split(' ',s1) for i in s1[0:-1]: print(chr(int(i,8)),end='') f1.close()#V2VsbCBkb25lIQoKIEZsYWc6IElTQ0N7TjBfMG5lX2Nhbl9zdDBwX3kwdX0K#base64解码：ISCC&#123;N0_0ne_can_st0p_y0u&#125; Welcome下载得到一个名为zip的文件，不可打开，看看文件类型 是一个压缩包文件，然后可以解压出50张二维码，发现一个jpg为其他都是png，查看文件二进制信息即可得到flag 1#flag&#123;15cC9012&#125; 提交格式应该是 15cC9012 碎纸机下载得到一个压缩包文件，可以直接解压，得到一个图片 真的是一个碎纸机，先看看文件类型 用binwalk查看一下是否图片里藏有其他文件： 用binwalk -e 平平无奇的碎纸机.jpg分离出文件，得到一些拼图和一个文档 再看看文本里的内容： 碎纸机中居然是一堆黑色和白色的碎片，但是这些碎片之中到底会有什么样的宝藏呢？我去问了欧鹏·曦文同学，他说他有办法恢复拼图原貌，但是前提是要我把真正有用的东西给他。 看起来是需要我们去里面得到相应的信息，可以需要拼图，对二进制进行操作，用winhex打开 现在就看有没有什么规律啥的，翻到最后，发现一个乱码是独立的而且就是由0和F组成，所以将其复制出来，在vscode中打开，然后查找0，可以得到 其他几个文件也是类似，这里就不做赘述，所以flag为：Flag={ISCC_is_so_interesting_!} 解密成绩单ISCC{Y0u_F0UnD_ThE_P4SSW0RD!} REV02flag{ST0RING_STAT1C_PA55WORDS_1N_FIL3S_1S_N0T_S3CUR3} REV03FLAG{I_LOVE_FONZY} Web5flag{1SCC_2OI9} Mobile1234567836275184 pwn02flag{2c9c6bd8-c285-43b7-ac8a-f74eb9a7cb2f} pwn01flag{f530c5ef-3a8a-4271-91f7-3c5ebd87fbe4} rev4http://ISCC2019{url_seems_rotten_with}ctf.com]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>ISCC</tag>
+      </tags>
+  </entry>
+</search>
