@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ISCC,CTF,">
+  <meta name="keywords" content="CTF,ISCC,">
 
 
 
@@ -82,7 +82,7 @@
 
 
 <meta name="description" content="隐藏的信息打开文件是一堆八进制码 10126 062 0126 0163 0142 0103 0102 0153 0142 062 065 0154 0111 0121 0157 0113 0111 0105 0132 0163 0131 0127 0143 066 0111 0105 0154 0124 0121 060 0116 067 0124 0152 0102 0146 0115 010">
-<meta name="keywords" content="ISCC,CTF">
+<meta name="keywords" content="CTF,ISCC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019_ISCC">
 <meta property="og:url" content="https://IFpop.github.io/2019/05/19/2019-ISCC-Misc/index.html">
@@ -377,16 +377,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/05/19/2019-ISCC-Misc/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/05/19/2019-ISCC-Misc/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -501,9 +491,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ISCC/" rel="tag"><i class="fa fa-tag"></i> ISCC</a>
-          
             <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag"></i> CTF</a>
+          
+            <a href="/tags/ISCC/" rel="tag"><i class="fa fa-tag"></i> ISCC</a>
           
         </div>
       
@@ -888,22 +878,26 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <!-- 请使用下面的替换  2019-06-30更新-->
+        <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+        <script src="https://billts.site/js/gitment.js"></script>
     
 <!-- END LOCAL -->
 
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
     
 
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             id: window.location.pathname, 
             owner: 'IFpop',
-            repo: 'IFpop.github.io',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            repo: 'blog-comments',
             
             oauth: {
             
