@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Bugku-Crypto]]></title>
+    <url>%2F2019%2F07%2F30%2FBugku-Crypto%2F</url>
+    <content type="text"><![CDATA[easy_crypto10010 0100 01 110 1111011 11 11111 010 000 0 001101 1010 111 100 0 001101 01111 000 001101 00 10 1 0 010 0 000 1 01111 10 11110 101011 1111101 打开链接，发现这样的一段字符串，可以看出是莫斯电码， ​ 根据上表进行相应的解码程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#owner=houhuiting#type=abstractstring=input()key=string.split(" ")dictionary= &#123;'01': 'A', '1000': 'B', '1010': 'C', '100':'D', '0':'E', '0010':'F', '110': 'G', '0000': 'H', '00': 'I', '0111':'J', '101': 'K', '0100': 'L', '11': 'M', '10': 'N', '111': 'O', '0110': 'P', '1101': 'Q', '010': 'R', '000': 'S', '1': 'T', '001': 'U', '0001': 'V', '011': 'W', '1001': 'X', '1011': 'Y', '1100': 'Z', '01111': '1', '00111': '2', '00011': '3', '00001': '4', '00000': '5', '10000': '6', '11000': '7', '11100': '8', '11110': '9', '11111': '0', '001100': '?', '10010': '/', '101101': ')', '100001': '-', '010101': '.', '110011':',', '011010':'@', '111000':':', '101010':':', '10001':'=', '011110':"'", '101011':'!', '001101':'_', '010010':'"', '10110':'(', '1111011':'&#123;', '1111101':'&#125;' &#125;; for item in key:# print(dictionary[item],end='') print(dictionary[item].lower(),end='') 解出flag:FLAG{M0RSE_CODE_1S_INTEREST1N9!} 但是交上去是错的，换成小写试试，flag{m0rse_code_1s_interest1n9!}成功 散乱的密文 lf5{ag024c483549d7fd@@1}一张纸条上凌乱的写着2 1 6 5 3 4 2 1 6]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>Crypto</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HITCON-train]]></title>
     <url>%2F2019%2F07%2F11%2FHITCON-train%2F</url>
     <content type="text"><![CDATA[lab1先看看保护机制 打开了部分可读，而就是可以进行溢出覆盖，打开了栈溢出保护，而且NX打开，不可执行，地址随机化没有打开 现在可以用ida打开看看文件，是32位的，所以就可以直接在ida.exe里面打开 找到mian函数，反编译以下： 看到关键函数get_flag(): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374v67 = __readgsdword(0x14u); v54 = 'y_oD'; v55 = 'k_uo'; v56 = '_won'; v57 = '_yhw'; v58 = 't_ym'; v59 = 'mmae'; v60 = '_eta'; v61 = 'narO'; v62 = 'i_eg'; v63 = 'os_s'; v64 = 'gna_'; v65 = '??yr'; v66 = '?'; v5 = 7; v6 = 59; v7 = 25; v8 = 2; v9 = 11; v10 = 16; v11 = 61; v12 = 30; v13 = 9; v14 = 8; v15 = 18; v16 = 45; v17 = 40; v18 = 89; v19 = 10; v20 = 0; v21 = 30; v22 = 22; v23 = 0; v24 = 4; v25 = 85; v26 = 22; v27 = 8; v28 = 31; v29 = 7; v30 = 1; v31 = 9; v32 = 0; v33 = 126; v34 = 28; v35 = 62; v36 = 10; v37 = 30; v38 = 11; v39 = 107; v40 = 4; v41 = 66; v42 = 60; v43 = 44; v44 = 91; v45 = 49; v46 = 85; v47 = 2; v48 = 30; v49 = 33; v50 = 16; v51 = 76; v52 = 30; v53 = 66; fd = open("/dev/urandom", 0); read(fd, &amp;buf, 4u); printf("Give me maigc :"); __isoc99_scanf("%d", &amp;v2); if ( buf == v2 ) &#123; for ( i = 0; i &lt;= 0x30; ++i ) putchar((char)(*(&amp;v5 + i) ^ *((_BYTE *)&amp;v54 + i))); &#125; return __readgsdword(0x14u) ^ v67;&#125; 根据这个可以直接进行逆向： 1234567#-*-encoding=utf-8-*-K = "Do_you_know_why_my_teammate_Orange_is_so_angry???"C = [7, 59, 25, 2, 11, 16, 61, 30, 9, 8, 18, 45, 40, 89, 10, 0, 30, 22, 0, 4, 85, 22, 8, 31, 7, 1, 9, 0, 126, 28, 62, 10, 30, 11, 107, 4, 66, 60, 44, 91, 49, 85, 2, 30, 33, 16, 76, 30, 66]print("sizeof(C):",len(C))print("sizeof(K):",len(K))for i in range(len(K)): print(chr(C[i]^ord(K[i])),end="") lab2]]></content>
@@ -13,8 +24,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[pytho推荐工具]]></title>
-    <url>%2F2019%2F05%2F19%2Fpytho%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7%2F</url>
+    <title><![CDATA[python推荐工具]]></title>
+    <url>%2F2019%2F05%2F19%2Fpython%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7%2F</url>
     <content type="text"><![CDATA[Anaconda介绍Anaconda就是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda包含了conda、Python在内的超过180个科学包及其依赖项。 特点 开源 安装过程简单 高性能使用Python和R语言 免费的社区支持 独立的环境依赖，使得诸多比较难装的库可以直接安装 安装 下载链接： https://www.anaconda.com/ Python2.7还有不到一年就要退休了，所以如果你没有什么特殊的工作要求，python3.7就足够满足所有要求 下载下来，点击安装，顺着流程走： 到这一步可以不用选择配置环境变量，以便后面安装什么东西冲突，会出现奇怪的bug 然后一直安装到这,点击install vscode，一个比较好用的编辑器 安装好后，安装一个插件，就差不多可以直接用了 pycharm安装 下载链接：https://www.jetbrains.com/zh/pycharm/specials/pycharm/pycharm.html?utm_source=baidu&amp;utm_medium=cpc&amp;utm_campaign=cn-bai-br-pycharm-ex-pc&amp;utm_content=pycharm-pure&amp;utm_term=pycharm&amp;gclid=CIesutOLqOICFQMpvAodTg4HGA&amp;gclsrc=ds 一路next就行 需要激活的地方停一下 申请学生账号 点击buy Pycharm 填信息 然后等着确认一下就行 之后就可以用了 pycharm中使用anaconda部署python环境 参考网站：https://www.cnblogs.com/pejsidney/p/9216470.html]]></content>
       <categories>
         <category>工具使用</category>
@@ -32,8 +43,8 @@
         <category>CTF</category>
       </categories>
       <tags>
-        <tag>ISCC</tag>
         <tag>CTF</tag>
+        <tag>ISCC</tag>
       </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-07-18T01:04:18.484Z</updated>
+  <updated>2019-08-02T16:47:01.301Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bugku-Crypto</title>
+    <link href="https://IFpop.github.io/2019/07/30/Bugku-Crypto/"/>
+    <id>https://IFpop.github.io/2019/07/30/Bugku-Crypto/</id>
+    <published>2019-07-30T14:08:48.000Z</published>
+    <updated>2019-08-02T16:47:01.301Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;easy-crypto&quot;&gt;&lt;a href=&quot;#easy-crypto&quot; class=&quot;headerlink&quot; title=&quot;easy_crypto&quot;&gt;&lt;/a&gt;easy_crypto&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;tab
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="Crypto" scheme="https://IFpop.github.io/tags/Crypto/"/>
+    
+  </entry>
   
   <entry>
     <title>HITCON-train</title>
@@ -43,11 +66,11 @@
   </entry>
   
   <entry>
-    <title>pytho推荐工具</title>
-    <link href="https://IFpop.github.io/2019/05/19/pytho%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7/"/>
-    <id>https://IFpop.github.io/2019/05/19/pytho推荐工具/</id>
+    <title>python推荐工具</title>
+    <link href="https://IFpop.github.io/2019/05/19/python%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7/"/>
+    <id>https://IFpop.github.io/2019/05/19/python推荐工具/</id>
     <published>2019-05-19T15:58:59.000Z</published>
-    <updated>2019-07-18T01:04:39.815Z</updated>
+    <updated>2019-07-30T14:11:56.013Z</updated>
     
     <summary type="html">
     
@@ -87,9 +110,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
     
   </entry>
   
