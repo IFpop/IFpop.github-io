@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-08-17T15:15:37.553Z</updated>
+  <updated>2019-08-31T02:00:56.223Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bugku_web</title>
+    <link href="https://IFpop.github.io/2019/08/04/Bugku-web/"/>
+    <id>https://IFpop.github.io/2019/08/04/Bugku-web/</id>
+    <published>2019-08-04T01:39:44.000Z</published>
+    <updated>2019-08-31T02:00:56.223Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Web2&quot;&gt;&lt;a href=&quot;#Web2&quot; class=&quot;headerlink&quot; title=&quot;Web2&quot;&gt;&lt;/a&gt;Web2&lt;/h2&gt;&lt;p&gt;打开链接：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/08/04/Bugku-web/1563499089600.png
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bugku_pwn</title>
+    <link href="https://IFpop.github.io/2019/07/31/Bugku-pwn/"/>
+    <id>https://IFpop.github.io/2019/07/31/Bugku-pwn/</id>
+    <published>2019-07-31T01:40:31.000Z</published>
+    <updated>2019-08-31T01:50:39.923Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;pwn1&quot;&gt;&lt;a href=&quot;#pwn1&quot; class=&quot;headerlink&quot; title=&quot;pwn1&quot;&gt;&lt;/a&gt;pwn1&lt;/h2&gt;&lt;p&gt;访问nc 114.116.54.89 10001&lt;/p&gt;
+&lt;p&gt;打印一下当前目录的文件，会发现：&lt;/p&gt;
+&lt;p&gt;&lt;img s
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+  </entry>
   
   <entry>
     <title>Bugku-Crypto</title>
@@ -36,6 +85,57 @@
     
     
       <category term="Crypto" scheme="https://IFpop.github.io/tags/Crypto/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL注入入门</title>
+    <link href="https://IFpop.github.io/2019/07/25/SQL%E6%B3%A8%E5%85%A5%E5%85%A5%E9%97%A8/"/>
+    <id>https://IFpop.github.io/2019/07/25/SQL注入入门/</id>
+    <published>2019-07-25T01:40:09.000Z</published>
+    <updated>2019-08-31T01:47:18.810Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2019/07/25/SQL注入入门/1562999206468.png&quot; alt=&quot;1562999206468&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;判断有无引号&quot;&gt;&lt;a href=&quot;#判断有无引号&quot; class=&quot;headerlink&quot; title=&quot;判断有
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="SQL" scheme="https://IFpop.github.io/tags/SQL/"/>
+    
+      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>密码学基础</title>
+    <link href="https://IFpop.github.io/2019/07/24/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    <id>https://IFpop.github.io/2019/07/24/密码学基础/</id>
+    <published>2019-07-24T01:39:20.000Z</published>
+    <updated>2019-08-31T01:44:14.971Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;密码学概述&quot;&gt;&lt;a href=&quot;#密码学概述&quot; class=&quot;headerlink&quot; title=&quot;密码学概述&quot;&gt;&lt;/a&gt;密码学概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;密码&lt;/strong&gt;：认证以及 保证通信信息的完整性、机密性&lt;/p&gt;
+&lt;/li&gt;
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
     
   </entry>
   
@@ -110,9 +210,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
