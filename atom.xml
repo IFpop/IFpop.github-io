@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-08-31T02:00:56.223Z</updated>
+  <updated>2019-09-16T06:48:41.980Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bugku-Misc</title>
+    <link href="https://IFpop.github.io/2019/09/16/bugku-Misc/"/>
+    <id>https://IFpop.github.io/2019/09/16/bugku-Misc/</id>
+    <published>2019-09-16T06:41:04.000Z</published>
+    <updated>2019-09-16T06:48:41.980Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;闪的好快&quot;&gt;&lt;a href=&quot;#闪的好快&quot; class=&quot;headerlink&quot; title=&quot;闪的好快&quot;&gt;&lt;/a&gt;闪的好快&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/2019/09/16/bugku-Misc/Users\X1TABLET\AppData\Roamin
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="Misc" scheme="https://IFpop.github.io/tags/Misc/"/>
+    
+  </entry>
   
   <entry>
     <title>Bugku_web</title>
@@ -159,9 +182,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
   </entry>
   
@@ -210,9 +233,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
