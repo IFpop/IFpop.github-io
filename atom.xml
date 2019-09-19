@@ -93,7 +93,7 @@
     <link href="https://IFpop.github.io/2019/07/30/Bugku-Crypto/"/>
     <id>https://IFpop.github.io/2019/07/30/Bugku-Crypto/</id>
     <published>2019-07-30T14:08:48.000Z</published>
-    <updated>2019-08-17T15:15:37.553Z</updated>
+    <updated>2019-09-19T17:15:20.593Z</updated>
     
     <summary type="html">
     
@@ -182,9 +182,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
@@ -233,9 +233,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
