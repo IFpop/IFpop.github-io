@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-09-16T18:01:01.499Z</updated>
+  <updated>2019-09-22T08:30:31.385Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bugku-re</title>
+    <link href="https://IFpop.github.io/2019/09/22/Bugku-re/"/>
+    <id>https://IFpop.github.io/2019/09/22/Bugku-re/</id>
+    <published>2019-09-22T02:57:01.000Z</published>
+    <updated>2019-09-22T08:30:31.385Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;游戏过关&quot;&gt;&lt;a href=&quot;#游戏过关&quot; class=&quot;headerlink&quot; title=&quot;游戏过关&quot;&gt;&lt;/a&gt;游戏过关&lt;/h1&gt;&lt;p&gt;这是一道exe逆向问题，而网上大多教程都是用OD解题，此时我对OD的使用情况并不是特别的熟练，尝试用ida进行解题。&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
+    
+  </entry>
   
   <entry>
     <title>bugku-Misc</title>
@@ -182,9 +205,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
   </entry>
   
@@ -233,9 +256,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
     
   </entry>
   
