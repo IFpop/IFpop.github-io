@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/653357-20180517203251515-632006721.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/Users/X1TABLET/Desktop/blog/%E5%AF%86%E7%A0%81%E5%AD%A6/6534448-a86714ce11f5ffad.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-9016223b743a410e.png">
-<meta property="og:updated_time" content="2019-08-31T01:44:14.971Z">
+<meta property="og:updated_time" content="2019-10-05T12:40:42.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码学基础">
 <meta name="twitter:description" content="密码学概述 密码：认证以及 保证通信信息的完整性、机密性  认证： 便于授权以及管理  机密性：为了防止信息被窃听，因此需要对信息进行加密，对应的密码技术主要就是对称加密和非对称加密。  完整性：为了防止信息被篡改，因此需要对信息进行完整性校验，对应的密码技术有单向散列函数、消息认证码、数字签名。  不可否认性：为了防止发送者发布信息后否认自己发布过，因此需要证据来证明信息是否由发送者发布，对应的">
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.3k 字
+                  1.7k 字
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4 分钟
+                  6 分钟
                 </span>
               
             </div>
@@ -464,11 +464,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">abcdefghijklmnopqrstuvwxyz</span><br><span class="line">--&gt;右移动两个位：</span><br><span class="line">yzabcdefghijklmnopqrstuvwx</span><br><span class="line">.....其他类似</span><br></pre></td></tr></table></figure>
 <ul>
 <li>加密结果只有26种，所以可以直接爆破(用python自己写脚本)</li>
-<li>网上有很多在线解密网站，比如：<code>http://ctf.ssleye.com/</code></li>
+<li>网上有很多在线解密网站，比如：<code>http://ctf.ssleye.com/</code>（但这个网站有的需要收费）</li>
 </ul>
 <h3 id="多表代换密码"><a href="#多表代换密码" class="headerlink" title="多表代换密码"></a>多表代换密码</h3><p>加密后字母不再保持原来的频率。</p>
 <p><img src="/2019/07/24/密码学基础/1563247882630.png" alt="1563247882630"></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<h3 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h3><ul>
 <li><p>base64编码，在CTF 中比较常见，base64编码后的字符串的长度一定会被4整除，包括用作后缀的等号吧；如果明文字符数不能被3整除，余1时，1个字符转为2个，补2个等号，共4个字符；余2时，2个字符转为3个字符，补1个等号，共4个字符</p>
 </li>
 <li><p>base64不仅可以编码字符串，也可以编码图片，</p>
@@ -481,7 +481,63 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RkxBR3tCSTdfMVNDXzZhYn0=</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="现代密码学"><a href="#现代密码学" class="headerlink" title="现代密码学"></a>现代密码学</h2><h3 id="椭圆曲线"><a href="#椭圆曲线" class="headerlink" title="椭圆曲线"></a>椭圆曲线</h3><p>椭圆曲线加密算法，即：Elliptic Curve Cryptography，简称ECC，是基于椭圆曲线数学理论实现的一种非对称加密算法。相比RSA，ECC优势是可以使用更短的密钥，来实现与RSA相当或更高的安全。据研究，160位ECC加密安全性相当于1024位RSA加密，210位ECC加密安全性相当于2048位RSA加密。</p>
+<h3 id="其他常用古典密码"><a href="#其他常用古典密码" class="headerlink" title="其他常用古典密码"></a>其他常用古典密码</h3><blockquote>
+<p>这个具体就自己搜搜呗</p>
+</blockquote>
+<ul>
+<li>栅栏密码</li>
+<li>培根密码</li>
+<li>键盘密码</li>
+<li>猪圈密码</li>
+</ul>
+<p>。。。。。。</p>
+<h2 id="现代密码学"><a href="#现代密码学" class="headerlink" title="现代密码学"></a>现代密码学</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+<li><p>对称加密</p>
+<blockquote>
+<p>只有一个密钥，加密和解密使用相同的密钥。需要双方协商密钥易泄露，密钥数量大难以管理</p>
+</blockquote>
+</li>
+<li><p>非对称加密</p>
+<blockquote>
+<p>一般有公钥(public key)与私钥(private key)。A生成一对密钥，把公钥向其他人公开，自己保留私钥。得到公钥的B把信息加密后发给A，A再用自己的私钥进行解密</p>
+</blockquote>
+</li>
+<li><p>现代加密策略</p>
+<blockquote>
+<p>一般先使用非对称加密的方式将对称加密所需的密钥进行加密交换，之后的通信可以通过对称加密进行，结合了二者的优点</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h3><h4 id="RSA-数论基础"><a href="#RSA-数论基础" class="headerlink" title="RSA-数论基础"></a>RSA-数论基础</h4><ul>
+<li><p>互质</p>
+<blockquote>
+<p> 如果两个正整数，除了1以外，没有其他公因子，我们就称这两个数是互质关系</p>
+</blockquote>
+</li>
+<li><p>欧拉函数</p>
+<blockquote>
+<p>小于等于n的正整数中与与n构成互质关系的个数。对于素数p, <code>φ(p)=p-1</code>，对于对两<br>个互质的数p,q， <code>φ(pq)=φ(p)φ(q) = (p-1)(q-1)</code></p>
+</blockquote>
+</li>
+<li><p>模反元素</p>
+<blockquote>
+<p>ab ≡ 1 (mod r), 则a,b互为模r的模反元素</p>
+</blockquote>
+</li>
+<li><p>贝祖等式</p>
+<blockquote>
+<p>若设a,b是整数，则存在整数x,y，使得<code>ax+by=gcd(a,b)</code></p>
+</blockquote>
+</li>
+<li><p>定理 ： 如果两个正整数a和n互质，那么一定可以找到整数b，使得<code>ab-1</code>被n整除，或者说ab被n除的余数是1</p>
+</li>
+<li><p>扩展欧几里得(<code>egcd</code>)</p>
+<blockquote>
+<p>已知a, b求解一组x，y，使它们满足<code>ax+by = gcd(a, b) =d</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="椭圆曲线"><a href="#椭圆曲线" class="headerlink" title="椭圆曲线"></a>椭圆曲线</h3><p>椭圆曲线加密算法，即：Elliptic Curve Cryptography，简称ECC，是基于椭圆曲线数学理论实现的一种非对称加密算法。相比RSA，ECC优势是可以使用更短的密钥，来实现与RSA相当或更高的安全。据研究，160位ECC加密安全性相当于1024位RSA加密，210位ECC加密安全性相当于2048位RSA加密。</p>
 <ul>
 <li><p>椭圆曲线的一般方程为<br>$$<br>y^2 = x^3+ax^2+b^2+c<br>$$</p>
 </li>
@@ -755,7 +811,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码学概述"><span class="nav-number">1.</span> <span class="nav-text">密码学概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要思想"><span class="nav-number">2.</span> <span class="nav-text">主要思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组密码："><span class="nav-number">2.1.</span> <span class="nav-text">分组密码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列密码："><span class="nav-number">2.2.</span> <span class="nav-text">序列密码：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#古典密码"><span class="nav-number">3.</span> <span class="nav-text">古典密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单表替换密码"><span class="nav-number">3.1.</span> <span class="nav-text">单表替换密码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#凯撒密码"><span class="nav-number">3.1.1.</span> <span class="nav-text">凯撒密码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表代换密码"><span class="nav-number">3.2.</span> <span class="nav-text">多表代换密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">3.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现代密码学"><span class="nav-number">4.</span> <span class="nav-text">现代密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#椭圆曲线"><span class="nav-number">4.1.</span> <span class="nav-text">椭圆曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义椭圆曲线的运算规则"><span class="nav-number">4.1.1.</span> <span class="nav-text">定义椭圆曲线的运算规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数的椭圆曲线"><span class="nav-number">4.1.2.</span> <span class="nav-text">实数的椭圆曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线加密解密原理"><span class="nav-number">4.1.3.</span> <span class="nav-text">椭圆曲线加密解密原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线签名算法原理"><span class="nav-number">4.1.4.</span> <span class="nav-text">椭圆曲线签名算法原理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码学概述"><span class="nav-number">1.</span> <span class="nav-text">密码学概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要思想"><span class="nav-number">2.</span> <span class="nav-text">主要思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组密码："><span class="nav-number">2.1.</span> <span class="nav-text">分组密码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列密码："><span class="nav-number">2.2.</span> <span class="nav-text">序列密码：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#古典密码"><span class="nav-number">3.</span> <span class="nav-text">古典密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单表替换密码"><span class="nav-number">3.1.</span> <span class="nav-text">单表替换密码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#凯撒密码"><span class="nav-number">3.1.1.</span> <span class="nav-text">凯撒密码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表代换密码"><span class="nav-number">3.2.</span> <span class="nav-text">多表代换密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base64"><span class="nav-number">3.3.</span> <span class="nav-text">base64</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他常用古典密码"><span class="nav-number">3.4.</span> <span class="nav-text">其他常用古典密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现代密码学"><span class="nav-number">4.</span> <span class="nav-text">现代密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">4.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA"><span class="nav-number">4.2.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA-数论基础"><span class="nav-number">4.2.1.</span> <span class="nav-text">RSA-数论基础</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#椭圆曲线"><span class="nav-number">4.3.</span> <span class="nav-text">椭圆曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义椭圆曲线的运算规则"><span class="nav-number">4.3.1.</span> <span class="nav-text">定义椭圆曲线的运算规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数的椭圆曲线"><span class="nav-number">4.3.2.</span> <span class="nav-text">实数的椭圆曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线加密解密原理"><span class="nav-number">4.3.3.</span> <span class="nav-text">椭圆曲线加密解密原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线签名算法原理"><span class="nav-number">4.3.4.</span> <span class="nav-text">椭圆曲线签名算法原理</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
