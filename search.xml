@@ -86,8 +86,8 @@
         <category>CTF</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>pwn</tag>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -110,8 +110,8 @@
         <category>CTF</category>
       </categories>
       <tags>
-        <tag>ISCC</tag>
         <tag>CTF</tag>
+        <tag>ISCC</tag>
       </tags>
   </entry>
 </search>
