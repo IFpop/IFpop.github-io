@@ -95,11 +95,11 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569121723181.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569135788843.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569136396861.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/Users/X1TABLET/AppData/Roaming/Typora/typora-user-images/1569136521562.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569136521562.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569137652632.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569140529945.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/09/22/Bugku-re/1569140989972.png">
-<meta property="og:updated_time" content="2019-09-25T09:13:00.265Z">
+<meta property="og:updated_time" content="2019-10-10T14:29:15.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bugku-re">
 <meta name="twitter:description" content="游戏过关这是一道exe逆向问题，而网上大多教程都是用OD解题，此时我对OD的使用情况并不是特别的熟练，尝试用ida进行解题。 用ida打开，  尝试找到main函数，可以i搜索，在function中用CTRL+F进行搜索：  查看main函数：  读完函数逻辑，查看其中的if-else判断，经逐个测试，发现最终会进入到： 顺着思路，发现sub_45E940函数，打开查看逻辑： 1234567891">
@@ -464,7 +464,7 @@
 <h1 id="love"><a href="#love" class="headerlink" title="love"></a>love</h1><p>下载下来发现一个reverse_3.exe文件，运行之后提示“没有相应的动态链接库”，查看文件类型</p>
 <p><img src="/2019/09/22/Bugku-re/1569136396861.png" alt="1569136396861"></p>
 <p>用ida打开，找到相应main函数的地方进行反编译，</p>
-<p><img src="/2019/09/22/Bugku-re/Users\X1TABLET\AppData\Roaming\Typora\typora-user-images\1569136521562.png" alt="1569136521562"></p>
+<p><img src="/2019/09/22/Bugku-re/1569136521562.png" alt="1569136521562"></p>
 <p>输入接收是通过一个函数来实现的，点入查看，发现有一串函数连续调用，然后查看一些字符串，得到，发现：</p>
 <p><img src="/2019/09/22/Bugku-re/1569137652632.png" alt="1569137652632"></p>
 <p>怀疑上面的函数是经过base64加密而成，然后进行其他运算，最后与<code>e3nifIH9b_C@n@dH</code>进行比较，可得到相应flag，所以我们进行逆向：</p>
