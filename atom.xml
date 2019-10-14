@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-10-10T14:29:15.195Z</updated>
+  <updated>2019-10-14T14:37:04.045Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HDU_Problem_exercise</title>
+    <link href="https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/"/>
+    <id>https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/</id>
+    <published>2019-10-14T13:14:51.000Z</published>
+    <updated>2019-10-14T14:37:04.045Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;又开始捡起自己的算法练习篇~~&lt;/p&gt;
+&lt;h1 id=&quot;1006-Tick-and-Tick&quot;&gt;&lt;a href=&quot;#1006-Tick-and-Tick&quot; class=&quot;headerlink&quot; title=&quot;1006  Tick and Tick&quot;&gt;&lt;/a&gt;1006 &lt;a 
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://IFpop.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="HDU" scheme="https://IFpop.github.io/tags/HDU/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RoarCTF2019</title>
+    <link href="https://IFpop.github.io/2019/10/12/RoarCTF2019/"/>
+    <id>https://IFpop.github.io/2019/10/12/RoarCTF2019/</id>
+    <published>2019-10-12T02:51:26.000Z</published>
+    <updated>2019-10-12T02:52:01.325Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Bugku-re</title>
