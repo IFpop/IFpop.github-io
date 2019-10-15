@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-10-14T14:37:04.045Z</updated>
+  <updated>2019-10-15T12:21:11.022Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第十届极客大挑战</title>
+    <link href="https://IFpop.github.io/2019/10/15/%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98/"/>
+    <id>https://IFpop.github.io/2019/10/15/第十届极客大挑战/</id>
+    <published>2019-10-15T11:49:59.000Z</published>
+    <updated>2019-10-15T12:21:11.022Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Web&quot;&gt;&lt;a href=&quot;#Web&quot; class=&quot;headerlink&quot; title=&quot;Web&quot;&gt;&lt;/a&gt;Web&lt;/h1&gt;&lt;h1 id=&quot;Misc&quot;&gt;&lt;a href=&quot;#Misc&quot; class=&quot;headerlink&quot; title=&quot;Misc&quot;&gt;&lt;/a&gt;Mis
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="Contest" scheme="https://IFpop.github.io/tags/Contest/"/>
+    
+  </entry>
   
   <entry>
     <title>HDU_Problem_exercise</title>
