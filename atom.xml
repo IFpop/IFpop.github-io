@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-10-15T12:21:11.022Z</updated>
+  <updated>2019-10-16T05:11:04.184Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>learn_pwn</title>
+    <link href="https://IFpop.github.io/2019/10/16/learn-pwn/"/>
+    <id>https://IFpop.github.io/2019/10/16/learn-pwn/</id>
+    <published>2019-10-16T04:57:40.000Z</published>
+    <updated>2019-10-16T05:11:04.184Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Checksec&quot;&gt;&lt;a href=&quot;#Checksec&quot; class=&quot;headerlink&quot; title=&quot;Checksec&quot;&gt;&lt;/a&gt;Checksec&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;这是&lt;code&gt;pwntools&lt;/code&gt;附带的一个工具，检测
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="learn" scheme="https://IFpop.github.io/tags/learn/"/>
+    
+  </entry>
   
   <entry>
     <title>第十届极客大挑战</title>

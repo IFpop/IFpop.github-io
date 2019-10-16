@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="HDU,">
+  <meta name="keywords" content="pwn,learn,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="又开始捡起自己的算法练习篇~~ 1006  Tick and TickProblem Description 1The three hands of the clock are rotating every second and meeting each other many times everyday. Finally, they get bored of this and each of t">
-<meta name="keywords" content="HDU">
+<meta name="description" content="Checksec 这是pwntools附带的一个工具，检测elf运行于哪个平台，开启了什么安全措施，如果用gcc的编译后，默认会开启所有的安全措施  1Arch:     amd64-64-little                                                             	 RELRO:    Full RELRO">
+<meta name="keywords" content="pwn,learn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU_Problem_exercise">
-<meta property="og:url" content="https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/index.html">
+<meta property="og:title" content="learn_pwn">
+<meta property="og:url" content="https://IFpop.github.io/2019/10/16/learn-pwn/index.html">
 <meta property="og:site_name" content="IFpop">
-<meta property="og:description" content="又开始捡起自己的算法练习篇~~ 1006  Tick and TickProblem Description 1The three hands of the clock are rotating every second and meeting each other many times everyday. Finally, they get bored of this and each of t">
+<meta property="og:description" content="Checksec 这是pwntools附带的一个工具，检测elf运行于哪个平台，开启了什么安全措施，如果用gcc的编译后，默认会开启所有的安全措施  1Arch:     amd64-64-little                                                             	 RELRO:    Full RELRO">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-14T14:37:04.045Z">
+<meta property="og:updated_time" content="2019-10-16T05:11:04.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU_Problem_exercise">
-<meta name="twitter:description" content="又开始捡起自己的算法练习篇~~ 1006  Tick and TickProblem Description 1The three hands of the clock are rotating every second and meeting each other many times everyday. Finally, they get bored of this and each of t">
+<meta name="twitter:title" content="learn_pwn">
+<meta name="twitter:description" content="Checksec 这是pwntools附带的一个工具，检测elf运行于哪个平台，开启了什么安全措施，如果用gcc的编译后，默认会开启所有的安全措施  1Arch:     amd64-64-little                                                             	 RELRO:    Full RELRO">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/">
+  <link rel="canonical" href="https://IFpop.github.io/2019/10/16/learn-pwn/">
 
 
 
 
 
-  <title>HDU_Problem_exercise | IFpop</title>
+  <title>learn_pwn | IFpop</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/">
+    <link itemprop="mainEntityOfPage" href="https://IFpop.github.io/2019/10/16/learn-pwn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IFpop">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HDU_Problem_exercise</h1>
+          <h1 class="post-title" itemprop="name headline">learn_pwn</h1>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-14T21:14:51+08:00">
-                2019-10-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-16T12:57:40+08:00">
+                2019-10-16
               </time>
             
 
@@ -355,8 +355,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
                   </a>
                 </span>
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.5k 字
+                  354 字
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  7 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -428,33 +428,40 @@
       
 
       
-        <p>又开始捡起自己的算法练习篇~~</p>
-<h1 id="1006-Tick-and-Tick"><a href="#1006-Tick-and-Tick" class="headerlink" title="1006  Tick and Tick"></a>1006 <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1006" target="_blank" rel="noopener"> Tick and Tick</a></h1><p><strong>Problem Description</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The three hands of the clock are rotating every second and meeting each other many times everyday. Finally, they get bored of this and each of them would like to stay away from the other two. A hand is happy if it is at least D degrees from any of the rest. You are to calculate how much time in a day that all the hands are happy.</span><br></pre></td></tr></table></figure>
-<p><strong>Input</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The input contains many test cases. Each of them has a single line with a real number D between 0 and 120, inclusively. The input is terminated with a D of -1.</span><br></pre></td></tr></table></figure>
-<p><strong>Output</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">For each D, print in a single line the percentage of time in a day that all of the hands are happy, accurate up to 3 decimal places.</span><br></pre></td></tr></table></figure>
-<p><strong>Sample Input</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">120</span><br><span class="line">90</span><br><span class="line">-1</span><br></pre></td></tr></table></figure>
-<p><strong>Sample Output</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">100.000</span><br><span class="line">0.000</span><br><span class="line">6.251</span><br></pre></td></tr></table></figure>
-<p><strong>题意：</strong> 时钟的三个指针，在他们之间的角度大于D度时，可以认为是happy，求一天中的happy时间占的百分比</p>
-<p><strong>分析：</strong>由于12小时后，时针、分针、看到这个首先想到的追击与相遇问题，我们可以将时、分、秒针的速度统一单位，然后可以求出相对速度。得到相对速度之后单独对两个针分析(由于是三个角度都需要大于D)，由此得到两针相差一度所需要的时间，那么最晚达到D度和最早结束D度之间的区间时间就是<code>happy-time</code>，然后就考虑周期的问题，但最早结束的应该转到下一个满足条件状态（加上一个周期)。最后记得我们是勇12小时来计算的，即43200s</p>
-<p><strong>代码</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span> a,<span class="keyword">double</span> b,<span class="keyword">double</span> c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a&gt;b?(a&gt;c?a:c):(b&gt;c?b:c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">min</span><span class="params">(<span class="keyword">double</span> a,<span class="keyword">double</span> b,<span class="keyword">double</span> c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a&lt;b?(a&lt;c?a:c):(b&lt;c?b:c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> d; <span class="comment">//需要间隔的度数</span></span><br><span class="line">	<span class="keyword">double</span> c_sm = <span class="number">3600</span>*<span class="number">1.0</span>/<span class="number">59</span>; </span><br><span class="line">	<span class="keyword">double</span> c_sh = <span class="number">43200</span>*<span class="number">1.0</span>/<span class="number">719</span>;</span><br><span class="line">	<span class="keyword">double</span> c_mh = <span class="number">43200</span>*<span class="number">1.0</span>/<span class="number">11</span>; <span class="comment">//这三行是时针、分针、秒针相遇的周期</span></span><br><span class="line">	<span class="keyword">double</span> sum;</span><br><span class="line">	<span class="keyword">double</span> happys,happye; <span class="comment">//开始happy和结束happy</span></span><br><span class="line">	<span class="keyword">double</span> sm = <span class="number">10</span>*<span class="number">1.0</span>/<span class="number">59</span>;</span><br><span class="line">	<span class="keyword">double</span> sh = <span class="number">120</span>*<span class="number">1.0</span>/<span class="number">719</span>;</span><br><span class="line">	<span class="keyword">double</span> mh = <span class="number">120</span>*<span class="number">1.0</span>/<span class="number">11</span>;  <span class="comment">//这是相差一度需要的时间</span></span><br><span class="line">	<span class="keyword">double</span> d_sm,d_sh,d_mh,not_d_sm,not_d_sh,not_d_mh;<span class="comment">//表示相差d°及以上的时刻和不再相差d°及以上的时刻</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;d)&amp;&amp;d!=<span class="number">-1</span>)&#123;</span><br><span class="line">		sum = <span class="number">0</span>;</span><br><span class="line">		d_sm=sm*d; not_d_sm=c_sm-d_sm;</span><br><span class="line">        d_sh=sh*d; not_d_sh=c_sh-d_sh;</span><br><span class="line">        d_mh=mh*d; not_d_mh=c_mh-d_mh;</span><br><span class="line">        </span><br><span class="line">        happys=max(d_sm,d_sh,d_mh);</span><br><span class="line">        happye=min(not_d_sm,not_d_sh,not_d_mh);  <span class="comment">//happy区间应该选择最晚开始的和最早结束的</span></span><br><span class="line">		<span class="keyword">while</span>(happys&lt;=<span class="number">43200</span>&amp;&amp;happye&lt;=<span class="number">43200</span>)<span class="comment">//43200是时针针转一圈的秒数</span></span><br><span class="line">        &#123;</span><br><span class="line">            happys=max(d_sm,d_sh,d_mh);<span class="comment">//两两之间最后一个满足相差d°及以上的条件视为开始happy时刻</span></span><br><span class="line">            happye=min(not_d_sm,not_d_sh,not_d_mh);<span class="comment">//两两之间第一个不再满足相差d°及以上视为结束happy的时刻</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(happys&lt;happye)</span><br><span class="line">                sum+=happye-happys;<span class="comment">//如果end的时间比start的晚,由sum记录并累积</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(happye==not_d_sm)</span><br><span class="line">            &#123;d_sm+=c_sm;not_d_sm+=c_sm;&#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(happye==not_d_sh)</span><br><span class="line">            &#123;d_sh+=c_sh;not_d_sh+=c_sh;&#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(happye==not_d_mh)</span><br><span class="line">            &#123;d_mh+=c_mh;not_d_mh+=c_mh;&#125;<span class="comment">//happy时间end后最慢的指针要提前一个周期才能让比它快的再次追上</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.3lf\n"</span>,sum/<span class="number">43200</span>*<span class="number">100</span>); </span><br><span class="line">	&#125;		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="1007-Quoit-Design"><a href="#1007-Quoit-Design" class="headerlink" title="1007 Quoit Design"></a>1007 <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1007" target="_blank" rel="noopener">Quoit Design</a></h1><p><strong>Problem Description</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Have you ever played quoit in a playground? Quoit is a game in which flat rings are pitched at some toys, with all the toys encircled awarded.</span><br><span class="line">In the field of Cyberground, the position of each toy is fixed, and the ring is carefully designed so it can only encircle one toy at a time. On the other hand, to make the game look more attractive, the ring is designed to have the largest radius. Given a configuration of the field, you are supposed to find the radius of such a ring.</span><br><span class="line"></span><br><span class="line">Assume that all the toys are points on a plane. A point is encircled by the ring if the distance between the point and the center of the ring is strictly less than the radius of the ring. If two toys are placed at the same point, the radius of the ring is considered to be 0.</span><br></pre></td></tr></table></figure>
-<p><strong>Input</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The input consists of several test cases. For each case, the first line contains an integer N (2 &lt;= N &lt;= 100,000), the total number of toys in the field. Then N lines follow, each contains a pair of (x, y) which are the coordinates of a toy. The input is terminated by N = 0.</span><br></pre></td></tr></table></figure>
-<p><strong>Output</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">For each test case, print in one line the radius of the ring required by the Cyberground manager, accurate up to 2 decimal places.</span><br></pre></td></tr></table></figure>
-<p><strong>Sample Input</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">0 0</span><br><span class="line">1 1</span><br><span class="line">2</span><br><span class="line">1 1</span><br><span class="line">1 1</span><br><span class="line">3</span><br><span class="line">-1.5 0</span><br><span class="line">0 0</span><br><span class="line">0 1.5</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-<p><strong>Sample Output</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0.71</span><br><span class="line">0.00</span><br><span class="line">0.75</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">看完题目发现是个最近点对的问题 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="comment">//定义点的结构体 </span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span>&#123;</span></span><br><span class="line">	<span class="keyword">double</span> x;</span><br><span class="line">	<span class="keyword">double</span> y;</span><br><span class="line">&#125;pt[<span class="number">100007</span>];</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100007</span>];<span class="comment">//可以记录大概满足要求的点的下标 </span></span><br><span class="line"><span class="comment">//对功能进行函数包装</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(Point a,Point b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a.x!=b.x)</span><br><span class="line">		<span class="keyword">return</span> a.x&lt;b.x;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">return</span> a.y&lt;b.y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp_y</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> pt[i].y&lt;pt[j].y;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//获取距离 </span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">getdis</span><span class="params">(Point &amp;a,Point &amp;b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">sqrt</span>((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">//只有两个点就直接输出 </span></span><br><span class="line">	<span class="keyword">if</span>(r-l &lt;= <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//当两个点重合,返回0 </span></span><br><span class="line">		<span class="keyword">if</span>(r-l == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> ans;</span><br><span class="line">		ans = getdis(pt[l],pt[l+<span class="number">1</span>]);</span><br><span class="line">		<span class="comment">//当只有一个点时，返回ans </span></span><br><span class="line">		<span class="keyword">if</span>(r-l == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> ans;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = l ; i &lt;= r ; i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span> ; j &lt;= r ; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				ans = min(ans,getdis(pt[i],pt[j]));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; </span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//剩下就是多个点的问题了 </span></span><br><span class="line">	<span class="keyword">int</span> m = (l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">double</span> temp1 = solve(l,m);</span><br><span class="line">	<span class="keyword">double</span> temp2 = solve(m+<span class="number">1</span>,r);</span><br><span class="line">	ans = min(temp1,temp2);</span><br><span class="line">	<span class="comment">//获取区间中的点，对y坐标进行排序</span></span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = l ; i &lt;= m &amp;&amp; pt[m].x -pt[i].x ; i++)</span><br><span class="line">		a[k++] = i;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j = m+<span class="number">1</span> ; j &lt;= r &amp;&amp; pt[r].x-pt[j].x ; j++)</span><br><span class="line">		a[k++] = j;</span><br><span class="line">	sort(a,a+k,cmp_y);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; k ; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span> ; j &lt; k &amp;&amp; j &lt;= i+<span class="number">7</span> ; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			ans = min(ans,getdis(pt[a[i]],pt[a[j]]));</span><br><span class="line">		&#125;</span><br><span class="line">	 &#125; </span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">	 </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)&amp;&amp;n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;pt[i].x,&amp;pt[i].y);</span><br><span class="line">		&#125;</span><br><span class="line">		sort(pt,pt+n,cmp);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>,solve(<span class="number">0</span>,n<span class="number">-1</span>)*<span class="number">1.0</span>/<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="Checksec"><a href="#Checksec" class="headerlink" title="Checksec"></a>Checksec</h1><blockquote>
+<p>这是<code>pwntools</code>附带的一个工具，检测elf运行于哪个平台，开启了什么安全措施，如果用gcc的编译后，默认会开启所有的安全措施</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arch:     amd64-64-little                                                             	 RELRO:    Full RELRO                                                                     Stack:    No canary found                                                                 NX:       NX enabled                                                                     PIE:      No PIE (0x400000)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>RELRO</code></p>
+<blockquote>
+<p><code>RELRO</code>会有<code>Partial RELRO</code>和<code>FULL RELRO</code>，如果开启<code>FULL RELRO</code>，意味着我们无法修改got表</p>
+</blockquote>
+</li>
+<li><p><code>Stack</code></p>
+<blockquote>
+<p>如果栈中开启<code>Canary found</code>，那么就不能用直接用溢出的方法覆盖栈中返回地址，而且要通过改写指针与局部变量、<code>leak canary</code>、<code>overwrite canary</code>的方法来绕过</p>
+</blockquote>
+</li>
+<li><p><code>NX</code></p>
+<blockquote>
+<p><code>NX enabled</code>如果这个保护开启就是意味着栈中数据没有执行权限，以前的经常用的<code>call esp</code>或者<code>jmp esp</code>的方法就不能使用，但是可以利用<code>rop</code>这种方法绕过</p>
+</blockquote>
+</li>
+<li><p><code>PIE</code></p>
+<blockquote>
+<p><code>PIE enabled</code>如果程序开启这个地址随机化选项就意味着程序每次运行的时候地址都会变化，而如果没有开<code>PIE</code>的话那么<code>No PIE (0x400000)</code>，括号内的数据就是程序的基地址 </p>
+</blockquote>
+</li>
+<li><p><code>FORTIFY</code></p>
+<blockquote>
+<p><code>FORTIFY_SOURCE</code>机制对格式化字符串有两个限制</p>
+<p>(1)包含%n的格式化字符串不能位于程序内存中的可写地址。</p>
+<p>(2)当使用位置参数时，必须使用范围内的所有参数。所以如果要使用%7$x，你必须同时使用1,2,3,4,5和6。</p>
+</blockquote>
+</li>
+<li></li>
+</ul>
 
       
     </div>
@@ -480,7 +487,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HDU/" rel="tag"><i class="fa fa-tag"></i> HDU</a>
+            <a href="/tags/pwn/" rel="tag"><i class="fa fa-tag"></i> pwn</a>
+          
+            <a href="/tags/learn/" rel="tag"><i class="fa fa-tag"></i> learn</a>
           
         </div>
       
@@ -492,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/12/RoarCTF2019/" rel="next" title="RoarCTF2019">
-                <i class="fa fa-chevron-left"></i> RoarCTF2019
+              <a href="/2019/10/15/第十届极客大挑战/" rel="next" title="第十届极客大挑战">
+                <i class="fa fa-chevron-left"></i> 第十届极客大挑战
               </a>
             
           </div>
@@ -501,10 +510,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/15/第十届极客大挑战/" rel="prev" title="第十届极客大挑战">
-                第十届极客大挑战 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -684,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1006-Tick-and-Tick"><span class="nav-number">1.</span> <span class="nav-text">1006  Tick and Tick</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1007-Quoit-Design"><span class="nav-number">2.</span> <span class="nav-text">1007 Quoit Design</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Checksec"><span class="nav-number">1.</span> <span class="nav-text">Checksec</span></a></li></ol></div>
             
 
           </div>
@@ -906,7 +911,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitment({
-            id: '1571058891000', 
+            id: '1571201860000', 
             owner: 'IFpop',
             repo: 'blog-comments',
             
