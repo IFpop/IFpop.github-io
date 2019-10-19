@@ -47,7 +47,7 @@
     <link href="https://IFpop.github.io/2019/10/15/%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98/"/>
     <id>https://IFpop.github.io/2019/10/15/第十届极客大挑战/</id>
     <published>2019-10-15T11:49:59.000Z</published>
-    <updated>2019-10-15T12:21:11.022Z</updated>
+    <updated>2019-10-17T15:18:15.160Z</updated>
     
     <summary type="html">
     
@@ -70,7 +70,7 @@
     <link href="https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/"/>
     <id>https://IFpop.github.io/2019/10/14/HDU-Problem-exercise/</id>
     <published>2019-10-14T13:14:51.000Z</published>
-    <updated>2019-10-16T13:43:58.189Z</updated>
+    <updated>2019-10-17T15:38:17.157Z</updated>
     
     <summary type="html">
     
@@ -94,17 +94,22 @@
     <link href="https://IFpop.github.io/2019/10/12/RoarCTF2019/"/>
     <id>https://IFpop.github.io/2019/10/12/RoarCTF2019/</id>
     <published>2019-10-12T02:51:26.000Z</published>
-    <updated>2019-10-12T02:52:01.325Z</updated>
+    <updated>2019-10-19T15:09:52.280Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+        &lt;p&gt;这次roarCTF就简单看了看两道RSA的题目，感觉还是有新意的，现在特地记录一下&lt;/p&gt;
+&lt;h1 id=&quot;easyrsa&quot;&gt;&lt;a href=&quot;#easyrsa&quot; class=&quot;headerlink&quot; title=&quot;easyrsa&quot;&gt;&lt;/a&gt;easyrsa&lt;/h1&gt;&lt;fig
       
     
     </summary>
     
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
     
   </entry>
   
@@ -297,9 +302,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
