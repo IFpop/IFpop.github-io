@@ -118,13 +118,14 @@
     <link href="https://IFpop.github.io/2019/09/22/Bugku-re/"/>
     <id>https://IFpop.github.io/2019/09/22/Bugku-re/</id>
     <published>2019-09-22T02:57:01.000Z</published>
-    <updated>2019-10-10T14:29:15.195Z</updated>
+    <updated>2019-10-20T16:17:17.077Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;游戏过关&quot;&gt;&lt;a href=&quot;#游戏过关&quot; class=&quot;headerlink&quot; title=&quot;游戏过关&quot;&gt;&lt;/a&gt;游戏过关&lt;/h1&gt;&lt;p&gt;这是一道exe逆向问题，而网上大多教程都是用OD解题，此时我对OD的使用情况并不是特别的熟练，尝试用ida进行解题。&lt;/p&gt;
+        &lt;h1 id=&quot;入门逆向&quot;&gt;&lt;a href=&quot;#入门逆向&quot; class=&quot;headerlink&quot; title=&quot;入门逆向&quot;&gt;&lt;/a&gt;入门逆向&lt;/h1&gt;&lt;p&gt;下载下来，查看一下文件类型：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/09/22/Bugku-re/156882631
       
     
     </summary>
@@ -141,7 +142,7 @@
     <link href="https://IFpop.github.io/2019/09/16/bugku-Misc/"/>
     <id>https://IFpop.github.io/2019/09/16/bugku-Misc/</id>
     <published>2019-09-16T06:41:04.000Z</published>
-    <updated>2019-10-20T16:05:51.654Z</updated>
+    <updated>2019-10-20T16:11:46.330Z</updated>
     
     <summary type="html">
     
@@ -302,9 +303,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
@@ -353,9 +354,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
     
   </entry>
   
