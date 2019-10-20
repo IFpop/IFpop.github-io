@@ -141,7 +141,7 @@
     <link href="https://IFpop.github.io/2019/09/16/bugku-Misc/"/>
     <id>https://IFpop.github.io/2019/09/16/bugku-Misc/</id>
     <published>2019-09-16T06:41:04.000Z</published>
-    <updated>2019-09-16T18:01:01.499Z</updated>
+    <updated>2019-10-20T16:05:51.654Z</updated>
     
     <summary type="html">
     
@@ -302,9 +302,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
   </entry>
   
