@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/653357-20180517203251515-632006721.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-a86714ce11f5ffad.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-9016223b743a410e.png">
-<meta property="og:updated_time" content="2019-10-11T10:30:59.253Z">
+<meta property="og:updated_time" content="2019-10-20T10:15:54.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码学基础">
 <meta name="twitter:description" content="密码学概述 密码：认证以及 保证通信信息的完整性、机密性  认证： 便于授权以及管理  机密性：为了防止信息被窃听，因此需要对信息进行加密，对应的密码技术主要就是对称加密和非对称加密。  完整性：为了防止信息被篡改，因此需要对信息进行完整性校验，对应的密码技术有单向散列函数、消息认证码、数字签名。  不可否认性：为了防止发送者发布信息后否认自己发布过，因此需要证据来证明信息是否由发送者发布，对应的">
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.7k 字
+                  1.9k 字
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  6 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -531,12 +531,26 @@
 </li>
 <li><p>定理 ： 如果两个正整数a和n互质，那么一定可以找到整数b，使得<code>ab-1</code>被n整除，或者说ab被n除的余数是1</p>
 </li>
-<li><p>扩展欧几里得(<code>egcd</code>)</p>
+<li><p>取模运算与同余的概念</p>
 <blockquote>
-<p>已知a, b求解一组x，y，使它们满足<code>ax+by = gcd(a, b) =d</code></p>
+<p>如果存在一个正整数m与两个整数a,b，如果a-b能够被m整除，也就是说m|(a-b),那么a和b模m同余。记为：<br>$$<br>a \equiv b \quad mod(m)<br>$$</p>
 </blockquote>
 </li>
+<li><p>模指数运算</p>
+<blockquote>
+<p>模指数运算即先进行指数运算，之后再进行取模运算。<br>$$<br>a \equiv b^c \quad mod(m)<br>$$</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python代码</span></span><br><span class="line">pow(b,c,m)</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+<li><p>扩展欧几里得(<code>egcd</code>)</p>
+<blockquote>
+<p>已知a, b求解一组x，y，使它们满足<code>ax+by = gcd(a, b)</code></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现代码：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extendedGCD</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="comment">#a*xi + b*yi = ri</span></span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">1</span>, <span class="number">0</span>, a)</span><br><span class="line">    <span class="comment">#a*x1 + b*y1 = a</span></span><br><span class="line">    x1 = <span class="number">1</span></span><br><span class="line">    y1 = <span class="number">0</span></span><br><span class="line">    <span class="comment">#a*x2 + b*y2 = b</span></span><br><span class="line">    x2 = <span class="number">0</span></span><br><span class="line">    y2 = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line">        q = a / b</span><br><span class="line">        <span class="comment">#ri = r(i-2) % r(i-1)</span></span><br><span class="line">        r = a % b</span><br><span class="line">        a = b</span><br><span class="line">        b = r</span><br><span class="line">        <span class="comment">#xi = x(i-2) - q*x(i-1)</span></span><br><span class="line">        x = x1 - q*x2</span><br><span class="line">        x1 = x2</span><br><span class="line">        x2 = x</span><br><span class="line">        <span class="comment">#yi = y(i-2) - q*y(i-1)</span></span><br><span class="line">        y = y1 - q*y2</span><br><span class="line">        y1 = y2</span><br><span class="line">        y2 = y</span><br><span class="line">    <span class="keyword">return</span>(x1, y1, a)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>#### </p>
 <h3 id="椭圆曲线"><a href="#椭圆曲线" class="headerlink" title="椭圆曲线"></a>椭圆曲线</h3><p>椭圆曲线加密算法，即：Elliptic Curve Cryptography，简称ECC，是基于椭圆曲线数学理论实现的一种非对称加密算法。相比RSA，ECC优势是可以使用更短的密钥，来实现与RSA相当或更高的安全。据研究，160位ECC加密安全性相当于1024位RSA加密，210位ECC加密安全性相当于2048位RSA加密。</p>
 <ul>
 <li><p>椭圆曲线的一般方程为<br>$$<br>y^2 = x^3+ax^2+b^2+c<br>$$</p>
