@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-10-16T05:11:04.184Z</updated>
+  <updated>2019-10-21T09:21:37.980Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RSA-集锦</title>
+    <link href="https://IFpop.github.io/2019/10/21/RSA-%E9%9B%86%E9%94%A6/"/>
+    <id>https://IFpop.github.io/2019/10/21/RSA-集锦/</id>
+    <published>2019-10-21T09:19:25.000Z</published>
+    <updated>2019-10-21T09:21:37.980Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;爆破&quot;&gt;&lt;a href=&quot;#爆破&quot; class=&quot;headerlink&quot; title=&quot;爆破&quot;&gt;&lt;/a&gt;爆破&lt;/h1&gt;&lt;h2 id=&quot;分解模数N&quot;&gt;&lt;a href=&quot;#分解模数N&quot; class=&quot;headerlink&quot; title=&quot;分解模数N&quot;&gt;&lt;/a&gt;分解模数
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
+    
+      <category term="RSA" scheme="https://IFpop.github.io/tags/RSA/"/>
+    
+  </entry>
   
   <entry>
     <title>learn_pwn</title>
@@ -263,13 +288,13 @@
     <link href="https://IFpop.github.io/2019/07/24/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
     <id>https://IFpop.github.io/2019/07/24/密码学基础/</id>
     <published>2019-07-24T01:39:20.000Z</published>
-    <updated>2019-10-20T10:15:54.496Z</updated>
+    <updated>2019-10-21T09:16:18.592Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;密码学概述&quot;&gt;&lt;a href=&quot;#密码学概述&quot; class=&quot;headerlink&quot; title=&quot;密码学概述&quot;&gt;&lt;/a&gt;密码学概述&lt;/h2&gt;&lt;ul&gt;
+        &lt;h1 id=&quot;密码学概述&quot;&gt;&lt;a href=&quot;#密码学概述&quot; class=&quot;headerlink&quot; title=&quot;密码学概述&quot;&gt;&lt;/a&gt;密码学概述&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;密码&lt;/strong&gt;：认证以及 保证通信信息的完整性、机密性&lt;/p&gt;
 &lt;/li&gt;
       
@@ -303,9 +328,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
   </entry>
   
@@ -354,9 +379,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   

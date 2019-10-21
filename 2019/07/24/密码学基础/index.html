@@ -91,10 +91,11 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/1563243840970.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/1563247882630.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/Users/96552/AppData/Roaming/Typora/typora-user-images/1571643287267.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/653357-20180517203251515-632006721.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-a86714ce11f5ffad.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-9016223b743a410e.png">
-<meta property="og:updated_time" content="2019-10-20T10:15:54.496Z">
+<meta property="og:updated_time" content="2019-10-21T09:16:18.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码学基础">
 <meta name="twitter:description" content="密码学概述 密码：认证以及 保证通信信息的完整性、机密性  认证： 便于授权以及管理  机密性：为了防止信息被窃听，因此需要对信息进行加密，对应的密码技术主要就是对称加密和非对称加密。  完整性：为了防止信息被篡改，因此需要对信息进行完整性校验，对应的密码技术有单向散列函数、消息认证码、数字签名。  不可否认性：为了防止发送者发布信息后否认自己发布过，因此需要证据来证明信息是否由发送者发布，对应的">
@@ -397,7 +398,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.9k 字
+                  3k 字
                 </span>
               
 
@@ -413,7 +414,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  7 分钟
+                  12 分钟
                 </span>
               
             </div>
@@ -434,7 +435,7 @@
       
 
       
-        <h2 id="密码学概述"><a href="#密码学概述" class="headerlink" title="密码学概述"></a>密码学概述</h2><ul>
+        <h1 id="密码学概述"><a href="#密码学概述" class="headerlink" title="密码学概述"></a>密码学概述</h1><ul>
 <li><p><strong>密码</strong>：认证以及 保证通信信息的完整性、机密性</p>
 </li>
 <li><p><strong>认证</strong>： 便于授权以及管理</p>
@@ -508,7 +509,7 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h3><h4 id="RSA-数论基础"><a href="#RSA-数论基础" class="headerlink" title="RSA-数论基础"></a>RSA-数论基础</h4><ul>
+<h3 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a><code>RSA</code></h3><h4 id="RSA-数论基础"><a href="#RSA-数论基础" class="headerlink" title="RSA-数论基础"></a><code>RSA</code>-数论基础</h4><ul>
 <li><p>互质</p>
 <blockquote>
 <p> 如果两个正整数，除了1以外，没有其他公因子，我们就称这两个数是互质关系</p>
@@ -542,15 +543,116 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python代码</span></span><br><span class="line">pow(b,c,m)</span><br></pre></td></tr></table></figure>
 </li>
-<li></li>
 <li><p>扩展欧几里得(<code>egcd</code>)</p>
 <blockquote>
-<p>已知a, b求解一组x，y，使它们满足<code>ax+by = gcd(a, b)</code></p>
+<p>已知a, b求解一组x，y，使它们满足<code>ax+by = gcd(a, b)</code>，这是一个递归的实现方式</p>
+<p>简单的证明过程:</p>
+<p>设<code>a&gt;b</code></p>
+<ol>
+<li><p>当<code>b = 0</code>时，<code>gcd(a,b) = a</code></p>
+<p>此时 <code>x = 1 , y = 0</code></p>
+</li>
+<li><p>当<code>b&gt;0</code>时</p>
+<p>由贝祖等式可知：</p>
+<p>​    对于<code>a,b</code>的解为<code>x1,y1</code>，我们有：<br>$$<br>a<em>x_1 + b</em>y_1 = gcd(a,b)<br>$$<br>​    对于<code>b,a%b</code>的解为<code>x2，y2</code>，我们有：<br>$$<br>b<em>x_2 + (a\%b)</em>y_2 = gcd(b,a\%b)<br>$$<br>由欧几里得算法可知：<br>$$<br>gcd(a,b) = gcd(b,a\%b)<br>$$<br>所以：<br>$$<br>a<em>x_1 + b</em>y_1 = b<em>x_2 + (a\%b)</em>y_2<br>$$<br>又：<br>$$<br>a\%b =a-\lfloor \frac{a}{b}\rfloor<em>b<br>$$<br>故：<br>$$<br>a</em>x_1 + b<em>y_1 = b</em>x_2 + (a-\lfloor \frac{a}{b} \rfloor<em>b)</em>y_2 \<br>a<em>x_1 + b</em>y_1 = a<em>y_2 + (x_2-\lfloor \frac{a}{b} \rfloor</em>y_2)<em>b<br>$$<br>所以：<br>$$<br>\begin{array}{</em>{20}{l}}</p>
+<p>{ \left{ \begin{array}{<em>{20}{c}}<br>{x_1 = y_2 }\<br>{y_1 = x_2-\lfloor \frac{a}{b} \rfloor</em>y_2 }\<br>\end{array}\right. }\<br>\end{array}<br>$$<br>进行递归求解，最终可以得到<code>x1，y1</code>,扩展欧几里得算法一般用来求模逆，如求解<br>$$<br>28^{-1}mod75<br>$$<br>最终的结果是:<br>$$<br>3<em>75-8</em>28=1<br>$$<br>所以此时<code>x1=3,y1=-8</code>但在模75范围内，<code>y1=75-8=67</code></p>
+<p>后续利用扩展欧几里得和下列公式求解d。<br>$$<br>e*d \equiv = 1 mod(\varphi(n))<br>$$</p>
+</li>
+</ol>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现代码：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extendedGCD</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="comment">#a*xi + b*yi = ri</span></span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">1</span>, <span class="number">0</span>, a)</span><br><span class="line">    <span class="comment">#a*x1 + b*y1 = a</span></span><br><span class="line">    x1 = <span class="number">1</span></span><br><span class="line">    y1 = <span class="number">0</span></span><br><span class="line">    <span class="comment">#a*x2 + b*y2 = b</span></span><br><span class="line">    x2 = <span class="number">0</span></span><br><span class="line">    y2 = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line">        q = a / b</span><br><span class="line">        <span class="comment">#ri = r(i-2) % r(i-1)</span></span><br><span class="line">        r = a % b</span><br><span class="line">        a = b</span><br><span class="line">        b = r</span><br><span class="line">        <span class="comment">#xi = x(i-2) - q*x(i-1)</span></span><br><span class="line">        x = x1 - q*x2</span><br><span class="line">        x1 = x2</span><br><span class="line">        x2 = x</span><br><span class="line">        <span class="comment">#yi = y(i-2) - q*y(i-1)</span></span><br><span class="line">        y = y1 - q*y2</span><br><span class="line">        y1 = y2</span><br><span class="line">        y2 = y</span><br><span class="line">    <span class="keyword">return</span>(x1, y1, a)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>#### </p>
+<h4 id="RSA加密解密原理"><a href="#RSA加密解密原理" class="headerlink" title="RSA加密解密原理"></a><code>RSA</code>加密解密原理</h4><h5 id="常见变量含义"><a href="#常见变量含义" class="headerlink" title="常见变量含义"></a>常见变量含义</h5><blockquote>
+<p><code>n</code>: 大整数，我们称之为模数<code>(modulus)</code></p>
+<p><code>p,q</code>:大整数的两个素因数<code>(factor),n = p*q</code></p>
+<p><code>e,d</code>:互为模反的两个数，其中<code>{e,n}</code>构成公钥，<code>{d,n}</code>构成私钥</p>
+<p><code>c,m</code>:<code>c = pow(m, e, N)</code>，得到的c即为密文,<code>m = pow(c, d, N)</code>，得到的m即为明文</p>
+</blockquote>
+<h5 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h5><blockquote>
+<ol>
+<li><p>选择两个大素数<code>p和q</code>，<code>n = p*q</code></p>
+</li>
+<li><p>选择一个整数e，满足条件<br>$$<br>1 &lt; e &lt; \varphi(n)\<br>gcd(e,\varphi(n)) = 1<br>$$</p>
+</li>
+<li><p>其中<code>{e,n}</code>是公钥，<code>{d,n}</code>是私钥</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="RSA安全性保障"><a href="#RSA安全性保障" class="headerlink" title="RSA安全性保障"></a>RSA安全性保障</h5><blockquote>
+<ol>
+<li><p>e的选择不可以太小，否则可能会被爆破</p>
+</li>
+<li><p>p和q的差值尽可能大一点</p>
+</li>
+<li><p>d的选择不能太小，也不能太大，一般满足<br>$$<br>d\ge n^{\frac{1}{4}}<br>$$</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="基本的攻击方法"><a href="#基本的攻击方法" class="headerlink" title="基本的攻击方法"></a>基本的攻击方法</h5><blockquote>
+<p><a href="https://www.freebuf.com/articles/others-articles/161475.html" target="_blank" rel="noopener">基本题型</a></p>
+</blockquote>
+<h4 id="变种RSA"><a href="#变种RSA" class="headerlink" title="变种RSA"></a>变种<code>RSA</code></h4><h5 id="Rabin算法"><a href="#Rabin算法" class="headerlink" title="Rabin算法"></a>Rabin算法</h5><blockquote>
+<p><code>e = 2</code>，与<code>RSA</code>类似但这个函数不是单射，一个密文能解出4个明文</p>
+<ol>
+<li><p>取两个大素数p与q，使得p≡q≡3(mod 4)(保证为奇素数)</p>
+</li>
+<li><p>加密：<br>$$<br>c=m^2 \quad mod( n)<br>$$</p>
+</li>
+<li><p>解密：<br>$$<br>m^2≡c \quad mod( n)<br>$$</p>
+</li>
+</ol>
+</blockquote>
+<h6 id="理论基础："><a href="#理论基础：" class="headerlink" title="理论基础："></a>理论基础：</h6><ul>
+<li><p>二次剩余</p>
+<blockquote>
+<p>$$<br>对于式子y^2 = a \quad mod \quad p,称a是y模p的二次剩余<br>$$</p>
+</blockquote>
+</li>
+<li><p><code>Euler准则</code></p>
+<blockquote>
+<p>设p为一个奇素数，a是一个正整数。那么a是一个模p二次剩余当且仅当<br>$$<br>a^{\frac{p-1}{2}} \equiv 1\ (mod\ p)<br>$$<br>证明：</p>
+<ol>
+<li>充分性</li>
+</ol>
+<p>$$<br>假定a\equiv y^2\ (mod\ p)。由欧拉定理可知（p为素数）a^{p-1} \equiv 1(mod\ p) \<br>对于任一a \ne 0 (mod\ p)成立，所以\qquad\qquad\qquad\qquad\qquad\qquad\qquad\<br>a^{\frac{p-1}{2}} \equiv (y^2)^{\frac{p-1}{2}}(mod\ p)\quad \<br>\equiv y^{p-1}(mod\ p) \<br>\equiv 1(mod\ p) \quad \<br>$$</p>
+<ol start="2">
+<li>必要性</li>
+</ol>
+<p>$$<br>假定a^{\frac{p-1}{2}}\equiv1(mod\ p)。设b是一个模p的元素。那么a\equiv b^i(mod\ p)对于\<br>某个整数i，我们有\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\ \ \<br>a^{\frac{p-1}{2}}\equiv(b^i)^{\frac{p-1}{2}}(mod\ p) \quad \quad\<br>\equiv b^{i(\frac{p-1}{2})}(mod\ p) \<br>由欧拉定理可知，此时i应该为偶数，所以a的平方根为\pm b^{\frac{i}{2}}(mod\ p )\quad\ \<br>$$</p>
+</blockquote>
+</li>
+<li><p>p,q要求<br>$$<br>当p \equiv 3\ (mod\ 4)时，有以下公式：\qquad\qquad \qquad\qquad\quad \qquad\qquad\quad \qquad\qquad\quad \qquad\qquad\quad\<br>(\pm \ y^{\frac{p+1}{4}})^2 \equiv y^{\frac{p+1}{2}}(mod\ p) \qquad\qquad\quad \quad \<br>\equiv y^{\frac{p-1}{2}}*y(mod\ p) \ \<br>\equiv y(mod\ p) \qquad \ \ \ \<br>$$</p>
+</li>
+<li><p>中国剩余定理</p>
+<blockquote>
+<p>用于求解同余方程组</p>
+</blockquote>
+<p><img src="/2019/07/24/密码学基础/Users\96552\AppData\Roaming\Typora\typora-user-images\1571643287267.png" alt="1571643287267"></p>
+</li>
+</ul>
+<h6 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h6><p>$$<br>y模p的两个平方根为\pm y^{\frac{p+1}{4}}(mod\ p) \<br>y模q的两个平方根为\pm y^{\frac{q+1}{4}}(mod\ q)<br>$$</p>
+<p>由欧拉公式可求解<code>p</code>关于<code>q</code>的模逆以及<code>q</code>关于<code>p</code>的模逆：<br>$$<br>y_p <em> p+y_q</em>q = 1<br>$$<br>由中国剩余定理可知：<br>$$<br>r = (yp <em> p </em> mq + yq <em> q </em> mp)\ mod\ n \</p>
+<p>-r = n - r \qquad \qquad \qquad \qquad \qquad \qquad\</p>
+<p>s = (yp <em> p </em> mq - yq <em> q </em> mp)\ mod\ n \</p>
+<p>-s = n - s \qquad \qquad \qquad \qquad \qquad \qquad \<br>$$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现脚本</span></span><br><span class="line"><span class="comment">#参数待定</span></span><br><span class="line">c = </span><br><span class="line">p = </span><br><span class="line">q = </span><br><span class="line">n = p*q</span><br><span class="line"> </span><br><span class="line">mp = pow(c,(p+<span class="number">1</span>)/<span class="number">4</span>,p)</span><br><span class="line">mq = pow(c,(q+<span class="number">1</span>)/<span class="number">4</span>,q)</span><br><span class="line"><span class="comment">#使用gmpy的库求模逆，也可以手写扩展欧几里得算法求模逆</span></span><br><span class="line">yp = gmpy.invert(p,q)</span><br><span class="line">yq = gmpy.invert(q,p)</span><br><span class="line"> </span><br><span class="line">a = (yp*p*mq + yq*q*mp)%n</span><br><span class="line">b = n - int(a)</span><br><span class="line">c = (yp*p*mq - yq*q*mp)%n</span><br><span class="line">d = n - int(c)</span><br></pre></td></tr></table></figure>
+<h5 id="三素数RSA"><a href="#三素数RSA" class="headerlink" title="三素数RSA"></a>三素数<code>RSA</code></h5><blockquote>
+<ol>
+<li>取三个素数<code>p,q,r</code></li>
+<li>计算<code>n=p*q*r</code></li>
+<li>计算欧拉函数</li>
+</ol>
+<p>$$<br>\varphi{n} = (p-1)<em>(q-1)</em>(r-1)<br>$$</p>
+<ol start="4">
+<li>选择一个e值，满足：</li>
+</ol>
+<p>$$<br>1 &lt; e &lt; \varphi(n)\<br>gcd(e,\varphi(n)) = 1<br>$$</p>
+<ol start="5">
+<li>计算d值，<br>$$<br>e*d \equiv 1 \quad mod(\varphi(n))<br>$$</li>
+</ol>
+</blockquote>
+<p><a href="https://wenku.baidu.com/view/02c064056bd97f192279e9ed.html" target="_blank" rel="noopener">正确性证明</a></p>
 <h3 id="椭圆曲线"><a href="#椭圆曲线" class="headerlink" title="椭圆曲线"></a>椭圆曲线</h3><p>椭圆曲线加密算法，即：Elliptic Curve Cryptography，简称ECC，是基于椭圆曲线数学理论实现的一种非对称加密算法。相比RSA，ECC优势是可以使用更短的密钥，来实现与RSA相当或更高的安全。据研究，160位ECC加密安全性相当于1024位RSA加密，210位ECC加密安全性相当于2048位RSA加密。</p>
 <ul>
 <li><p>椭圆曲线的一般方程为<br>$$<br>y^2 = x^3+ax^2+b^2+c<br>$$</p>
@@ -729,7 +831,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -751,7 +853,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -825,7 +927,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码学概述"><span class="nav-number">1.</span> <span class="nav-text">密码学概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要思想"><span class="nav-number">2.</span> <span class="nav-text">主要思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组密码："><span class="nav-number">2.1.</span> <span class="nav-text">分组密码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列密码："><span class="nav-number">2.2.</span> <span class="nav-text">序列密码：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#古典密码"><span class="nav-number">3.</span> <span class="nav-text">古典密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单表替换密码"><span class="nav-number">3.1.</span> <span class="nav-text">单表替换密码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#凯撒密码"><span class="nav-number">3.1.1.</span> <span class="nav-text">凯撒密码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表代换密码"><span class="nav-number">3.2.</span> <span class="nav-text">多表代换密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base64"><span class="nav-number">3.3.</span> <span class="nav-text">base64</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他常用古典密码"><span class="nav-number">3.4.</span> <span class="nav-text">其他常用古典密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现代密码学"><span class="nav-number">4.</span> <span class="nav-text">现代密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">4.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA"><span class="nav-number">4.2.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA-数论基础"><span class="nav-number">4.2.1.</span> <span class="nav-text">RSA-数论基础</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#椭圆曲线"><span class="nav-number">4.3.</span> <span class="nav-text">椭圆曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义椭圆曲线的运算规则"><span class="nav-number">4.3.1.</span> <span class="nav-text">定义椭圆曲线的运算规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数的椭圆曲线"><span class="nav-number">4.3.2.</span> <span class="nav-text">实数的椭圆曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线加密解密原理"><span class="nav-number">4.3.3.</span> <span class="nav-text">椭圆曲线加密解密原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线签名算法原理"><span class="nav-number">4.3.4.</span> <span class="nav-text">椭圆曲线签名算法原理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#密码学概述"><span class="nav-number">1.</span> <span class="nav-text">密码学概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要思想"><span class="nav-number">1.1.</span> <span class="nav-text">主要思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组密码："><span class="nav-number">1.1.1.</span> <span class="nav-text">分组密码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列密码："><span class="nav-number">1.1.2.</span> <span class="nav-text">序列密码：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#古典密码"><span class="nav-number">1.2.</span> <span class="nav-text">古典密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单表替换密码"><span class="nav-number">1.2.1.</span> <span class="nav-text">单表替换密码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#凯撒密码"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">凯撒密码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表代换密码"><span class="nav-number">1.2.2.</span> <span class="nav-text">多表代换密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base64"><span class="nav-number">1.2.3.</span> <span class="nav-text">base64</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他常用古典密码"><span class="nav-number">1.2.4.</span> <span class="nav-text">其他常用古典密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现代密码学"><span class="nav-number">1.3.</span> <span class="nav-text">现代密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA"><span class="nav-number">1.3.2.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA-数论基础"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">RSA-数论基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA加密解密原理"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">RSA加密解密原理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常见变量含义"><span class="nav-number">1.3.2.2.1.</span> <span class="nav-text">常见变量含义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#生成密钥"><span class="nav-number">1.3.2.2.2.</span> <span class="nav-text">生成密钥</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RSA安全性保障"><span class="nav-number">1.3.2.2.3.</span> <span class="nav-text">RSA安全性保障</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基本的攻击方法"><span class="nav-number">1.3.2.2.4.</span> <span class="nav-text">基本的攻击方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变种RSA"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">变种RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Rabin算法"><span class="nav-number">1.3.2.3.1.</span> <span class="nav-text">Rabin算法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#理论基础："><span class="nav-number">1.3.2.3.1.1.</span> <span class="nav-text">理论基础：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#解密"><span class="nav-number">1.3.2.3.1.2.</span> <span class="nav-text">解密</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三素数RSA"><span class="nav-number">1.3.2.3.2.</span> <span class="nav-text">三素数RSA</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#椭圆曲线"><span class="nav-number">1.3.3.</span> <span class="nav-text">椭圆曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义椭圆曲线的运算规则"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">定义椭圆曲线的运算规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数的椭圆曲线"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">实数的椭圆曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线加密解密原理"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">椭圆曲线加密解密原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#椭圆曲线签名算法原理"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">椭圆曲线签名算法原理</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
