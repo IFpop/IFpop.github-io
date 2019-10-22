@@ -91,11 +91,10 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/1563243840970.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/1563247882630.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/Users/96552/AppData/Roaming/Typora/typora-user-images/1571643287267.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/653357-20180517203251515-632006721.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-a86714ce11f5ffad.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-9016223b743a410e.png">
-<meta property="og:updated_time" content="2019-10-21T09:16:18.592Z">
+<meta property="og:updated_time" content="2019-10-21T13:43:54.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码学基础">
 <meta name="twitter:description" content="密码学概述 密码：认证以及 保证通信信息的完整性、机密性  认证： 便于授权以及管理  机密性：为了防止信息被窃听，因此需要对信息进行加密，对应的密码技术主要就是对称加密和非对称加密。  完整性：为了防止信息被篡改，因此需要对信息进行完整性校验，对应的密码技术有单向散列函数、消息认证码、数字签名。  不可否认性：为了防止发送者发布信息后否认自己发布过，因此需要证据来证明信息是否由发送者发布，对应的">
@@ -628,7 +627,6 @@
 <blockquote>
 <p>用于求解同余方程组</p>
 </blockquote>
-<p><img src="/2019/07/24/密码学基础/Users\96552\AppData\Roaming\Typora\typora-user-images\1571643287267.png" alt="1571643287267"></p>
 </li>
 </ul>
 <h6 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h6><p>$$<br>y模p的两个平方根为\pm y^{\frac{p+1}{4}}(mod\ p) \<br>y模q的两个平方根为\pm y^{\frac{q+1}{4}}(mod\ q)<br>$$</p>
@@ -636,7 +634,7 @@
 <p>-r = n - r \qquad \qquad \qquad \qquad \qquad \qquad\</p>
 <p>s = (yp <em> p </em> mq - yq <em> q </em> mp)\ mod\ n \</p>
 <p>-s = n - s \qquad \qquad \qquad \qquad \qquad \qquad \<br>$$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现脚本</span></span><br><span class="line"><span class="comment">#参数待定</span></span><br><span class="line">c = </span><br><span class="line">p = </span><br><span class="line">q = </span><br><span class="line">n = p*q</span><br><span class="line"> </span><br><span class="line">mp = pow(c,(p+<span class="number">1</span>)/<span class="number">4</span>,p)</span><br><span class="line">mq = pow(c,(q+<span class="number">1</span>)/<span class="number">4</span>,q)</span><br><span class="line"><span class="comment">#使用gmpy的库求模逆，也可以手写扩展欧几里得算法求模逆</span></span><br><span class="line">yp = gmpy.invert(p,q)</span><br><span class="line">yq = gmpy.invert(q,p)</span><br><span class="line"> </span><br><span class="line">a = (yp*p*mq + yq*q*mp)%n</span><br><span class="line">b = n - int(a)</span><br><span class="line">c = (yp*p*mq - yq*q*mp)%n</span><br><span class="line">d = n - int(c)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现脚本</span></span><br><span class="line"><span class="comment">#参数待定</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rabin_decrypt</span><span class="params">(c, p, q, e=<span class="number">2</span>)</span>:</span> </span><br><span class="line">    n = p * q </span><br><span class="line">    mp = pow(c, (p + <span class="number">1</span>) / <span class="number">4</span>, p) <span class="comment">#整除 ⽤// </span></span><br><span class="line">    mq = pow(c, (q + <span class="number">1</span>) / <span class="number">4</span>, q) </span><br><span class="line">    yp = gmpy2.invert(p, q) </span><br><span class="line">    yq = gmpy2.invert(q, p) </span><br><span class="line">    r = (yp * p * mq + yq * q * mp) % n </span><br><span class="line">    rr = n - r </span><br><span class="line">    s = (yp * p * mq - yq * q * mp) % n </span><br><span class="line">    ss = n - s </span><br><span class="line">    <span class="keyword">return</span> (r, rr, s, ss)</span><br></pre></td></tr></table></figure>
 <h5 id="三素数RSA"><a href="#三素数RSA" class="headerlink" title="三素数RSA"></a>三素数<code>RSA</code></h5><blockquote>
 <ol>
 <li>取三个素数<code>p,q,r</code></li>
