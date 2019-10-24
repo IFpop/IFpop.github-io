@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-10-22T12:39:17.523Z</updated>
+  <updated>2019-10-24T13:27:39.610Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bugku-wp</title>
+    <link href="https://IFpop.github.io/2019/10/24/Bugku-wp/"/>
+    <id>https://IFpop.github.io/2019/10/24/Bugku-wp/</id>
+    <published>2019-10-24T12:54:25.000Z</published>
+    <updated>2019-10-24T13:27:39.610Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;MISC&quot;&gt;&lt;a href=&quot;#MISC&quot; class=&quot;headerlink&quot; title=&quot;MISC&quot;&gt;&lt;/a&gt;MISC&lt;/h1&gt;&lt;h2 id=&quot;闪的好快&quot;&gt;&lt;a href=&quot;#闪的好快&quot; class=&quot;headerlink&quot; title=&quot;闪的好快&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
+    
+      <category term="wp" scheme="https://IFpop.github.io/categories/CTF/wp/"/>
+    
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
+    
+      <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
+    
+      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
+    
+  </entry>
   
   <entry>
     <title>RSA-集锦</title>
@@ -135,125 +168,6 @@
     
     
       <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bugku-re</title>
-    <link href="https://IFpop.github.io/2019/09/22/Bugku-re/"/>
-    <id>https://IFpop.github.io/2019/09/22/Bugku-re/</id>
-    <published>2019-09-22T02:57:01.000Z</published>
-    <updated>2019-10-20T16:17:17.077Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;入门逆向&quot;&gt;&lt;a href=&quot;#入门逆向&quot; class=&quot;headerlink&quot; title=&quot;入门逆向&quot;&gt;&lt;/a&gt;入门逆向&lt;/h1&gt;&lt;p&gt;下载下来，查看一下文件类型：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/09/22/Bugku-re/156882631
-      
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
-    
-    
-      <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bugku-Misc</title>
-    <link href="https://IFpop.github.io/2019/09/16/bugku-Misc/"/>
-    <id>https://IFpop.github.io/2019/09/16/bugku-Misc/</id>
-    <published>2019-09-16T06:41:04.000Z</published>
-    <updated>2019-10-20T16:11:46.330Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;闪的好快&quot;&gt;&lt;a href=&quot;#闪的好快&quot; class=&quot;headerlink&quot; title=&quot;闪的好快&quot;&gt;&lt;/a&gt;闪的好快&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/2019/09/16/bugku-Misc/1568616335935.png&quot; alt=&quot;15686
-      
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
-    
-    
-      <category term="Misc" scheme="https://IFpop.github.io/tags/Misc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bugku_web</title>
-    <link href="https://IFpop.github.io/2019/08/04/Bugku-web/"/>
-    <id>https://IFpop.github.io/2019/08/04/Bugku-web/</id>
-    <published>2019-08-04T01:39:44.000Z</published>
-    <updated>2019-10-11T10:28:50.721Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Web2&quot;&gt;&lt;a href=&quot;#Web2&quot; class=&quot;headerlink&quot; title=&quot;Web2&quot;&gt;&lt;/a&gt;Web2&lt;/h2&gt;&lt;p&gt;打开链接：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/08/04/Bugku-web/1563499089600.png
-      
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
-    
-    
-      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bugku_pwn</title>
-    <link href="https://IFpop.github.io/2019/07/31/Bugku-pwn/"/>
-    <id>https://IFpop.github.io/2019/07/31/Bugku-pwn/</id>
-    <published>2019-07-31T01:40:31.000Z</published>
-    <updated>2019-08-31T01:50:39.923Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;pwn1&quot;&gt;&lt;a href=&quot;#pwn1&quot; class=&quot;headerlink&quot; title=&quot;pwn1&quot;&gt;&lt;/a&gt;pwn1&lt;/h2&gt;&lt;p&gt;访问nc 114.116.54.89 10001&lt;/p&gt;
-&lt;p&gt;打印一下当前目录的文件，会发现：&lt;/p&gt;
-&lt;p&gt;&lt;img s
-      
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
-    
-    
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bugku-Crypto</title>
-    <link href="https://IFpop.github.io/2019/07/30/Bugku-Crypto/"/>
-    <id>https://IFpop.github.io/2019/07/30/Bugku-Crypto/</id>
-    <published>2019-07-30T14:08:48.000Z</published>
-    <updated>2019-10-11T16:38:55.073Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;easy-crypto&quot;&gt;&lt;a href=&quot;#easy-crypto&quot; class=&quot;headerlink&quot; title=&quot;easy_crypto&quot;&gt;&lt;/a&gt;easy_crypto&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;tab
-      
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
-    
-    
-      <category term="Crypto" scheme="https://IFpop.github.io/tags/Crypto/"/>
     
   </entry>
   
