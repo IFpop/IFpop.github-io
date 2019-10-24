@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-10-24T13:27:39.610Z</updated>
+  <updated>2019-10-24T16:31:10.288Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -17,17 +17,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Bugku-wp</title>
-    <link href="https://IFpop.github.io/2019/10/24/Bugku-wp/"/>
-    <id>https://IFpop.github.io/2019/10/24/Bugku-wp/</id>
-    <published>2019-10-24T12:54:25.000Z</published>
-    <updated>2019-10-24T13:27:39.610Z</updated>
+    <title>SmartCar-study</title>
+    <link href="https://IFpop.github.io/2019/10/25/SmartCar-study/"/>
+    <id>https://IFpop.github.io/2019/10/25/SmartCar-study/</id>
+    <published>2019-10-24T16:08:32.000Z</published>
+    <updated>2019-10-24T16:31:10.288Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;MISC&quot;&gt;&lt;a href=&quot;#MISC&quot; class=&quot;headerlink&quot; title=&quot;MISC&quot;&gt;&lt;/a&gt;MISC&lt;/h1&gt;&lt;h2 id=&quot;闪的好快&quot;&gt;&lt;a href=&quot;#闪的好快&quot; class=&quot;headerlink&quot; title=&quot;闪的好快&quot;&gt;&lt;/a
+        &lt;blockquote&gt;
+&lt;p&gt;这是一位不成器的计算机选手开始挑战跨专业的探测信标的&lt;del&gt;智障车&lt;/del&gt;智能车:boom:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;2019-10-22&quot;&gt;&lt;a href=&quot;#2019-10-22&quot; class=&quot;headerl
+      
+    
+    </summary>
+    
+      <category term="Study" scheme="https://IFpop.github.io/categories/Study/"/>
+    
+    
+      <category term="SmartCar" scheme="https://IFpop.github.io/tags/SmartCar/"/>
+    
+      <category term="IAR" scheme="https://IFpop.github.io/tags/IAR/"/>
+    
+      <category term="openmv" scheme="https://IFpop.github.io/tags/openmv/"/>
+    
+      <category term="daily_record" scheme="https://IFpop.github.io/tags/daily-record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bugku-wp</title>
+    <link href="https://IFpop.github.io/2019/10/24/Bugku-wp/"/>
+    <id>https://IFpop.github.io/2019/10/24/Bugku-wp/</id>
+    <published>2019-10-24T12:54:25.000Z</published>
+    <updated>2019-10-24T16:09:51.536Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;bugku的部分wp&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;MISC&quot;&gt;&lt;a href=&quot;#MISC&quot; class=&quot;headerlink&quot; title=&quot;MISC&quot;&gt;&lt;/a&gt;MISC&lt;/h1&gt;&lt;h2 id=&quot;闪的好快&quot;&gt;&lt;a hre
       
     
     </summary>
