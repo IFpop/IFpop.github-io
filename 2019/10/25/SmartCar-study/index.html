@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁 2019/10/24今天把kea128code中的common部分函数，梳理了一下有哪些函数以及函数的用途👀    文件名称 文件功能     assert.c 包含ass">
+<meta name="description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
 <meta name="keywords" content="SmartCar,IAR,openmv,daily_record">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SmartCar-study">
 <meta property="og:url" content="https://IFpop.github.io/2019/10/25/SmartCar-study/index.html">
 <meta property="og:site_name" content="IFpop">
-<meta property="og:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁 2019/10/24今天把kea128code中的common部分函数，梳理了一下有哪些函数以及函数的用途👀    文件名称 文件功能     assert.c 包含ass">
+<meta property="og:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-24T16:54:25.603Z">
+<meta property="og:updated_time" content="2019-10-26T15:39:41.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SmartCar-study">
-<meta name="twitter:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁 2019/10/24今天把kea128code中的common部分函数，梳理了一下有哪些函数以及函数的用途👀    文件名称 文件功能     assert.c 包含ass">
+<meta name="twitter:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
 
 
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  779 字
+                  2.1k 字
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -431,6 +431,14 @@
         <p>这是一位不成器的计算机选手开始挑战跨专业的探测信标的<del>智障车</del>智能车🔞</p>
 <h1 id="2019-10-22"><a href="#2019-10-22" class="headerlink" title="2019/10/22"></a>2019/10/22</h1><p>练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆</p>
 <h1 id="2019-10-23"><a href="#2019-10-23" class="headerlink" title="2019/10/23"></a>2019/10/23</h1><p>看完<code>IAR</code>使用手册，熟悉<code>IAR</code>的实际操作😁</p>
+<blockquote>
+<p>工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”</p>
+<ol>
+<li>“工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文件“<code>crt0.s</code>”与“<code>start.c</code>”，“链接文件”包括<code>Pflash.icf</code>与<code>Ram.icf</code>两个文件，通过修改它们可以将可执行代码链接到芯片RAM中或Flash中</li>
+<li>”源程序文件夹“包括C语言程序、头文件，C语言程序一般包括构件C文件夹”Component_C“、框架C文件夹”Frame_C“、中断服务例程源文件<code>isr</code>与主程序源文件<code>main</code>，头文件一般包括<code>include.h</code>、构件头文件”Component_H”,框架C文件夹“Frame_H”。系统启动并初始化后，程序先执行配置文件的启动代码文件，随后根据<code>main</code>中定义的逻辑顺序执行，当遇到中断请求时，转而执行<code>isr.c</code>中定义的相应中断处理程序；中断结束，则返回中断出继续顺序执行。与总体有关的架构程序相关的头文件和源文件分别放在了<code>Frmae_H</code>和<code>Frame_C</code>文件夹中，其中<code>Frame_H</code>一般会有<code>common.h</code>、<code>system_SKEAZ1284.h</code>、<code>sysinit.h</code>、<code>vectors.h</code>等头文件，<code>system_SKEAZ1284.h</code>时芯片寄存器及相关定义头文件，它被视为芯片的接口文件，<code>sysinit.h</code>与<code>sysinit.c</code>(存在于<code>Frame_C</code>中)一起完成系统初始化，系统时钟等，而<code>common.c</code>与<code>common.h</code>一起完成一些基本函数</li>
+<li>“机器码文件”包括<code>.out</code>文件和<code>.map</code>文件，写到<code>Flash</code>中的文件为<code>.out</code>文件</li>
+</ol>
+</blockquote>
 <h1 id="2019-10-24"><a href="#2019-10-24" class="headerlink" title="2019/10/24"></a>2019/10/24</h1><p>今天把<code>kea128code</code>中的common部分函数，梳理了一下有哪些函数以及函数的用途👀</p>
 <table>
 <thead>
@@ -506,6 +514,215 @@
 </tr>
 </tbody>
 </table>
+<h1 id="2019-10-25"><a href="#2019-10-25" class="headerlink" title="2019/10/25"></a>2019/10/25</h1><p><code>config files</code>存在着<code>flash</code>和<code>RAM</code>的配置信息</p>
+<p><code>cpu</code>文件夹中相关函数信息</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>文件功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arm_cm0.c</code></td>
+<td>定义了<code>stop</code>，<code>wait</code>，<code>write_vtor</code>函数，<code>stop</code>是该进程进入了<code>deepsleep</code>，<code>wait</code>是从<code>deepsleep</code>状态苏醒至<code>sleep</code>会改变状态编码，<code>wirte_vtor</code>将矢量表偏移寄存器的值更改为指定值，被<code>startup</code>调用</td>
+</tr>
+<tr>
+<td><code>arm_cm0.h</code></td>
+<td>使用<code>#undef</code>取消系统对关键字的定义转而自己进行<code>#define</code>,使用<code>asm</code>进行汇编指令定义与使用，其中<code>asm(&quot; CPSIE i&quot;)</code>是允许全能中断，<code>asm(&quot; CPSID i&quot;)</code>是禁止全能中断，关键在单词末尾的’E’与’D’分别是enable和disable</td>
+</tr>
+<tr>
+<td><code>crt0.s</code></td>
+<td>汇编代码文件，这是程序运行的开始（先于main函数），实际上的程序在汇编里面也会有这样一段代码，主要用途是将寄存器清零</td>
+</tr>
+<tr>
+<td><code>isr.h</code></td>
+<td>中断服务例程源文件<code>isr.h</code>,具体实现过程其实没咋弄懂，还是问问学长</td>
+</tr>
+<tr>
+<td><code>start.c</code></td>
+<td>启动代码文件,<a href="http://www.sohu.com/a/122050439_505888" target="_blank" rel="noopener">为什么要禁用看门狗</a>，这里的<code>cpu_identify</code>和<code>flash_identify</code>是需要自己去写的，<code>SystemInit</code>这里也是禁用看门狗，但是不太明白的是为什么要禁用两次</td>
+</tr>
+<tr>
+<td><code>start.h</code></td>
+<td>定义<code>start.c</code>中函数的头文件</td>
+</tr>
+<tr>
+<td><code>sysinit.c</code></td>
+<td>初始化系统，包括<code>sim、ics、uart</code>等,现在其实还没怎么建立起<code>SIM通信</code>以及<code>ICS和UART</code>怎么使用的概念</td>
+</tr>
+<tr>
+<td><code>sysinit.h</code></td>
+<td>定义了<code>sysinit.c</code>中的函数</td>
+</tr>
+<tr>
+<td><code>system_SKEAZ1284.h</code></td>
+<td><code>system_SKEAZ1284.h</code>时芯片寄存器及相关定义头文件，它被视为芯片的接口文件</td>
+</tr>
+<tr>
+<td><code>systick.c</code></td>
+<td><code>systick</code>,系统时钟，<a href="https://wenku.baidu.com/view/cb81c1ebb8f67c1cfad6b86b.html" target="_blank" rel="noopener">具体信息</a>，这里龙邱添加了些函数，也是有关系统时钟有关的东西(具体用途目前不清)</td>
+</tr>
+<tr>
+<td><code>systick.h</code></td>
+<td>对<code>systick</code>的函数进行了定义</td>
+</tr>
+<tr>
+<td><code>vectors.c</code></td>
+<td>提供中断向量表</td>
+</tr>
+<tr>
+<td><code>vectors.h</code></td>
+<td>提供定义</td>
+</tr>
+</tbody>
+</table>
+<p>人傻了，这东西也太错综复杂，本来想着一周速成单片机，看来有点困难。。😭</p>
+<p>还是接着看吧</p>
+<p><code>drives</code>文件</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>文件功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acmp.h</code></td>
+<td>这里我查到的是<code>Analog Comparator</code>，即模拟比较器，然后其中还定义了一些有关<code>DAC</code>函数，用于<code>DAC</code>转换？仔细研究的话还是得要慢慢看</td>
+</tr>
+<tr>
+<td><code>adc.c</code></td>
+<td>首先，这个不是<code>moba</code>游戏，没有<code>ADC</code>选手，<a href="http://bbs.elecfans.com/jishu_1812180_1_1.html" target="_blank" rel="noopener">ADC模块</a>， 基本信息就是可以将连续的信号转换称数字信号，然后其中对每次处理的数字信号进行求和，之后求平均，达到了减少信息的失真率</td>
+</tr>
+<tr>
+<td><code>adc.h</code></td>
+<td>定义了关于ADC模块的一些配置信息，如<code>adc_ref_list</code>(适用电压范围)，<code>ADC clock source</code>(ADC时钟来源)，<code>ADC divider</code>(ADC中会按几位非分配)以及<code>ADC mode</code>(有<code>8，10，12bit</code>)的选择，但是什么情况选择什么样子的模式，这里应该怎么去控制也不太清楚</td>
+</tr>
+<tr>
+<td><code>bit_band.h</code></td>
+<td>位带的头文件，<a href="http://news.eeworld.com.cn/mcu/article_2016061326941.html" target="_blank" rel="noopener">位带详情</a>,可以使用普通的加载/存储指令来对单一的比特进行读写</td>
+</tr>
+<tr>
+<td><code>BME.h</code></td>
+<td><a href="https://community.nxp.com/docs/DOC-98798" target="_blank" rel="noopener"><code>BME</code></a> 是<code>Bit Manipulation Engine</code>，位操作引擎功能，是<code>M0+</code>上的一个集成模块</td>
+</tr>
+<tr>
+<td><code>crc.c</code></td>
+<td><code>CRC</code>(循环冗余校验,Cyclic redundancy check)，这是一种通过除法运算来建立有效信息位和校验位之间的约定关系的，也就是用来确定信息传输是否正确，减少的误码的产生</td>
+</tr>
+<tr>
+<td><code>flash.c</code></td>
+<td>一个闪存驱动程序</td>
+</tr>
+<tr>
+<td><code>flash.h</code></td>
+<td>定义有关<code>flash</code>的配置，以及一些函数</td>
+</tr>
+<tr>
+<td><code>ftm.c</code></td>
+<td>ftm定时器，<a href="https://max.book118.com/html/2017/1006/136242796.shtm" target="_blank" rel="noopener">详情</a></td>
+</tr>
+<tr>
+<td><code>ftm.h</code></td>
+<td>定义ftm必须的函数</td>
+</tr>
+<tr>
+<td><code>gpio_icf.h</code></td>
+<td>定义了<code>gpio</code>的配置文件，如输入输出端口信息以及寄存器信息，<a href="https://wenku.baidu.com/view/ca7f65020029bd64793e2c48.html" target="_blank" rel="noopener">详情</a></td>
+</tr>
+<tr>
+<td><code>gpio.c</code></td>
+<td>实现了通用输入输出的必要函数</td>
+</tr>
+<tr>
+<td><code>gpio.h</code></td>
+<td>定义了<code>gpio</code>的函数</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="2019-10-26"><a href="#2019-10-26" class="headerlink" title="2019/10/26"></a>2019/10/26</h1><p>今天还是接着函数，发现个<a href="http://www.doc88.com/p-1344840862773.html" target="_blank" rel="noopener">中文文档</a></p>
 
       
     </div>
@@ -737,7 +954,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-22"><span class="nav-number">1.</span> <span class="nav-text">2019/10/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-23"><span class="nav-number">2.</span> <span class="nav-text">2019/10/23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-24"><span class="nav-number">3.</span> <span class="nav-text">2019/10/24</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-22"><span class="nav-number">1.</span> <span class="nav-text">2019/10/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-23"><span class="nav-number">2.</span> <span class="nav-text">2019/10/23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-24"><span class="nav-number">3.</span> <span class="nav-text">2019/10/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-25"><span class="nav-number">4.</span> <span class="nav-text">2019/10/25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-26"><span class="nav-number">5.</span> <span class="nav-text">2019/10/26</span></a></li></ol></div>
             
 
           </div>
