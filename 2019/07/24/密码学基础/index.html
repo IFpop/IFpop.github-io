@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/653357-20180517203251515-632006721.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-a86714ce11f5ffad.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/24/密码学基础/6534448-9016223b743a410e.png">
-<meta property="og:updated_time" content="2019-10-21T13:43:54.234Z">
+<meta property="og:updated_time" content="2019-10-28T10:24:49.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码学基础">
 <meta name="twitter:description" content="密码学概述 密码：认证以及 保证通信信息的完整性、机密性  认证： 便于授权以及管理  机密性：为了防止信息被窃听，因此需要对信息进行加密，对应的密码技术主要就是对称加密和非对称加密。  完整性：为了防止信息被篡改，因此需要对信息进行完整性校验，对应的密码技术有单向散列函数、消息认证码、数字签名。  不可否认性：为了防止发送者发布信息后否认自己发布过，因此需要证据来证明信息是否由发送者发布，对应的">
@@ -533,13 +533,15 @@
 </li>
 <li><p>取模运算与同余的概念</p>
 <blockquote>
-<p>如果存在一个正整数m与两个整数a,b，如果a-b能够被m整除，也就是说m|(a-b),那么a和b模m同余。记为：<br>$$<br>a \equiv b \quad mod(m)<br>$$</p>
-</blockquote>
+<p>如果存在一个正整数m与两个整数a,b，如果a-b能够被m整除，也就是说m|(a-b),那么a和b模m同余。记为：</p>
+<script type="math/tex; mode=display">
+a \equiv b \quad mod(m)</script></blockquote>
 </li>
 <li><p>模指数运算</p>
 <blockquote>
-<p>模指数运算即先进行指数运算，之后再进行取模运算。<br>$$<br>a \equiv b^c \quad mod(m)<br>$$</p>
-</blockquote>
+<p>模指数运算即先进行指数运算，之后再进行取模运算。</p>
+<script type="math/tex; mode=display">
+a \equiv b^c \quad mod(m)</script></blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python代码</span></span><br><span class="line">pow(b,c,m)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>扩展欧几里得(<code>egcd</code>)</p>
@@ -553,10 +555,35 @@
 </li>
 <li><p>当<code>b&gt;0</code>时</p>
 <p>由贝祖等式可知：</p>
-<p>​    对于<code>a,b</code>的解为<code>x1,y1</code>，我们有：<br>$$<br>a<em>x_1 + b</em>y_1 = gcd(a,b)<br>$$<br>​    对于<code>b,a%b</code>的解为<code>x2，y2</code>，我们有：<br>$$<br>b<em>x_2 + (a\%b)</em>y_2 = gcd(b,a\%b)<br>$$<br>由欧几里得算法可知：<br>$$<br>gcd(a,b) = gcd(b,a\%b)<br>$$<br>所以：<br>$$<br>a<em>x_1 + b</em>y_1 = b<em>x_2 + (a\%b)</em>y_2<br>$$<br>又：<br>$$<br>a\%b =a-\lfloor \frac{a}{b}\rfloor<em>b<br>$$<br>故：<br>$$<br>a</em>x_1 + b<em>y_1 = b</em>x_2 + (a-\lfloor \frac{a}{b} \rfloor<em>b)</em>y_2 \<br>a<em>x_1 + b</em>y_1 = a<em>y_2 + (x_2-\lfloor \frac{a}{b} \rfloor</em>y_2)<em>b<br>$$<br>所以：<br>$$<br>\begin{array}{</em>{20}{l}}</p>
-<p>{ \left{ \begin{array}{<em>{20}{c}}<br>{x_1 = y_2 }\<br>{y_1 = x_2-\lfloor \frac{a}{b} \rfloor</em>y_2 }\<br>\end{array}\right. }\<br>\end{array}<br>$$<br>进行递归求解，最终可以得到<code>x1，y1</code>,扩展欧几里得算法一般用来求模逆，如求解<br>$$<br>28^{-1}mod75<br>$$<br>最终的结果是:<br>$$<br>3<em>75-8</em>28=1<br>$$<br>所以此时<code>x1=3,y1=-8</code>但在模75范围内，<code>y1=75-8=67</code></p>
-<p>后续利用扩展欧几里得和下列公式求解d。<br>$$<br>e*d \equiv = 1 mod(\varphi(n))<br>$$</p>
-</li>
+<p>​    对于<code>a,b</code>的解为<code>x1,y1</code>，我们有：</p>
+<script type="math/tex; mode=display">
+a*x_1 + b*y_1 = gcd(a,b)</script><p>​    对于<code>b,a%b</code>的解为<code>x2，y2</code>，我们有：</p>
+<script type="math/tex; mode=display">
+b*x_2 + (a\%b)*y_2 = gcd(b,a\%b)</script><p>由欧几里得算法可知：</p>
+<script type="math/tex; mode=display">
+gcd(a,b) = gcd(b,a\%b)</script><p>所以：</p>
+<script type="math/tex; mode=display">
+a*x_1 + b*y_1 = b*x_2 + (a\%b)*y_2</script><p>又：</p>
+<script type="math/tex; mode=display">
+a\%b =a-\lfloor \frac{a}{b}\rfloor*b</script><p>故：</p>
+<script type="math/tex; mode=display">
+a*x_1 + b*y_1 = b*x_2 + (a-\lfloor \frac{a}{b} \rfloor*b)*y_2 \\
+a*x_1 + b*y_1 = a*y_2 + (x_2-\lfloor \frac{a}{b} \rfloor*y_2)*b</script><p>所以：</p>
+<script type="math/tex; mode=display">
+\begin{array}{*{20}{l}}
+
+{ \left\{ \begin{array}{*{20}{c}}
+{x_1 = y_2 }\\
+{y_1 = x_2-\lfloor \frac{a}{b} \rfloor*y_2 }\\
+\end{array}\right. }\\
+\end{array}</script><p>进行递归求解，最终可以得到<code>x1，y1</code>,扩展欧几里得算法一般用来求模逆，如求解</p>
+<script type="math/tex; mode=display">
+28^{-1}mod75</script><p>最终的结果是:</p>
+<script type="math/tex; mode=display">
+3*75-8*28=1</script><p>所以此时<code>x1=3,y1=-8</code>但在模75范围内，<code>y1=75-8=67</code></p>
+<p>后续利用扩展欧几里得和下列公式求解d。</p>
+<script type="math/tex; mode=display">
+e*d \equiv = 1 mod(\varphi(n))</script></li>
 </ol>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现代码：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extendedGCD</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="comment">#a*xi + b*yi = ri</span></span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">1</span>, <span class="number">0</span>, a)</span><br><span class="line">    <span class="comment">#a*x1 + b*y1 = a</span></span><br><span class="line">    x1 = <span class="number">1</span></span><br><span class="line">    y1 = <span class="number">0</span></span><br><span class="line">    <span class="comment">#a*x2 + b*y2 = b</span></span><br><span class="line">    x2 = <span class="number">0</span></span><br><span class="line">    y2 = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line">        q = a / b</span><br><span class="line">        <span class="comment">#ri = r(i-2) % r(i-1)</span></span><br><span class="line">        r = a % b</span><br><span class="line">        a = b</span><br><span class="line">        b = r</span><br><span class="line">        <span class="comment">#xi = x(i-2) - q*x(i-1)</span></span><br><span class="line">        x = x1 - q*x2</span><br><span class="line">        x1 = x2</span><br><span class="line">        x2 = x</span><br><span class="line">        <span class="comment">#yi = y(i-2) - q*y(i-1)</span></span><br><span class="line">        y = y1 - q*y2</span><br><span class="line">        y1 = y2</span><br><span class="line">        y2 = y</span><br><span class="line">    <span class="keyword">return</span>(x1, y1, a)</span><br></pre></td></tr></table></figure>
@@ -572,8 +599,10 @@
 <ol>
 <li><p>选择两个大素数<code>p和q</code>，<code>n = p*q</code></p>
 </li>
-<li><p>选择一个整数e，满足条件<br>$$<br>1 &lt; e &lt; \varphi(n)\<br>gcd(e,\varphi(n)) = 1<br>$$</p>
-</li>
+<li><p>选择一个整数e，满足条件</p>
+<script type="math/tex; mode=display">
+1 < e < \varphi(n)\\
+gcd(e,\varphi(n)) = 1</script></li>
 <li><p>其中<code>{e,n}</code>是公钥，<code>{d,n}</code>是私钥</p>
 </li>
 </ol>
@@ -584,8 +613,9 @@
 </li>
 <li><p>p和q的差值尽可能大一点</p>
 </li>
-<li><p>d的选择不能太小，也不能太大，一般满足<br>$$<br>d\ge n^{\frac{1}{4}}<br>$$</p>
-</li>
+<li><p>d的选择不能太小，也不能太大，一般满足</p>
+<script type="math/tex; mode=display">
+d\ge n^{\frac{1}{4}}</script></li>
 </ol>
 </blockquote>
 <h5 id="基本的攻击方法"><a href="#基本的攻击方法" class="headerlink" title="基本的攻击方法"></a>基本的攻击方法</h5><blockquote>
@@ -596,70 +626,99 @@
 <ol>
 <li><p>取两个大素数p与q，使得p≡q≡3(mod 4)(保证为奇素数)</p>
 </li>
-<li><p>加密：<br>$$<br>c=m^2 \quad mod( n)<br>$$</p>
-</li>
-<li><p>解密：<br>$$<br>m^2≡c \quad mod( n)<br>$$</p>
-</li>
+<li><p>加密：</p>
+<script type="math/tex; mode=display">
+c=m^2 \quad mod( n)</script></li>
+<li><p>解密：</p>
+<script type="math/tex; mode=display">
+m^2≡c \quad mod( n)</script></li>
 </ol>
 </blockquote>
 <h6 id="理论基础："><a href="#理论基础：" class="headerlink" title="理论基础："></a>理论基础：</h6><ul>
 <li><p>二次剩余</p>
 <blockquote>
-<p>$$<br>对于式子y^2 = a \quad mod \quad p,称a是y模p的二次剩余<br>$$</p>
-</blockquote>
+<script type="math/tex; mode=display">
+对于式子y^2 = a \quad mod \quad p,称a是y模p的二次剩余</script></blockquote>
 </li>
 <li><p><code>Euler准则</code></p>
 <blockquote>
-<p>设p为一个奇素数，a是一个正整数。那么a是一个模p二次剩余当且仅当<br>$$<br>a^{\frac{p-1}{2}} \equiv 1\ (mod\ p)<br>$$<br>证明：</p>
+<p>设p为一个奇素数，a是一个正整数。那么a是一个模p二次剩余当且仅当</p>
+<script type="math/tex; mode=display">
+a^{\frac{p-1}{2}} \equiv 1\ (mod\ p)</script><p>证明：</p>
 <ol>
 <li>充分性</li>
 </ol>
-<p>$$<br>假定a\equiv y^2\ (mod\ p)。由欧拉定理可知（p为素数）a^{p-1} \equiv 1(mod\ p) \<br>对于任一a \ne 0 (mod\ p)成立，所以\qquad\qquad\qquad\qquad\qquad\qquad\qquad\<br>a^{\frac{p-1}{2}} \equiv (y^2)^{\frac{p-1}{2}}(mod\ p)\quad \<br>\equiv y^{p-1}(mod\ p) \<br>\equiv 1(mod\ p) \quad \<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+假定a\equiv y^2\ (mod\ p)。由欧拉定理可知（p为素数）a^{p-1} \equiv 1(mod\ p) \\
+对于任一a \ne 0 (mod\ p)成立，所以\qquad\qquad\qquad\qquad\qquad\qquad\qquad\\
+a^{\frac{p-1}{2}} \equiv (y^2)^{\frac{p-1}{2}}(mod\ p)\quad \\
+\equiv y^{p-1}(mod\ p) \\
+\equiv 1(mod\ p) \quad \</script><ol>
 <li>必要性</li>
 </ol>
-<p>$$<br>假定a^{\frac{p-1}{2}}\equiv1(mod\ p)。设b是一个模p的元素。那么a\equiv b^i(mod\ p)对于\<br>某个整数i，我们有\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\ \ \<br>a^{\frac{p-1}{2}}\equiv(b^i)^{\frac{p-1}{2}}(mod\ p) \quad \quad\<br>\equiv b^{i(\frac{p-1}{2})}(mod\ p) \<br>由欧拉定理可知，此时i应该为偶数，所以a的平方根为\pm b^{\frac{i}{2}}(mod\ p )\quad\ \<br>$$</p>
-</blockquote>
+<script type="math/tex; mode=display">
+假定a^{\frac{p-1}{2}}\equiv1(mod\ p)。设b是一个模p的元素。那么a\equiv b^i(mod\ p)对于\\
+某个整数i，我们有\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\ \ \\
+a^{\frac{p-1}{2}}\equiv(b^i)^{\frac{p-1}{2}}(mod\ p) \quad \quad\\
+\equiv b^{i(\frac{p-1}{2})}(mod\ p) \\
+由欧拉定理可知，此时i应该为偶数，所以a的平方根为\pm b^{\frac{i}{2}}(mod\ p )\quad\ \</script></blockquote>
 </li>
-<li><p>p,q要求<br>$$<br>当p \equiv 3\ (mod\ 4)时，有以下公式：\qquad\qquad \qquad\qquad\quad \qquad\qquad\quad \qquad\qquad\quad \qquad\qquad\quad\<br>(\pm \ y^{\frac{p+1}{4}})^2 \equiv y^{\frac{p+1}{2}}(mod\ p) \qquad\qquad\quad \quad \<br>\equiv y^{\frac{p-1}{2}}*y(mod\ p) \ \<br>\equiv y(mod\ p) \qquad \ \ \ \<br>$$</p>
-</li>
+<li><p>p,q要求</p>
+<script type="math/tex; mode=display">
+当p \equiv 3\ (mod\ 4)时，有以下公式：\qquad\qquad \qquad\qquad\quad \qquad\qquad\quad \qquad\qquad\quad \qquad\qquad\quad\\
+(\pm \ y^{\frac{p+1}{4}})^2 \equiv y^{\frac{p+1}{2}}(mod\ p) \qquad\qquad\quad \quad \\
+\equiv y^{\frac{p-1}{2}}*y(mod\ p) \ \\
+\equiv y(mod\ p) \qquad \ \ \ \</script></li>
 <li><p>中国剩余定理</p>
 <blockquote>
 <p>用于求解同余方程组</p>
 </blockquote>
 </li>
 </ul>
-<h6 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h6><p>$$<br>y模p的两个平方根为\pm y^{\frac{p+1}{4}}(mod\ p) \<br>y模q的两个平方根为\pm y^{\frac{q+1}{4}}(mod\ q)<br>$$</p>
-<p>由欧拉公式可求解<code>p</code>关于<code>q</code>的模逆以及<code>q</code>关于<code>p</code>的模逆：<br>$$<br>y_p <em> p+y_q</em>q = 1<br>$$<br>由中国剩余定理可知：<br>$$<br>r = (yp <em> p </em> mq + yq <em> q </em> mp)\ mod\ n \</p>
-<p>-r = n - r \qquad \qquad \qquad \qquad \qquad \qquad\</p>
-<p>s = (yp <em> p </em> mq - yq <em> q </em> mp)\ mod\ n \</p>
-<p>-s = n - s \qquad \qquad \qquad \qquad \qquad \qquad \<br>$$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现脚本</span></span><br><span class="line"><span class="comment">#参数待定</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rabin_decrypt</span><span class="params">(c, p, q, e=<span class="number">2</span>)</span>:</span> </span><br><span class="line">    n = p * q </span><br><span class="line">    mp = pow(c, (p + <span class="number">1</span>) / <span class="number">4</span>, p) <span class="comment">#整除 ⽤// </span></span><br><span class="line">    mq = pow(c, (q + <span class="number">1</span>) / <span class="number">4</span>, q) </span><br><span class="line">    yp = gmpy2.invert(p, q) </span><br><span class="line">    yq = gmpy2.invert(q, p) </span><br><span class="line">    r = (yp * p * mq + yq * q * mp) % n </span><br><span class="line">    rr = n - r </span><br><span class="line">    s = (yp * p * mq - yq * q * mp) % n </span><br><span class="line">    ss = n - s </span><br><span class="line">    <span class="keyword">return</span> (r, rr, s, ss)</span><br></pre></td></tr></table></figure>
+<h6 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h6><script type="math/tex; mode=display">
+y模p的两个平方根为\pm y^{\frac{p+1}{4}}(mod\ p) \\
+y模q的两个平方根为\pm y^{\frac{q+1}{4}}(mod\ q)</script><p>由欧拉公式可求解<code>p</code>关于<code>q</code>的模逆以及<code>q</code>关于<code>p</code>的模逆：</p>
+<script type="math/tex; mode=display">
+y_p * p+y_q*q = 1</script><p>由中国剩余定理可知：</p>
+<script type="math/tex; mode=display">
+r = (yp * p * mq + yq * q * mp)\ mod\ n \\
+
+-r = n - r \qquad \qquad \qquad \qquad \qquad \qquad\\
+
+s = (yp * p * mq - yq * q * mp)\ mod\ n \\
+
+-s = n - s \qquad \qquad \qquad \qquad \qquad \qquad \\</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python实现脚本</span></span><br><span class="line"><span class="comment">#参数待定</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rabin_decrypt</span><span class="params">(c, p, q, e=<span class="number">2</span>)</span>:</span> </span><br><span class="line">    n = p * q </span><br><span class="line">    mp = pow(c, (p + <span class="number">1</span>) / <span class="number">4</span>, p) <span class="comment">#整除 ⽤// </span></span><br><span class="line">    mq = pow(c, (q + <span class="number">1</span>) / <span class="number">4</span>, q) </span><br><span class="line">    yp = gmpy2.invert(p, q) </span><br><span class="line">    yq = gmpy2.invert(q, p) </span><br><span class="line">    r = (yp * p * mq + yq * q * mp) % n </span><br><span class="line">    rr = n - r </span><br><span class="line">    s = (yp * p * mq - yq * q * mp) % n </span><br><span class="line">    ss = n - s </span><br><span class="line">    <span class="keyword">return</span> (r, rr, s, ss)</span><br></pre></td></tr></table></figure>
 <h5 id="三素数RSA"><a href="#三素数RSA" class="headerlink" title="三素数RSA"></a>三素数<code>RSA</code></h5><blockquote>
 <ol>
 <li>取三个素数<code>p,q,r</code></li>
 <li>计算<code>n=p*q*r</code></li>
 <li>计算欧拉函数</li>
 </ol>
-<p>$$<br>\varphi{n} = (p-1)<em>(q-1)</em>(r-1)<br>$$</p>
-<ol start="4">
+<script type="math/tex; mode=display">
+\varphi{n} = (p-1)*(q-1)*(r-1)</script><ol>
 <li>选择一个e值，满足：</li>
 </ol>
-<p>$$<br>1 &lt; e &lt; \varphi(n)\<br>gcd(e,\varphi(n)) = 1<br>$$</p>
-<ol start="5">
-<li>计算d值，<br>$$<br>e*d \equiv 1 \quad mod(\varphi(n))<br>$$</li>
+<script type="math/tex; mode=display">
+1 < e < \varphi(n)\\
+gcd(e,\varphi(n)) = 1</script><ol>
+<li>计算d值，<script type="math/tex; mode=display">
+e*d \equiv 1 \quad mod(\varphi(n))</script></li>
 </ol>
 </blockquote>
 <p><a href="https://wenku.baidu.com/view/02c064056bd97f192279e9ed.html" target="_blank" rel="noopener">正确性证明</a></p>
 <h3 id="椭圆曲线"><a href="#椭圆曲线" class="headerlink" title="椭圆曲线"></a>椭圆曲线</h3><p>椭圆曲线加密算法，即：Elliptic Curve Cryptography，简称ECC，是基于椭圆曲线数学理论实现的一种非对称加密算法。相比RSA，ECC优势是可以使用更短的密钥，来实现与RSA相当或更高的安全。据研究，160位ECC加密安全性相当于1024位RSA加密，210位ECC加密安全性相当于2048位RSA加密。</p>
 <ul>
-<li><p>椭圆曲线的一般方程为<br>$$<br>y^2 = x^3+ax^2+b^2+c<br>$$</p>
-</li>
-<li><p>判别式为<br>$$<br>\Delta (E) = -4a^3c+a^2b^2-4b^3-27c^2+18abc \neq 0<br>$$<br>比如下面这个图：</p>
+<li><p>椭圆曲线的一般方程为</p>
+<script type="math/tex; mode=display">
+y^2 = x^3+ax^2+b^2+c</script></li>
+<li><p>判别式为</p>
+<script type="math/tex; mode=display">
+\Delta (E) = -4a^3c+a^2b^2-4b^3-27c^2+18abc \neq 0</script><p>比如下面这个图：</p>
 <p><img src="/2019/07/24/密码学基础/653357-20180517203251515-632006721.png" alt="653357-20180517203251515-632006721"></p>
 </li>
-<li><p>密码学中用到的椭圆曲线方程一般限定为<br>$$<br>y^2=x^3+ax+b，其中\Delta(E)=4a^3+27b^2 \neq 0<br>$$</p>
-</li>
+<li><p>密码学中用到的椭圆曲线方程一般限定为</p>
+<script type="math/tex; mode=display">
+y^2=x^3+ax+b，其中\Delta(E)=4a^3+27b^2 \neq 0</script></li>
 </ul>
 <h4 id="定义椭圆曲线的运算规则"><a href="#定义椭圆曲线的运算规则" class="headerlink" title="定义椭圆曲线的运算规则"></a>定义椭圆曲线的运算规则</h4><ul>
 <li><p>加法</p>
@@ -1506,6 +1565,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

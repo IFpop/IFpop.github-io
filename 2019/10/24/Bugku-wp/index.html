@@ -200,7 +200,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/10/24/Bugku-wp/1570682541529.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/10/24/Bugku-wp/1570685710252.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/10/24/Bugku-wp/1570685669522.png">
-<meta property="og:updated_time" content="2019-10-24T16:09:51.536Z">
+<meta property="og:updated_time" content="2019-10-28T10:25:17.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bugku-wp">
 <meta name="twitter:description" content="bugku的部分wp  MISC闪的好快 下载文件是一个动态二维码，扫描第一帧之后会返回一个S，所以猜测就是所有二维码的字符串就是flag，所以写个脚本： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465">
@@ -902,6 +902,7 @@
 <h2 id="散乱的密文"><a href="#散乱的密文" class="headerlink" title="散乱的密文"></a>散乱的密文</h2><blockquote>
 <p>lf5{ag024c483549d7fd@@1}<br>一张纸条上凌乱的写着2 1 6 5 3 4</p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -948,6 +949,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>按照上述顺序弄出，得到<code>flag{52048c453d794df1}</code></p>
 <p>ps: 将后面两个@@去掉</p>
 <h2 id="凯撒部长的奖励"><a href="#凯撒部长的奖励" class="headerlink" title="凯撒部长的奖励"></a>凯撒部长的奖励</h2><p>给出一串字符串：</p>
@@ -967,6 +969,7 @@
 <p><img src="/2019/10/24/Bugku-wp/1570280252723.png" alt="1570280252723"></p>
 <h2 id="奇怪的密码"><a href="#奇怪的密码" class="headerlink" title="奇怪的密码"></a>奇怪的密码</h2><p><img src="/2019/10/24/Bugku-wp/1570280637305.png" alt="1570280637305"></p>
 <p>看到这种没见过的古典密码，习惯先看看ASCII，看上面的字符串，€符号像{，那么前面四个字母可能就是flag</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1003,6 +1006,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>发现，这四个貌似间隔是1，2，3，4</p>
 <p>所以想着是不是顺次替换，直接在python上通过<code>chr</code>会产生报错，因为€的编码是8364，chr只能处理256之内的ASCII，所以我们将相应编码通过程序得到：</p>
 <p><code>102 108 97 103 8359 108 101 105 95 99 105 95 106 105 97 109 105</code></p>
@@ -1908,6 +1912,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

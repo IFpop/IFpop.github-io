@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="爆破分解模数N方法介绍 n比较小的话，可以手写脚本进行爆破 1234567#coding=utf-8for i in range(2,n):    if(n%i == 0):        p = i        q = n/i        break  n比较大的话，可以使用一些攻击进行暴力破解，如RSATool或者yafu  yafu提取码：9qtg RSATool提取码：502a   一">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-22T12:39:17.523Z">
+<meta property="og:updated_time" content="2019-10-28T11:26:48.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RSA-集锦">
 <meta name="twitter:description" content="爆破分解模数N方法介绍 n比较小的话，可以手写脚本进行爆破 1234567#coding=utf-8for i in range(2,n):    if(n%i == 0):        p = i        q = n/i        break  n比较大的话，可以使用一些攻击进行暴力破解，如RSATool或者yafu  yafu提取码：9qtg RSATool提取码：502a   一">
@@ -456,10 +456,20 @@
 <p>结论：当n不变的情况下，知道<code>n,e1,e2,c1,c2</code> 可以在不知道<code>d1,d2</code>情况下，解出m。</p>
 </blockquote>
 <p><strong>证明</strong></p>
-<p>由<code>RSA</code>基本原理可知：<br>$$<br>\begin{array}{*{20}{l}}</p>
-<p>{ \left{ \begin{array}{<em>{20}{c}}<br>{c_1 = m^{e_1}\ mod\ n }\<br>{c_2 = m^{e_2}\ mod\ n}\<br>\end{array}\right. }\<br>\end{array}<br>$$<br>由于<code>e1与e2互质</code>，由贝祖等式可知，必有<code>s1,s2</code>满足：<br>$$<br>e_1</em>s_1+e_2*s_2 = 1<br>$$<br><code>s1,s2</code>皆为整数，但是一正一负，我们可以通过扩展欧几里得算法计算<code>s1,s2</code></p>
-<p>所以：<br>$$<br>(c_1^{s_1}<em>c_2^{s_2})\ mod\ n = (m^{e_1</em>s_1}<em>m^{e_2</em>s_2})\ mod\ n    =m\ mod\ n<br>$$</p>
-<h2 id="题目积累-1"><a href="#题目积累-1" class="headerlink" title="题目积累"></a>题目积累</h2><h3 id="very-hard-RSA"><a href="#very-hard-RSA" class="headerlink" title="very hard RSA"></a>very hard RSA</h3><p>解压下来有三个文件，两个enc文件，和一个加密的python脚本</p>
+<p>由<code>RSA</code>基本原理可知：</p>
+<script type="math/tex; mode=display">
+\begin{array}{*{20} {l} }
+
+{ \left\{ \begin {array} {*{20} {c} }
+{ c_1 = m^{e_1}\ mod\ n }\\
+{ c_2 = m^{e_2}\ mod\ n}\\
+\end{array}\right. }\\
+\end{array}</script><p>由于<code>e1与e2互质</code>，由贝祖等式可知，必有<code>s1,s2</code>满足：</p>
+<script type="math/tex; mode=display">
+e_1*s_1+e_2*s_2 = 1</script><p><code>s1,s2</code>皆为整数，但是一正一负，我们可以通过扩展欧几里得算法计算<code>s1,s2</code></p>
+<p>所以：</p>
+<script type="math/tex; mode=display">
+(c_1^{s_1}*c_2^{s_2})\ mod\ n = (m^{e_1*s_1}*m^{e_2*s_2})\ mod\ n    = m\ mod\ n</script><h2 id="题目积累-1"><a href="#题目积累-1" class="headerlink" title="题目积累"></a>题目积累</h2><h3 id="very-hard-RSA"><a href="#very-hard-RSA" class="headerlink" title="very hard RSA"></a>very hard RSA</h3><p>解压下来有三个文件，两个enc文件，和一个加密的python脚本</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#veryhrdrsa.py</span></span><br><span class="line"><span class="comment">#!/usr/bin/e</span></span><br><span class="line">nv python</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">N = <span class="number">0x00b0bee5e3e9e5a7e8d00b493355c618fc8c7d7d03b82e409951c182f398dee3104580e7ba70d383ae5311475656e8a964d380cb157f48c951adfa65db0b122ca40e42fa709189b719a4f0d746e2f6069baf11cebd650f14b93c977352fd13b1eea6d6e1da775502abff89d3a8b3615fd0db49b88a976bc20568489284e181f6f11e270891c8ef80017bad238e363039a458470f1749101bc29949d3a4f4038d463938851579c7525a69984f15b5667f34209b70eb261136947fa123e549dfff00601883afd936fe411e006e4e93d1a00b0fea541bbfc8c5186cb6220503a94b2413110d640c77ea54ba3220fc8f4cc6ce77151e29b3e06578c478bd1bebe04589ef9a197f6f806db8b3ecd826cad24f5324ccdec6e8fead2c2150068602c8dcdc59402ccac9424b790048ccdd9327068095efa010b7f196c74ba8c37b128f9e1411751633f78b7b9e56f71f77a1b4daad3fc54b5e7ef935d9a72fb176759765522b4bbc02e314d5c06b64d5054b7b096c601236e6ccf45b5e611c805d335dbab0c35d226cc208d8ce4736ba39a0354426fae006c7fe52d5267dcfb9c3884f51fddfdf4a9794bcfe0e1557113749e6c8ef421dba263aff68739ce00ed80fd0022ef92d3488f76deb62bdef7bea6026f22a1d25aa2a92d124414a8021fe0c174b9803e6bb5fad75e186a946a17280770f1243f4387446ccceb2222a965cc30b3929L</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pad_even</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> (<span class="string">''</span>, <span class="string">'0'</span>)[len(x)%<span class="number">2</span>] + x</span><br><span class="line">e1 = <span class="number">17</span></span><br><span class="line">e2 = <span class="number">65537</span></span><br><span class="line">fi = open(<span class="string">'flag.txt'</span>,<span class="string">'rb'</span>)</span><br><span class="line">fo1 = open(<span class="string">'flag.enc1'</span>,<span class="string">'wb'</span>)</span><br><span class="line">fo2 = open(<span class="string">'flag.enc2'</span>,<span class="string">'wb'</span>)</span><br><span class="line"></span><br><span class="line">data = fi.read()</span><br><span class="line">fi.close()</span><br><span class="line"><span class="keyword">while</span> (len(data)&lt;<span class="number">512</span><span class="number">-11</span>):</span><br><span class="line">	data  =  chr(random.randint(<span class="number">0</span>,<span class="number">255</span>))+data</span><br><span class="line">data_num = int(data.encode(<span class="string">'hex'</span>),<span class="number">16</span>)</span><br><span class="line">encrypt1 = pow(data_num,e1,N)</span><br><span class="line">encrypt2 = pow(data_num,e2,N)</span><br><span class="line">fo1.write(pad_even(format(encrypt1,<span class="string">'x'</span>)).decode(<span class="string">'hex'</span>))</span><br><span class="line">fo2.write(pad_even(format(encrypt2,<span class="string">'x'</span>)).decode(<span class="string">'hex'</span>))</span><br><span class="line"></span><br><span class="line">fo1.close()</span><br><span class="line">fo2.close()</span><br></pre></td></tr></table></figure>
 <p>通过算法很容易知道是共模攻击，所以我们不需要的得到密钥d就可以进行解密：</p>
 <p>这里出现了一个问题，就是使用gmpy无法进行解密，可能是我脚本写的有问题，目前没有找到解决方案。</p>
@@ -471,8 +481,9 @@
 <li><p>明文过小，导致明文的三次方还是小于n    </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#此时只需要对密文开三次方即可</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line">gmpy2.iroot(c,e)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>如果m稍微大一点，那么<br>$$<br>m^e = k*N + c<br>$$</p>
-</li>
+<li><p>如果m稍微大一点，那么</p>
+<script type="math/tex; mode=display">
+m^e = k*N + c</script></li>
 </ol>
 <p>   我们可以对<code>k</code>进行枚举</p>
    <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line">k = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">if</span>(gmpy2.iroot(c+k*n,<span class="number">3</span>)[<span class="number">1</span>] == <span class="number">1</span>):</span><br><span class="line">        print(gmpy2.iroot(c+k*n,<span class="number">3</span>))</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">     i = i+<span class="number">1</span></span><br></pre></td></tr></table></figure>
@@ -1330,6 +1341,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

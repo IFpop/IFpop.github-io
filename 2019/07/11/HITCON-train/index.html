@@ -91,7 +91,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/11/HITCON-train/1562811133517.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/11/HITCON-train/1562813207401.png">
-<meta property="og:updated_time" content="2019-07-18T01:04:18.484Z">
+<meta property="og:updated_time" content="2019-10-28T10:25:44.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HITCON-train">
 <meta name="twitter:description" content="lab1先看看保护机制  打开了部分可读，而就是可以进行溢出覆盖，打开了栈溢出保护，而且NX打开，不可执行，地址随机化没有打开 现在可以用ida打开看看文件，是32位的，所以就可以直接在ida.exe里面打开 找到mian函数，反编译以下：  看到关键函数get_flag(): 123456789101112131415161718192021222324252627282930313233343">
@@ -1253,6 +1253,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

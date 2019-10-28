@@ -93,7 +93,7 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/07/25/SQL注入入门/1562999570039.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/25/SQL注入入门/1562999587796.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/07/25/SQL注入入门/1563002860330.png">
-<meta property="og:updated_time" content="2019-08-31T01:47:18.810Z">
+<meta property="og:updated_time" content="2019-10-28T10:26:46.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL注入入门">
 <meta name="twitter:description" content="判断有无引号 根据字段的意义或输入的值 Name/可以输入字母或符号 Id/输入是数字   运算测试id=2-1 结果与id=1一样，说明2-1被执行，没有被引号包裹 结果与id=2一样，说明2-1被当做字符串先进行了类型转换，再执行，有引号    判断单双引号 一般来说可以直接用转义字符进行判断         ps:上面这个bugku上的成绩单一题是利用post进行传值   这里的后台就可以">
@@ -1331,6 +1331,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
