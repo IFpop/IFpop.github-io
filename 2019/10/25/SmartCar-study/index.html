@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-11T12:20:50.180Z">
+<meta property="og:updated_time" content="2019-11-11T12:30:09.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SmartCar-study">
 <meta name="twitter:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  4.2k 字
+                  4.3k 字
                 </span>
               
 
@@ -732,6 +732,11 @@
 </ul>
 <h1 id="2019-11-10"><a href="#2019-11-10" class="headerlink" title="2019/11/10"></a>2019/11/10</h1><p>昨天下午5个小时，用来检测驱动板的电路问题(而且不能升压至12V）开始是一直短路的，看完其他小组的板子才发现，芯片以及钽电容是有方向的，emmm，由于这块板子已经被折磨的不成人样了，所以最终决定重新焊，又花了一个小时，我们重新焊好了驱动板，好了，现在可以得到12V的电压，但是问题又来了，主控板上的双排母又出现接触不良的现象，所以之后在进行之后的检测吧（溜…毕竟我不是搞电路的，甩锅…)</p>
 <h1 id="2019-11-11"><a href="#2019-11-11" class="headerlink" title="2019/11/11"></a>2019/11/11</h1><p>昨天问了学长很多问题，现在在这总结一下，以便方便我后面的任务的进行</p>
+<ul>
+<li><p>首先整理一下app的输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//手动控制</span></span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">0xc1</span>);</span><br><span class="line">byte_buffer.write(Integer.toString(direction).getBytes());</span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">32</span>);<span class="comment">//' '</span></span><br><span class="line">byte_buffer.write(Integer.toString(speed).getBytes());</span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//遥杆控制</span></span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">0xc3</span>);</span><br><span class="line">byte_buffer.write(Float.toString(x).getBytes());</span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">32</span>);<span class="comment">//' '</span></span><br><span class="line">byte_buffer.write(Float.toString(y).getBytes());</span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">32</span>);<span class="comment">//' '</span></span><br><span class="line">byte_buffer.write(Integer.toString(speed).getBytes());</span><br><span class="line">byte_buffer.write((<span class="keyword">byte</span>) <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ul>
 <li><p><code>uart</code>与蓝牙接收的问题</p>
 <p><code>uart</code>只能一个字节一个字节地接收，需要设置起始字节和结束字节,然后需要写一个中断函数<code>UART2_buleteeth_ISR</code>,具体如下：</p>
