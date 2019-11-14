@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-11-08T10:34:40.622Z</updated>
+  <updated>2019-11-12T03:45:21.982Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -17,11 +17,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SageMent解题记录</title>
+    <link href="https://IFpop.github.io/2019/11/12/SageMent%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://IFpop.github.io/2019/11/12/SageMent解题记录/</id>
+    <published>2019-11-12T03:45:21.000Z</published>
+    <updated>2019-11-12T03:45:21.982Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2019湖湘杯</title>
+    <link href="https://IFpop.github.io/2019/11/12/2019%E6%B9%96%E6%B9%98%E6%9D%AF/"/>
+    <id>https://IFpop.github.io/2019/11/12/2019湖湘杯/</id>
+    <published>2019-11-12T03:44:11.000Z</published>
+    <updated>2019-11-12T03:50:51.402Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Misc&quot;&gt;&lt;a href=&quot;#Misc&quot; class=&quot;headerlink&quot; title=&quot;Misc&quot;&gt;&lt;/a&gt;Misc&lt;/h1&gt;&lt;h2 id=&quot;第一个貌似是签到来着&quot;&gt;&lt;a href=&quot;#第一个貌似是签到来着&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+      <category term="wp" scheme="https://IFpop.github.io/categories/wp/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/categories/wp/CTF/"/>
+    
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
+    
+      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jarvisoj-wp</title>
     <link href="https://IFpop.github.io/2019/11/08/Jarvisoj-wp/"/>
     <id>https://IFpop.github.io/2019/11/08/Jarvisoj-wp/</id>
     <published>2019-11-07T16:17:47.000Z</published>
-    <updated>2019-11-08T10:34:40.622Z</updated>
+    <updated>2019-11-14T07:18:27.062Z</updated>
     
     <summary type="html">
     
@@ -95,15 +136,15 @@
       <category term="wp" scheme="https://IFpop.github.io/categories/CTF/wp/"/>
     
     
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
+    
+      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
+    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
     
-      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
-    
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
-    
-      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
   </entry>
   
