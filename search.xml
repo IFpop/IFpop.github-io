@@ -55,8 +55,8 @@
       <tags>
         <tag>crypto</tag>
         <tag>misc</tag>
-        <tag>web</tag>
         <tag>pwn</tag>
+        <tag>web</tag>
         <tag>re</tag>
       </tags>
   </entry>
@@ -172,8 +172,8 @@
         <category>CTF</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>ISCC</tag>
+        <tag>CTF</tag>
       </tags>
   </entry>
 </search>
