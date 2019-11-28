@@ -89,13 +89,10 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ifpop.github.io/2019/10/25/SmartCar-study/2.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/10/25/SmartCar-study/3.png">
-<meta property="og:updated_time" content="2019-11-14T16:19:36.086Z">
+<meta property="og:updated_time" content="2019-11-28T16:57:10.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SmartCar-study">
 <meta name="twitter:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
-<meta name="twitter:image" content="https://ifpop.github.io/2019/10/25/SmartCar-study/2.png">
 
 
 
@@ -394,7 +391,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  4.7k 字
+                  5.4k 字
                 </span>
               
 
@@ -410,7 +407,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  17 分钟
+                  20 分钟
                 </span>
               
             </div>
@@ -756,21 +753,63 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">         串口号   默认引脚            重映射引脚</span></span><br><span class="line"><span class="string">        UART0:  RX--B0 ；TX--B1     PTA3 TX ,PTA2 RX</span></span><br><span class="line"><span class="string">        UART1:  RX--C6 ；TX--C7     PTF3 TX ,PTF2 RX</span></span><br><span class="line"><span class="string">        UART2:  RX--D6 ；TX--D7     PTI1 TX ,PTI0 RX </span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>上述也就是直接将蓝牙与单片机连起来，然后<code>app</code>直接发送给车，但是我们目前还没有到达这一步，我们想先从电脑上能不能得到<code>app</code>发送的消息，或者是蓝牙连上单片机上之后我们要怎么调试（知道）程序的运行过程。想着这部分应该是串口调试程序完成的。所以现在关于串口程序的界面问题又有一些问题</p>
-<p><img src="/2019/10/25/SmartCar-study/2.png" alt="2"></p>
 <p>这张图中端口是默认的<code>COM2</code>，然后波特率是干啥用的其实也不太明确。</p>
 <blockquote>
-<p>尝试自己解决，看看这篇<a href="https://blog.csdn.net/dok12/article/details/80152239" target="_blank" rel="noopener">博客</a>，也可以看看相关</p>
+<p>尝试自己解决，看看这篇<a href="https://blog.csdn.net/dok12/article/details/80152239" target="_blank" rel="noopener">博客</a>。</p>
+<p>串口其实就是传输的端口，波特率是发送频率来着，貌似跟速度有关，波特率越大，传输的频率越快</p>
 </blockquote>
 </li>
 <li><p>然后就是关于上次那个<code>app</code>，界面如下：</p>
-<p><img src="/2019/10/25/SmartCar-study/3.png" alt="3"></p>
 <p>发现一个奇怪的问题，就是手动控制的按钮不点，摇杆也是不能动的，然后关于那个send窗口是干什么的也不太清楚</p>
 <blockquote>
-<p>这部分还是先问问学长</p>
+<p>这部分是为了防止误触而设置的。</p>
 </blockquote>
 </li>
 </ul>
-<p>大概这就是今天的问题了</p>
+<h1 id="2019-11-17"><a href="#2019-11-17" class="headerlink" title="2019/11/17"></a>2019/11/17</h1><p>简单进行了蓝牙测试，使用<code>H06</code>和<code>ch340</code>连接，可以得到手机<code>app</code>传出的参数。但是可能也遇到了一些问题，在和小车相连时只能发送转向信号，由于现在还是不知道怎么在程序内部进行调试，所以这部分目前还是不知道怎么处理。</p>
+<p>现在可以进行简单的转向操作，或者进行转向。</p>
+<p>不过，在学长以及网上资源的帮助下，终于实现了蓝牙控制。</p>
+<h1 id="2019-11-18"><a href="#2019-11-18" class="headerlink" title="2019/11/18"></a>2019/11/18</h1><p>简单学一下<a href="https://book.openmv.cc/" target="_blank" rel="noopener"><code>openmv</code></a></p>
+<h1 id="2019-11-24"><a href="#2019-11-24" class="headerlink" title="2019/11/24"></a>2019/11/24</h1><p>今天大概做了这么一些事情：</p>
+<ul>
+<li><p>对摄像头进行调参，主要是曝光率，使其能够设别到对角的红灯</p>
+</li>
+<li><p>对蓝牙控制进行简单删减，并实现转圈(转圈其实就是一个电机正转，一个电机反转）</p>
+</li>
+<li><p>实现简单摄像头找灯</p>
+<blockquote>
+<p>思路如下：</p>
+<ol>
+<li>当找不到灯时，就转圈</li>
+<li>如果找到灯，通过x,w判断方向，调整舵机进行偏转。</li>
+<li>到达灯附近<code>60-70cm</code>时(通过w,h的值进行判断)，给电机一个偏向然后保持不动。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h1 id="2019-11-26"><a href="#2019-11-26" class="headerlink" title="2019/11/26"></a>2019/11/26</h1><p>今天去地下室调车时，车突然出现一顿一顿的问题，蓝牙连接也不太稳定。。测试1个小时都不知道怎么回事。。就当其是电路问题吧。。明天让负责电路的同学进行测试。</p>
+<h1 id="2019-11-27"><a href="#2019-11-27" class="headerlink" title="2019/11/27"></a>2019/11/27</h1><p>结果出现了，电路是没有问题的，电池电压低于<code>7.2V</code>就不能正常工作。。<code>emmm</code>，真的人傻了</p>
+<h1 id="2019-11-28"><a href="#2019-11-28" class="headerlink" title="2019/11/28"></a>2019/11/28</h1><p>今天做了以下事项：</p>
+<ul>
+<li><p>测试了拨码的功能。</p>
+</li>
+<li><p>编码器</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//初始化编码      </span></span><br><span class="line">ftm_count_init(ftm0);   <span class="comment">//对E0引脚输入的脉冲进行计数    E0接编码器LSB   </span></span><br><span class="line">gpio_init(H7,GPI,<span class="number">0</span>);    <span class="comment">//用于判断方向                C5接编码器DIR   </span></span><br><span class="line">ftm_count_init(ftm1);   <span class="comment">//对E7引脚输入的脉冲进行计数    E7接编码器LSB</span></span><br><span class="line">gpio_init(H5,GPI,<span class="number">0</span>);    <span class="comment">//用于判断方向                  H5接编码器DIR</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>弄清<code>pwm</code>波初始化以及输出过程，由于编码器后续可能需要占用两个<code>ftm</code>模块，所以需要将舵机这个模块给空出来，使用定时中断进行控制(具体过程尚不清楚)</p>
+<blockquote>
+<p>看看关于这篇<a href="https://blog.csdn.net/u014183377/article/details/41091927" target="_blank" rel="noopener">详解</a>,虽然是kea60，但思路差不多</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="2019-11-29"><a href="#2019-11-29" class="headerlink" title="2019/11/29"></a>2019/11/29</h1><p>今日计划：</p>
+<ul>
+<li>[ ] 了解如何通过其他替换<code>ftm</code>输出<code>pwm</code>给舵机的方案</li>
+<li>[ ] 晚上去地下车，测试一下摄像头能否正常工作</li>
+<li>[ ] 将车的前部给固定一下，顺便对摄像头调参，固定摄像头。</li>
+</ul>
 
       
     </div>
@@ -1006,7 +1045,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-22"><span class="nav-number">1.</span> <span class="nav-text">2019/10/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-23"><span class="nav-number">2.</span> <span class="nav-text">2019/10/23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-24"><span class="nav-number">3.</span> <span class="nav-text">2019/10/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-25"><span class="nav-number">4.</span> <span class="nav-text">2019/10/25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-26"><span class="nav-number">5.</span> <span class="nav-text">2019/10/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-30"><span class="nav-number">6.</span> <span class="nav-text">2019/10/30</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-31"><span class="nav-number">7.</span> <span class="nav-text">2019/10/31</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-2"><span class="nav-number">8.</span> <span class="nav-text">2019/11/2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-7"><span class="nav-number">9.</span> <span class="nav-text">2019/11/7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-10"><span class="nav-number">10.</span> <span class="nav-text">2019/11/10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-11"><span class="nav-number">11.</span> <span class="nav-text">2019/11/11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-14"><span class="nav-number">12.</span> <span class="nav-text">2019/11/14</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-22"><span class="nav-number">1.</span> <span class="nav-text">2019/10/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-23"><span class="nav-number">2.</span> <span class="nav-text">2019/10/23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-24"><span class="nav-number">3.</span> <span class="nav-text">2019/10/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-25"><span class="nav-number">4.</span> <span class="nav-text">2019/10/25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-26"><span class="nav-number">5.</span> <span class="nav-text">2019/10/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-30"><span class="nav-number">6.</span> <span class="nav-text">2019/10/30</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-31"><span class="nav-number">7.</span> <span class="nav-text">2019/10/31</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-2"><span class="nav-number">8.</span> <span class="nav-text">2019/11/2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-7"><span class="nav-number">9.</span> <span class="nav-text">2019/11/7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-10"><span class="nav-number">10.</span> <span class="nav-text">2019/11/10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-11"><span class="nav-number">11.</span> <span class="nav-text">2019/11/11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-14"><span class="nav-number">12.</span> <span class="nav-text">2019/11/14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-17"><span class="nav-number">13.</span> <span class="nav-text">2019/11/17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-18"><span class="nav-number">14.</span> <span class="nav-text">2019/11/18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-24"><span class="nav-number">15.</span> <span class="nav-text">2019/11/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-26"><span class="nav-number">16.</span> <span class="nav-text">2019/11/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-27"><span class="nav-number">17.</span> <span class="nav-text">2019/11/27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-28"><span class="nav-number">18.</span> <span class="nav-text">2019/11/28</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-29"><span class="nav-number">19.</span> <span class="nav-text">2019/11/29</span></a></li></ol></div>
             
 
           </div>
@@ -1587,26 +1626,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
