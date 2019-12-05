@@ -87,7 +87,7 @@
     <link href="https://IFpop.github.io/2019/10/25/SmartCar-study/"/>
     <id>https://IFpop.github.io/2019/10/25/SmartCar-study/</id>
     <published>2019-10-24T16:08:32.000Z</published>
-    <updated>2019-11-28T16:57:10.827Z</updated>
+    <updated>2019-11-30T15:35:55.473Z</updated>
     
     <summary type="html">
     
@@ -140,9 +140,9 @@
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
@@ -392,9 +392,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   
