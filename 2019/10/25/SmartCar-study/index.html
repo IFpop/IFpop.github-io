@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-30T15:35:55.473Z">
+<meta property="og:updated_time" content="2019-12-16T16:50:52.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SmartCar-study">
 <meta name="twitter:description" content="这是一位不成器的计算机选手开始挑战跨专业的探测信标的智障车智能车🔞 2019/10/22练习如何焊接电路板，成就：成功焊坏一个芯片，貌似是车队最后一个 😆 2019/10/23看完IAR使用手册，熟悉IAR的实际操作😁  工程相关源文件的树型结构，可分为“工程配置文件”，“源程序文件”，“机器码文件”  “工程配置文件”包含的文件与芯片及工程初始化相关，包含链接文件与启动代码文件。启动代码文">
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  5.5k 字
+                  5.7k 字
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  20 分钟
+                  21 分钟
                 </span>
               
             </div>
@@ -809,10 +809,24 @@
 <p>明天去测试一下是否可行</p>
 <h1 id="2019-12-1"><a href="#2019-12-1" class="headerlink" title="2019/12/1"></a>2019/12/1</h1><p>今日计划：</p>
 <ul>
-<li>[ ] 了解如何通过其他替换<code>ftm</code>输出<code>pwm</code>给舵机的方案</li>
-<li>[ ] 晚上去地下车，测试一下摄像头能否正常工作</li>
-<li>[ ] 将车的前部给固定一下，顺便对摄像头调参，固定摄像头。</li>
+<li>[x] 了解如何通过其他替换<code>ftm</code>输出<code>pwm</code>给舵机的方案</li>
+<li>[x] 晚上去地下车，测试一下摄像头能否正常工作</li>
+<li>[x] 将车的前部给固定一下，顺便对摄像头调参，固定摄像头。</li>
 </ul>
+<h1 id="2019-12-14"><a href="#2019-12-14" class="headerlink" title="2019/12/14"></a>2019/12/14</h1><p>现存问题及预估解决方案</p>
+<ul>
+<li>摄像头角度需调整，调整好以后固定死</li>
+<li>杜邦线连接稳定性（今天测车过程中舵机pwm控制线被撞掉导致原地转圈）</li>
+<li>电机过烫（加入速度闭环控制）</li>
+<li>到达预定区域后偏向，避免撞上灯柱，但现在问题是偏向后车并没有把灯灭掉，需第二次进行灭灯，此时车会直接撞向灯柱，须进一步细调</li>
+</ul>
+<h1 id="2019-12-16"><a href="#2019-12-16" class="headerlink" title="2019/12/16"></a>2019/12/16</h1><p>分析学长代码</p>
+<ol>
+<li><p>关于如何适用当定时器产生<code>pwm</code>波</p>
+<blockquote>
+<h1 id="include-“fsl-ftm-h”-找到这个文件"><a href="#include-“fsl-ftm-h”-找到这个文件" class="headerlink" title="include “fsl_ftm.h”  找到这个文件"></a>include “fsl_ftm.h”  找到这个文件</h1></blockquote>
+</li>
+</ol>
 
       
     </div>
@@ -952,7 +966,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -963,7 +977,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1048,7 +1062,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-22"><span class="nav-number">1.</span> <span class="nav-text">2019/10/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-23"><span class="nav-number">2.</span> <span class="nav-text">2019/10/23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-24"><span class="nav-number">3.</span> <span class="nav-text">2019/10/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-25"><span class="nav-number">4.</span> <span class="nav-text">2019/10/25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-26"><span class="nav-number">5.</span> <span class="nav-text">2019/10/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-30"><span class="nav-number">6.</span> <span class="nav-text">2019/10/30</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-31"><span class="nav-number">7.</span> <span class="nav-text">2019/10/31</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-2"><span class="nav-number">8.</span> <span class="nav-text">2019/11/2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-7"><span class="nav-number">9.</span> <span class="nav-text">2019/11/7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-10"><span class="nav-number">10.</span> <span class="nav-text">2019/11/10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-11"><span class="nav-number">11.</span> <span class="nav-text">2019/11/11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-14"><span class="nav-number">12.</span> <span class="nav-text">2019/11/14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-17"><span class="nav-number">13.</span> <span class="nav-text">2019/11/17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-18"><span class="nav-number">14.</span> <span class="nav-text">2019/11/18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-24"><span class="nav-number">15.</span> <span class="nav-text">2019/11/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-26"><span class="nav-number">16.</span> <span class="nav-text">2019/11/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-27"><span class="nav-number">17.</span> <span class="nav-text">2019/11/27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-28"><span class="nav-number">18.</span> <span class="nav-text">2019/11/28</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-29"><span class="nav-number">19.</span> <span class="nav-text">2019/11/29</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-1"><span class="nav-number">20.</span> <span class="nav-text">2019/12/1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-22"><span class="nav-number">1.</span> <span class="nav-text">2019/10/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-23"><span class="nav-number">2.</span> <span class="nav-text">2019/10/23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-24"><span class="nav-number">3.</span> <span class="nav-text">2019/10/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-25"><span class="nav-number">4.</span> <span class="nav-text">2019/10/25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-26"><span class="nav-number">5.</span> <span class="nav-text">2019/10/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-30"><span class="nav-number">6.</span> <span class="nav-text">2019/10/30</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-10-31"><span class="nav-number">7.</span> <span class="nav-text">2019/10/31</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-2"><span class="nav-number">8.</span> <span class="nav-text">2019/11/2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-7"><span class="nav-number">9.</span> <span class="nav-text">2019/11/7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-10"><span class="nav-number">10.</span> <span class="nav-text">2019/11/10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-11"><span class="nav-number">11.</span> <span class="nav-text">2019/11/11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-14"><span class="nav-number">12.</span> <span class="nav-text">2019/11/14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-17"><span class="nav-number">13.</span> <span class="nav-text">2019/11/17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-18"><span class="nav-number">14.</span> <span class="nav-text">2019/11/18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-24"><span class="nav-number">15.</span> <span class="nav-text">2019/11/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-26"><span class="nav-number">16.</span> <span class="nav-text">2019/11/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-27"><span class="nav-number">17.</span> <span class="nav-text">2019/11/27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-28"><span class="nav-number">18.</span> <span class="nav-text">2019/11/28</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-11-29"><span class="nav-number">19.</span> <span class="nav-text">2019/11/29</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-1"><span class="nav-number">20.</span> <span class="nav-text">2019/12/1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-14"><span class="nav-number">21.</span> <span class="nav-text">2019/12/14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-16"><span class="nav-number">22.</span> <span class="nav-text">2019/12/16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#include-“fsl-ftm-h”-找到这个文件"><span class="nav-number">23.</span> <span class="nav-text">include “fsl_ftm.h”  找到这个文件</span></a></li></ol></div>
             
 
           </div>

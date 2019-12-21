@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-11-12T03:45:21.982Z</updated>
+  <updated>2019-12-21T16:01:07.668Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sudoku</title>
+    <link href="https://IFpop.github.io/2019/12/21/Sudoku/"/>
+    <id>https://IFpop.github.io/2019/12/21/Sudoku/</id>
+    <published>2019-12-21T12:00:22.000Z</published>
+    <updated>2019-12-21T16:01:07.668Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;项目链接&quot;&gt;&lt;a href=&quot;#项目链接&quot; class=&quot;headerlink&quot; title=&quot;项目链接&quot;&gt;&lt;/a&gt;项目链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/IFpop/Soduku&quot; target=&quot;_blank&quot; rel=
+      
+    
+    </summary>
+    
+      <category term="Homework" scheme="https://IFpop.github.io/categories/Homework/"/>
+    
+      <category term="study" scheme="https://IFpop.github.io/categories/Homework/study/"/>
+    
+    
+      <category term="python" scheme="https://IFpop.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>SageMent解题记录</title>
@@ -87,7 +112,7 @@
     <link href="https://IFpop.github.io/2019/10/25/SmartCar-study/"/>
     <id>https://IFpop.github.io/2019/10/25/SmartCar-study/</id>
     <published>2019-10-24T16:08:32.000Z</published>
-    <updated>2019-11-30T15:35:55.473Z</updated>
+    <updated>2019-12-16T16:50:52.195Z</updated>
     
     <summary type="html">
     
@@ -140,9 +165,9 @@
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
-      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
