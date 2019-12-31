@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2019-12-21T16:01:07.668Z</updated>
+  <updated>2019-12-31T12:04:49.329Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://IFpop.github.io/2019/12/21/Sudoku/"/>
     <id>https://IFpop.github.io/2019/12/21/Sudoku/</id>
     <published>2019-12-21T12:00:22.000Z</published>
-    <updated>2019-12-21T16:01:07.668Z</updated>
+    <updated>2019-12-31T12:04:49.329Z</updated>
     
     <summary type="html">
     
@@ -165,9 +165,9 @@
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     

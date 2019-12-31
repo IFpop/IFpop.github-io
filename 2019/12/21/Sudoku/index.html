@@ -89,16 +89,20 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="项目链接数独项目仓库 PSP PSP是卡耐基梅隆大学（CMU）的专家们针对软件工程师所提出的一套模型：Personal Software Process (PSP， 个人开发流程，或称个体软件过程)。  时间安排表    PSP2.1 Personal Software Process stages 预估耗时(min) 实际耗时(min)     Planning 计划 60 60   ·Esti">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1576601025276.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/AppData/Roaming/Typora/typora-user-images/1576601025276.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1576630672896.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1576630770056.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1576630843295.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1576630882421.png">
-<meta property="og:updated_time" content="2019-12-21T16:01:07.668Z">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1577256535140.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1577338561803.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/AppData/Roaming/Typora/typora-user-images/1577338458758.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/96552/Desktop/优化前/1.png">
+<meta property="og:updated_time" content="2019-12-31T12:04:49.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sudoku">
 <meta name="twitter:description" content="项目链接数独项目仓库 PSP PSP是卡耐基梅隆大学（CMU）的专家们针对软件工程师所提出的一套模型：Personal Software Process (PSP， 个人开发流程，或称个体软件过程)。  时间安排表    PSP2.1 Personal Software Process stages 预估耗时(min) 实际耗时(min)     Planning 计划 60 60   ·Esti">
-<meta name="twitter:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1576601025276.png">
+<meta name="twitter:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/AppData/Roaming/Typora/typora-user-images/1576601025276.png">
 
 
 
@@ -408,7 +412,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.6k 字
+                  2.8k 字
                 </span>
               
 
@@ -424,7 +428,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  5 分钟
+                  10 分钟
                 </span>
               
             </div>
@@ -604,7 +608,7 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="/2019/12/21/Sudoku/1576601025276.png" alt="1576601025276"></p>
+<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\AppData\Roaming\Typora\typora-user-images\1576601025276.png" alt="1576601025276"></p>
 <ul>
 <li><p>以宫为单位的矩阵置换法</p>
 <blockquote>
@@ -639,9 +643,85 @@
 </ul>
 <h3 id="选取"><a href="#选取" class="headerlink" title="选取"></a>选取</h3><p>​    分性上述方法，回溯法生成的数独终局随机性非常高，但是效率相对较低，想要达到题目要求需要消耗大量时间和计算机资源；以宫为单位的矩阵置换法，通过矩阵行列变换有2!×3!×3!×2!×3!×3!=5184，要想生成1000000个终局，中间的九宫格就需要1000000/5184=192，而正中九宫格有8!=40320个足够满足要求，但由于需要控制多个九宫格进行矩阵变换，还是较为复杂；模板数字替换法效率较高，但是如果只使用一个模板的话，最多能生成的不同的数独终局数仅为9！=362880，而本项目中规定数独终局的第一行第一列为定值，使一个模板能生成的不同的数独终局数为8！=40320，显然是远远无法达到题目要求的数量上限（N&lt;=1000000）。对于数列法，不仅高效，生成的终局数量达到目标要求，而且操作简单而快速，但终局相差不多。</p>
 <p>​    最终权衡，我决定使用方法四——数列法，来产生最终的数独终局。由于实验要求左上角的数字是<code>(学号后两位相加)%9+1</code>,所以生成数列时先固定好第一位数字，剩下的8位数字全排列8!也就是约为40000，是要求最大的终局数为1000000，所以最终一个排列需要1000000/40000 = 25，也就是每种排列需要生成25个终局。本实验中每种排列生成30个终局。</p>
-<p>​    最终方案：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 确定一个初始数列。</span><br><span class="line">2. 由当前数列生成全排列中的一种。</span><br><span class="line">3. 由上述得到的排列，按照之前所说原则进行移动操作，最终生成一个终局。</span><br><span class="line">4. 检查生辰的终局数是否达到要求，如果没有达到，则返回第3步。</span><br></pre></td></tr></table></figure>
-<h2 id="求解终局"><a href="#求解终局" class="headerlink" title="求解终局"></a>求解终局</h2>
+<h2 id="求解数独"><a href="#求解数独" class="headerlink" title="求解数独"></a>求解数独</h2><h3 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>递归回溯法</p>
+<blockquote>
+<ol>
+<li>如果全部填完，那么该数独的这种填法就是其中一种解，输出该数独解。</li>
+<li>如果还没填完，填到了第x，y位置，判断该位置是否有数字（原题该位置有就有，没有就没有），如果有，填下一个位置。如果没有，寻找1-9数字在三个flag中为0的数字。找到了，标记flag（3个）为1，填下一个位置。</li>
+<li>回溯法是恢复之前的flag和数据，即恢复为0，因此，每次填完数字，即在尝试该数据填完后，恢复flag和原来的数独数字</li>
+</ol>
+</blockquote>
+</li>
+<li><p>排除候选猜测法</p>
+<blockquote>
+<ol>
+<li>传入数独矩阵，确定的数字直接填到对应的坐标上，没有填上数字的坐标可能候选值是1~9，再根据确定的值排除候选值。</li>
+<li>当通过一般数独规则将候选值排除完，若答案仍不能确定，那么就开始进行点的猜测。</li>
+<li>知道所有框中的数字都是确定的，就将其输出。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="选取-1"><a href="#选取-1" class="headerlink" title="选取"></a>选取</h3><ul>
+<li><p>​    最终综合考虑，当遇到困难级别的数独时，排除候选猜测法的效率是要高于递归回溯法。</p>
+<p>​    下列是我的测试结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">8</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">3</span> <span class="number">6</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">7</span> <span class="number">0</span> <span class="number">0</span> <span class="number">9</span> <span class="number">0</span> <span class="number">2</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">5</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">7</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">3</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">6</span> <span class="number">8</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">8</span> <span class="number">5</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">9</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">4</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">排除候选测试法：<span class="number">0.0100</span> seconds</span><br><span class="line">递归回溯法：    <span class="number">0.1262</span> seconds</span><br></pre></td></tr></table></figure>
+<p>​    最终决定选取排除候选测试法。</p>
+</li>
+</ul>
+<h1 id="设计实现过程"><a href="#设计实现过程" class="headerlink" title="设计实现过程"></a>设计实现过程</h1><h2 id="模块介绍"><a href="#模块介绍" class="headerlink" title="模块介绍"></a>模块介绍</h2><h3 id="主控模块"><a href="#主控模块" class="headerlink" title="主控模块"></a>主控模块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">根据参数调用下列函数进行相应处理（包括参数合法性判断）</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="生成终局模块"><a href="#生成终局模块" class="headerlink" title="生成终局模块"></a>生成终局模块</h3><ul>
+<li>数列法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 确定一个初始数列。</span><br><span class="line"><span class="number">2.</span> 由当前数列生成全排列中的一种。</span><br><span class="line"><span class="number">3.</span> 由上述得到的排列，按照之前所说原则进行移动操作，最终生成一个终局。</span><br><span class="line"><span class="number">4.</span> 检查生辰的终局数是否达到要求，如果没有达到，则返回第<span class="number">3</span>步。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>代码组织</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">终局生成类：</span></span><br><span class="line"><span class="string">移动变换元组、求解下一个全排列函数、初始化函数</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="数独求解"><a href="#数独求解" class="headerlink" title="数独求解"></a>数独求解</h3><ul>
+<li>排除候选法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#这里之后补充完整的算法思路</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>代码组织</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">数独求解类：</span></span><br><span class="line"><span class="string">初始化函数、记录函数、检错函数、回溯函数、估值函数、排除侯选数函数、深度优先遍历</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="思路流程图"><a href="#思路流程图" class="headerlink" title="思路流程图"></a>思路流程图</h2><p><img src="/2019/12/21/Sudoku/Users\96552\AppData\Roaming\Typora\typora-user-images\1577256535140.png" alt="1577256535140"></p>
+<h1 id="性能分析及优化"><a href="#性能分析及优化" class="headerlink" title="性能分析及优化"></a>性能分析及优化</h1><h3 id="生成终局部分性能分析及优化"><a href="#生成终局部分性能分析及优化" class="headerlink" title="生成终局部分性能分析及优化"></a>生成终局部分性能分析及优化</h3><ul>
+<li><p>执行命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 sudoku.py -c <span class="number">1000000</span></span><br></pre></td></tr></table></figure>
+<p>|  语言  |  耗时   |<br>| :——: | :——-: |<br>| python | 30.9375 |<br>| c/c++  | 2.4605s |</p>
+</li>
+<li><p>模块时间分布</p>
+<blockquote>
+<p>使用【调试】中的启动python分析得到</p>
+</blockquote>
+<p><img src="/2019/12/21/Sudoku/Users\96552\AppData\Roaming\Typora\typora-user-images\1577338561803.png" alt="1577338561803"></p>
+<p>由图中分析可以知道占用时间主要集中于<code>__init__</code>和<code>create</code>。</p>
+</li>
+<li><p>函数时间分布</p>
+<p><img src="/2019/12/21/Sudoku/Users\96552\AppData\Roaming\Typora\typora-user-images\1577338458758.png" alt="1577338458758"></p>
+<p>时间消耗主要集中于<code>write2file</code>函数以及<code>get_sudoku</code>函数中。</p>
+</li>
+<li><p>时间分布图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#为了能够更加直观的看出那个模块以及函数的时间消耗，增加了利用cprofile(分析时间）以及gprof2dot（可视化）</span></span><br><span class="line"><span class="comment">#参考文献进行了性能分析: https://zhuanlan.zhihu.com/p/24495603</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/21/Sudoku/Users\96552\Desktop\优化前\1.png" alt="1"></p>
+</li>
+</ul>
+<p>此处可以看出<code>replace</code>切割相对于其他比较耗时。</p>
+<ul>
+<li><p>原因分析及解决方案</p>
+<p>​    首先是<code>write2file</code>以及<code>get_sudoku</code>函数，最开始的思路是得到一个终局写入一次，但事实证明效率极低，目前采用的策略是将全部的数独存到一个<code>list</code>变量<code>perm</code>中，最后集中写入。而<code>replace</code>比较耗时，这是因为<code>python</code>本身的特性决定的，<code>python</code>是一种解释性语言，前期的编译是将 <code>Python</code> 代码编译成解释器可以理解的中间代码，解释器再将中间代码翻译成<code>CPU</code>可以理解的指令,相比于 AOT(提前编译型语言，比如C)直接编译成机器码，肯定是慢的。那么要怎样才能使用<code>python</code>到达<code>c</code>的速度呢?由此我决定使用<code>cython</code>(一种C语言与python的结合体)写数独过程。学习过程参看<a href="https://blog.csdn.net/Pythoncxy/article/details/98060530" target="_blank" rel="noopener">博客</a>。</p>
+<p>​    另外，生成全排列的函数<code>nextPermutation</code>，采取的措施是每次遍历完30个<code>move_way</code>之后才会获取下一个全排列，大大增加了该函数的调用次数，也浪费了时间。由此，我之后采用先将所有的全排列生成然后存储起来，之后直接访问即可。</p>
+<p>​    最后就是文件写入函数也会有占用大量时间，目前采用的策略是对于每一个数独，逐个写入，这样会多次调用<code>write</code>函数，所以最终的方案是建立一个缓存区，将数独以字符串形式存入，最后一起写入。结合<code>cython</code>，可以使用更快的<code>fputs</code>进行一次性写入。</p>
+</li>
+<li><p>最终结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#执行下列命令</span></span><br><span class="line">python3 sudoku.py -c <span class="number">1000000</span></span><br></pre></td></tr></table></figure>
+<p>|      语言      | 运行时间 |<br>| :——————: | :———: |<br>| python(最开始) | 30.9375  |<br>|     c/c++      | 2.4605s  |<br>|     cython     |  2.6758  |</p>
+</li>
+</ul>
+<h2 id="解数独性能及优化"><a href="#解数独性能及优化" class="headerlink" title="解数独性能及优化"></a>解数独性能及优化</h2>
       
     </div>
     
@@ -866,7 +946,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目链接"><span class="nav-number">1.</span> <span class="nav-text">项目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PSP"><span class="nav-number">2.</span> <span class="nav-text">PSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间安排表"><span class="nav-number">2.1.</span> <span class="nav-text">时间安排表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">3.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">4.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局"><span class="nav-number">4.1.</span> <span class="nav-text">生成终局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取"><span class="nav-number">4.1.2.</span> <span class="nav-text">选取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解终局"><span class="nav-number">4.2.</span> <span class="nav-text">求解终局</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目链接"><span class="nav-number">1.</span> <span class="nav-text">项目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PSP"><span class="nav-number">2.</span> <span class="nav-text">PSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间安排表"><span class="nav-number">2.1.</span> <span class="nav-text">时间安排表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">3.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">4.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局"><span class="nav-number">4.1.</span> <span class="nav-text">生成终局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取"><span class="nav-number">4.1.2.</span> <span class="nav-text">选取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解数独"><span class="nav-number">4.2.</span> <span class="nav-text">求解数独</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">选取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计实现过程"><span class="nav-number">5.</span> <span class="nav-text">设计实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块介绍"><span class="nav-number">5.1.</span> <span class="nav-text">模块介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主控模块"><span class="nav-number">5.1.1.</span> <span class="nav-text">主控模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局模块"><span class="nav-number">5.1.2.</span> <span class="nav-text">生成终局模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数独求解"><span class="nav-number">5.1.3.</span> <span class="nav-text">数独求解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路流程图"><span class="nav-number">5.2.</span> <span class="nav-text">思路流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能分析及优化"><span class="nav-number">6.</span> <span class="nav-text">性能分析及优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局部分性能分析及优化"><span class="nav-number">6.0.1.</span> <span class="nav-text">生成终局部分性能分析及优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解数独性能及优化"><span class="nav-number">6.1.</span> <span class="nav-text">解数独性能及优化</span></a></li></ol></div>
             
 
           </div>
