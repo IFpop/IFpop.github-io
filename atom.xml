@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2020-01-03T06:27:26.020Z</updated>
+  <updated>2020-01-03T07:18:01.865Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sudoku_Study_daily</title>
+    <link href="https://IFpop.github.io/2020/01/03/Sudoku-Study-daily/"/>
+    <id>https://IFpop.github.io/2020/01/03/Sudoku-Study-daily/</id>
+    <published>2020-01-03T06:31:45.000Z</published>
+    <updated>2020-01-03T07:18:01.865Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2019-12-16&quot;&gt;&lt;a href=&quot;#2019-12-16&quot; class=&quot;headerlink&quot; title=&quot;2019/12/16&quot;&gt;&lt;/a&gt;2019/12/16&lt;/h1&gt;&lt;p&gt;今天开始启动了软件工程大作业的工作，大概做了如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li
+      
+    
+    </summary>
+    
+      <category term="Homework" scheme="https://IFpop.github.io/categories/Homework/"/>
+    
+      <category term="study" scheme="https://IFpop.github.io/categories/Homework/study/"/>
+    
+    
+      <category term="python" scheme="https://IFpop.github.io/tags/python/"/>
+    
+      <category term="Daily" scheme="https://IFpop.github.io/tags/Daily/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sudoku</title>
     <link href="https://IFpop.github.io/2019/12/21/Sudoku/"/>
     <id>https://IFpop.github.io/2019/12/21/Sudoku/</id>
     <published>2019-12-21T12:00:22.000Z</published>
-    <updated>2020-01-03T06:27:26.020Z</updated>
+    <updated>2020-01-03T06:54:26.358Z</updated>
     
     <summary type="html">
     
@@ -31,10 +60,6 @@
       
     
     </summary>
-    
-      <category term="Homework" scheme="https://IFpop.github.io/categories/Homework/"/>
-    
-      <category term="study" scheme="https://IFpop.github.io/categories/Homework/study/"/>
     
     
       <category term="python" scheme="https://IFpop.github.io/tags/python/"/>
@@ -161,13 +186,13 @@
       <category term="wp" scheme="https://IFpop.github.io/categories/CTF/wp/"/>
     
     
-      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
-    
-      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
+    
+      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
@@ -417,9 +442,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
     
   </entry>
   
