@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2020-01-08T04:59:24.641Z</updated>
+  <updated>2020-01-08T18:11:12.530Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://IFpop.github.io/2020/01/03/Sudoku-Study-daily/"/>
     <id>https://IFpop.github.io/2020/01/03/Sudoku-Study-daily/</id>
     <published>2020-01-03T06:31:45.000Z</published>
-    <updated>2020-01-08T04:59:24.641Z</updated>
+    <updated>2020-01-08T18:11:12.530Z</updated>
     
     <summary type="html">
     
@@ -50,7 +50,7 @@
     <link href="https://IFpop.github.io/2019/12/21/Sudoku/"/>
     <id>https://IFpop.github.io/2019/12/21/Sudoku/</id>
     <published>2019-12-21T12:00:22.000Z</published>
-    <updated>2020-01-03T06:54:26.358Z</updated>
+    <updated>2020-01-08T18:10:53.352Z</updated>
     
     <summary type="html">
     
@@ -190,9 +190,9 @@
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
