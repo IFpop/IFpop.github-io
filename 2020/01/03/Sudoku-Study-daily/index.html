@@ -89,6 +89,11 @@
 <meta property="og:site_name" content="IFpop">
 <meta property="og:description" content="2019/12/16今天开始启动了软件工程大作业的工作，大概做了如下：  创建一个github仓库Soduku(这里貌似打错了，本来是Sudoku，但由于已经交给老师的仓库链接是之前的那个，也就没有进行更改了)   预计需消耗时间，撰写PSP表格部分内容  需求分析  生成终局  在命令行中使用-c参数加数字N(1≤N≤1000000)控制生成数独终局的数量 1sudoku.exe -c N  将">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1577338561803.png">
+<meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1577338458758.png">
+<meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1.png">
+<meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/2.png">
+<meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/solve.png">
 <meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578421446864.png">
 <meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578421538005.png">
 <meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578421556901.png">
@@ -99,11 +104,11 @@
 <meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578424103811.png">
 <meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578424244071.png">
 <meta property="og:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578424301099.png">
-<meta property="og:updated_time" content="2020-01-18T11:23:27.552Z">
+<meta property="og:updated_time" content="2020-01-18T13:08:40.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sudoku_Study_daily">
 <meta name="twitter:description" content="2019/12/16今天开始启动了软件工程大作业的工作，大概做了如下：  创建一个github仓库Soduku(这里貌似打错了，本来是Sudoku，但由于已经交给老师的仓库链接是之前的那个，也就没有进行更改了)   预计需消耗时间，撰写PSP表格部分内容  需求分析  生成终局  在命令行中使用-c参数加数字N(1≤N≤1000000)控制生成数独终局的数量 1sudoku.exe -c N  将">
-<meta name="twitter:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1578421446864.png">
+<meta name="twitter:image" content="https://ifpop.github.io/2020/01/03/Sudoku-Study-daily/1577338561803.png">
 
 
 
@@ -413,7 +418,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2.4k 字
+                  3.4k 字
                 </span>
               
 
@@ -429,7 +434,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  9 分钟
+                  13 分钟
                 </span>
               
             </div>
@@ -528,8 +533,117 @@
 </li>
 <li><p>将之前所写的本地内容填到其中</p>
 </li>
+<li><p>编写解题程序(一部分)</p>
+<ul>
+<li><p>处理文本读取部分以及时间输出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开文件</span></span><br><span class="line">        <span class="keyword">with</span> open(filepath, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            line = f.readline()</span><br><span class="line">            num = <span class="number">0</span>  <span class="comment">#记录当前是否是第九行</span></span><br><span class="line">            cur = <span class="number">0</span>  <span class="comment">#记录当前个数</span></span><br><span class="line">            temp = []</span><br><span class="line">            <span class="keyword">while</span> line:</span><br><span class="line">                <span class="keyword">if</span>(line[<span class="number">0</span>] != <span class="string">'\n'</span> <span class="keyword">and</span> num != <span class="number">9</span>):</span><br><span class="line">                    line = [int(i) <span class="keyword">for</span> i <span class="keyword">in</span> line <span class="keyword">if</span> str.isdigit(i)]</span><br><span class="line">                    temp.append(deepcopy(line))</span><br><span class="line">                    num += <span class="number">1</span></span><br><span class="line">                    line = f.readline()</span><br><span class="line">                <span class="comment"># 已经收集了一个数独</span></span><br><span class="line">                <span class="keyword">elif</span> num == <span class="number">9</span> <span class="keyword">or</span> line[<span class="number">0</span>] == <span class="string">'\n'</span>:</span><br><span class="line">                    line = f.readline()</span><br><span class="line">                    num = <span class="number">0</span></span><br><span class="line">                    print(cur)</span><br><span class="line">                    cur += <span class="number">1</span></span><br><span class="line">                    self.current_sudoku = SudoKu(temp)</span><br><span class="line">                    start = time.time()</span><br><span class="line">                    self.sudo_solve()</span><br><span class="line">                    self.current_sudoku.value = self.current_sudoku.value.tolist()</span><br><span class="line">                    ans.append(self.current_sudoku.value)</span><br><span class="line">                    end = time.time()</span><br><span class="line">                    print(<span class="string">"time is %.4f"</span> % (end-start))</span><br><span class="line">                    temp = []</span><br><span class="line">        print(cur)</span><br><span class="line">        <span class="comment"># 最后一个</span></span><br><span class="line">        self.current_sudoku = SudoKu(temp)  </span><br><span class="line">        start = time.time()</span><br><span class="line">        self.sudo_solve()</span><br><span class="line">        self.current_sudoku.value = self.current_sudoku.value.tolist()</span><br><span class="line">        ans.append(self.current_sudoku.value)</span><br><span class="line">        end = time.time()</span><br><span class="line">        print(<span class="string">"time is %.4f"</span> % (end-start))</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h1 id="2019-12-24"><a href="#2019-12-24" class="headerlink" title="2019/12/24"></a>2019/12/24</h1><h1 id="2020-1-2"><a href="#2020-1-2" class="headerlink" title="2020/1/2"></a>2020/1/2</h1><ul>
+</li>
+</ul>
+<h1 id="2019-12-22"><a href="#2019-12-22" class="headerlink" title="2019/12/22"></a>2019/12/22</h1><ul>
+<li>完善解题功能</li>
+<li>更新博客</li>
+</ul>
+<h1 id="2019-12-26"><a href="#2019-12-26" class="headerlink" title="2019/12/26"></a>2019/12/26</h1><ul>
+<li><p>为解数独程序添加注释</p>
+</li>
+<li><p>上传测试用例</p>
+</li>
+<li><p>规范代码格式</p>
+</li>
+<li><p>进行性能测试</p>
+<ul>
+<li><p>使用VS进行性能分析，首先是对生成终局进行性能分析</p>
+<ul>
+<li><p>模块时间分布</p>
+<blockquote>
+<p>使用【调试】中的启动python分析得到</p>
+</blockquote>
+<p><img src="/2020/01/03/Sudoku-Study-daily/1577338561803.png" alt="1577338561803"></p>
+<p>由图中分析可以知道占用时间主要集中于<code>__init__</code>和<code>create</code>。</p>
+</li>
+<li><p>函数时间分布</p>
+<p><img src="/2020/01/03/Sudoku-Study-daily/1577338458758.png" alt="1577338458758"></p>
+<p>时间消耗主要集中于<code>write2file</code>函数以及<code>get_sudoku</code>函数中。</p>
+</li>
+<li><p>时间分布图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#为了能够更加直观的看出那个模块以及函数的时间消耗，增加了利用cprofile(分析时间）以及gprof2dot（可视化）</span></span><br><span class="line"><span class="comment">#参考文献进行了性能分析: https://zhuanlan.zhihu.com/p/24495603</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2020/01/03/Sudoku-Study-daily/1.png" alt="1"></p>
+</li>
+</ul>
+<p>此处可以看出<code>replace</code>切割相对于其他比较耗时。</p>
+<ul>
+<li><p>原因分析及解决方案</p>
+<p>​    首先是<code>write2file</code>以及<code>get_sudoku</code>函数，最开始的思路是得到一个终局写入一次，但事实证明效率极低，目前采用的策略是将全部的数独存到一个<code>list</code>变量<code>perm</code>中，最后集中写入。而<code>replace</code>比较耗时，这是因为<code>python</code>本身的特性决定的，<code>python</code>是一种解释性语言，前期的编译是将 <code>Python</code> 代码编译成解释器可以理解的中间代码，解释器再将中间代码翻译成<code>CPU</code>可以理解的指令,相比于 AOT(提前编译型语言，比如C)直接编译成机器码，肯定是慢的。那么要怎样才能使用<code>python</code>到达<code>c</code>的速度呢?由此我决定使用<code>cython</code>(一种C语言与python的结合体)写数独过程。学习过程参看<a href="https://blog.csdn.net/Pythoncxy/article/details/98060530" target="_blank" rel="noopener">博客</a>。</p>
+<p>​    另外，生成全排列的函数<code>nextPermutation</code>，采取的措施是每次遍历完30个<code>move_way</code>之后才会获取下一个全排列，大大增加了该函数的调用次数，也浪费了时间。由此，我之后采用先将所有的全排列生成然后存储起来，之后直接访问即可。</p>
+<p>​    最后就是文件写入函数也会有占用大量时间，目前采用的策略是对于每一个数独，逐个写入，这样会多次调用<code>write</code>函数，所以最终的方案是建立一个缓存区，将数独以字符串形式存入，最后一起写入。结合<code>cython</code>，可以使用更快的<code>fputs</code>进行一次性写入。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>解数独性能及优化</p>
+<ul>
+<li><p>函数时间分布</p>
+<blockquote>
+<p>使用【调试】中的启动python分析得到</p>
+</blockquote>
+<p><img src="/2020/01/03/Sudoku-Study-daily/2.png" alt="2"></p>
+</li>
+<li><p>时间分布图</p>
+<p><img src="/2020/01/03/Sudoku-Study-daily/solve.png" alt="solve"></p>
+<p>从上面的图中可以看出来，guess函数耗时过多，其次就是排除候选的三种算法耗时也比较多。</p>
+</li>
+<li><p>原因分析</p>
+<ul>
+<li>python语言本身的原因</li>
+<li>没有将其变为字符串一次写入，在write上耗时过多</li>
+</ul>
+</li>
+<li><p>解决方案</p>
+<ul>
+<li>建立一个缓冲区，优化写入过程</li>
+<li>优化一下排除候选的算法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2020-1-1"><a href="#2020-1-1" class="headerlink" title="2020/1/1"></a>2020/1/1</h1><ul>
+<li><p>使用<code>cython</code></p>
+<p>将<code>sudoku_generate.py</code>用<code>cython</code>进行 编程,建立缓冲区</p>
+<p>最终结果：                                                                                </p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>生成1000000个终局所耗时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python(最开始)</td>
+<td>30.9375</td>
+</tr>
+<tr>
+<td>c/c++</td>
+<td>2.4605</td>
+</tr>
+<tr>
+<td>cython</td>
+<td>2.6758</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>更新博客</li>
+</ul>
+<h1 id="2020-1-2"><a href="#2020-1-2" class="headerlink" title="2020/1/2"></a>2020/1/2</h1><ul>
 <li><p>GUI设计</p>
 <ul>
 <li><p>GUI环境搭建</p>
@@ -885,7 +999,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-16"><span class="nav-number">1.</span> <span class="nav-text">2019/12/16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-19"><span class="nav-number">2.</span> <span class="nav-text">2019/12/19</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-20"><span class="nav-number">3.</span> <span class="nav-text">2019/12/20</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-21"><span class="nav-number">4.</span> <span class="nav-text">2019/12/21</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-24"><span class="nav-number">5.</span> <span class="nav-text">2019/12/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-2"><span class="nav-number">6.</span> <span class="nav-text">2020/1/2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-3"><span class="nav-number">7.</span> <span class="nav-text">2020/1/3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-7"><span class="nav-number">8.</span> <span class="nav-text">2020/1/7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-18"><span class="nav-number">9.</span> <span class="nav-text">2020/1/18</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-16"><span class="nav-number">1.</span> <span class="nav-text">2019/12/16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-19"><span class="nav-number">2.</span> <span class="nav-text">2019/12/19</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-20"><span class="nav-number">3.</span> <span class="nav-text">2019/12/20</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-21"><span class="nav-number">4.</span> <span class="nav-text">2019/12/21</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-22"><span class="nav-number">5.</span> <span class="nav-text">2019/12/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-12-26"><span class="nav-number">6.</span> <span class="nav-text">2019/12/26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-1"><span class="nav-number">7.</span> <span class="nav-text">2020/1/1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-2"><span class="nav-number">8.</span> <span class="nav-text">2020/1/2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-3"><span class="nav-number">9.</span> <span class="nav-text">2020/1/3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-7"><span class="nav-number">10.</span> <span class="nav-text">2020/1/7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-18"><span class="nav-number">11.</span> <span class="nav-text">2020/1/18</span></a></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2020-01-18T11:23:27.552Z</updated>
+  <updated>2020-01-18T13:08:40.665Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://IFpop.github.io/2020/01/03/Sudoku-Study-daily/"/>
     <id>https://IFpop.github.io/2020/01/03/Sudoku-Study-daily/</id>
     <published>2020-01-03T06:31:45.000Z</published>
-    <updated>2020-01-18T11:23:27.552Z</updated>
+    <updated>2020-01-18T13:08:40.665Z</updated>
     
     <summary type="html">
     
@@ -50,7 +50,7 @@
     <link href="https://IFpop.github.io/2019/12/21/Sudoku/"/>
     <id>https://IFpop.github.io/2019/12/21/Sudoku/</id>
     <published>2019-12-21T12:00:22.000Z</published>
-    <updated>2020-01-18T09:51:35.823Z</updated>
+    <updated>2020-01-18T13:13:10.810Z</updated>
     
     <summary type="html">
     
@@ -164,8 +164,8 @@
   
   <entry>
     <title>Bugku-wp</title>
-    <link href="https://IFpop.github.io/2019/10/24/Bugku-wp/"/>
-    <id>https://IFpop.github.io/2019/10/24/Bugku-wp/</id>
+    <link href="https://IFpop.github.io/2019/10/24/RoarCTF2019/Bugku-wp/"/>
+    <id>https://IFpop.github.io/2019/10/24/RoarCTF2019/Bugku-wp/</id>
     <published>2019-10-24T12:54:25.000Z</published>
     <updated>2019-10-28T10:25:17.726Z</updated>
     
@@ -186,13 +186,13 @@
       <category term="wp" scheme="https://IFpop.github.io/categories/CTF/wp/"/>
     
     
-      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
-    
-      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
+    
+      <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
+    
+      <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
@@ -442,9 +442,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
-    
       <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
+    
+      <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
     
   </entry>
   

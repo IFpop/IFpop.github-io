@@ -112,7 +112,9 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424103811.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424244071.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424301099.png">
-<meta property="og:updated_time" content="2020-01-18T09:51:35.823Z">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/901.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/902.png">
+<meta property="og:updated_time" content="2020-01-18T13:13:10.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sudoku">
 <meta name="twitter:description" content="项目链接数独项目仓库 PSP PSP是卡耐基梅隆大学（CMU）的专家们针对软件工程师所提出的一套模型：Personal Software Process (PSP， 个人开发流程，或称个体软件过程)。  时间安排表    PSP2.1 Personal Software Process stages 预估耗时(min) 实际耗时(min)     Planning 计划 60 60   ·Esti">
@@ -395,7 +397,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6.8k 字
+                  7.1k 字
                 </span>
               
 
@@ -411,7 +413,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  28 分钟
+                  29 分钟
                 </span>
               
             </div>
@@ -457,90 +459,91 @@
 <td style="text-align:left">·Estimate</td>
 <td style="text-align:left">·估计这个任务需要多少时间</td>
 <td>60*48</td>
-<td></td>
+<td>60*72</td>
 </tr>
 <tr>
 <td style="text-align:left">Development</td>
 <td style="text-align:left">开发</td>
 <td>60*2</td>
-<td></td>
+<td>60*5</td>
 </tr>
 <tr>
 <td style="text-align:left">· Analysis</td>
 <td style="text-align:left">· 需求分析 (包括学习新技术)</td>
 <td>60*2</td>
-<td></td>
+<td>60*3</td>
 </tr>
 <tr>
 <td style="text-align:left">· Design Spec</td>
 <td style="text-align:left">· 生成设计文档</td>
 <td>60</td>
-<td></td>
+<td>60</td>
 </tr>
 <tr>
 <td style="text-align:left">· Design Review</td>
 <td style="text-align:left">· 设计复审</td>
 <td>60*2</td>
-<td></td>
+<td>60</td>
 </tr>
 <tr>
 <td style="text-align:left">· Coding Standard</td>
 <td style="text-align:left">· 代码规范 (为目前的开发制定合适的规范)</td>
 <td>60</td>
-<td></td>
+<td>60*3</td>
 </tr>
 <tr>
 <td style="text-align:left">· Design</td>
 <td style="text-align:left">· 具体设计</td>
 <td>60*3</td>
-<td></td>
+<td>60</td>
 </tr>
 <tr>
 <td style="text-align:left">· Coding</td>
 <td style="text-align:left">· 具体编码</td>
 <td>60*4</td>
-<td></td>
+<td>60*3</td>
 </tr>
 <tr>
 <td style="text-align:left">· Code Review</td>
 <td style="text-align:left">· 代码复审</td>
 <td>60*2</td>
-<td></td>
+<td>60*2</td>
 </tr>
 <tr>
 <td style="text-align:left">· Test</td>
 <td style="text-align:left">· 测试（自我测试，修改代码，提交修改）</td>
 <td>60*4</td>
-<td></td>
+<td>60*3</td>
 </tr>
 <tr>
 <td style="text-align:left">Reporting</td>
 <td style="text-align:left">报告</td>
 <td>60*3</td>
-<td></td>
+<td>60*1</td>
 </tr>
 <tr>
 <td style="text-align:left">· Test Repor</td>
 <td style="text-align:left">· 测试报告</td>
 <td>60</td>
-<td></td>
+<td>30</td>
 </tr>
 <tr>
 <td style="text-align:left">· Size Measurement</td>
 <td style="text-align:left">· 计算工作量</td>
 <td>60</td>
-<td></td>
+<td>30</td>
 </tr>
 <tr>
 <td style="text-align:left">· Postmortem &amp; Process Improvement Plan</td>
 <td style="text-align:left">· 事后总结, 并提出过程改进计划</td>
 <td>60*2</td>
-<td></td>
+<td>60</td>
 </tr>
 <tr>
 <td style="text-align:left"></td>
 <td style="text-align:left">合计</td>
 <td>60*77</td>
+<td>60*101</td>
 </tr>
 </tbody>
 </table>
@@ -900,12 +903,16 @@
 </li>
 <li><p>对于一些特殊情况的处理</p>
 <p>由于NEXT以及LAST是通过栈实现的，所以我对其边界进行了判断，如果在没有开始游戏的时候点击LAST,它会提示您尚未开始游戏，如下：</p>
-<p>[尚未开始游戏图]</p>
+<p><img src="/2019/12/21/Sudoku/901.png" alt="901"></p>
 <p>如果点击NEXT一直到最后一步，那么就是执行Done的功能，具体效果如下：</p>
-<p>[图片]</p>
+<p><img src="/2019/12/21/Sudoku/902.png" alt="902"></p>
 </li>
 </ul>
-<h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1>
+<h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>​    这次数独项目开发，让我从零开始了解了软件开发的全过程，从需求分析到软件测试，对软件开发模型也有了一定的了解。其次就是学到了很多关于<code>python</code>项目编程的方法，以及对其进行处理的工具，如<code>cython、pyqt、pyinstaller</code>等等。对<code>python</code>编程的熟练度也得到了提高，特别是界面的编写，当然也有着很强的工具Qtdesign辅助编程。这次开发，也同时锻炼了思维以及寻找解决问题的能力，从刚开始对其完全不太了解到明白如何去做，这个过程是让我收获巨大的。</p>
+<p>​    老师的基本要求虽然已经实现，但还是有些地方不太完善，如单元测试部分，我发现有些类中的函数并不是很容易能进行单元测试，需要和其他函数一起，才能测试其中内容，这也可能是模块独立性还是不高导致的。</p>
+<p>​    总而言之，这次开发让我收获颇多，以后也必会越来越熟练。</p>
+<p>​    </p>
+
       
     </div>
     
