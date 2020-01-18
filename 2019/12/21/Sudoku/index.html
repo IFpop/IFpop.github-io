@@ -100,19 +100,19 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/2.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/solve.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8001.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8002.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8003.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8004.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8005.png">
-<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8006.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/8001.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/8002.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/8003.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/8004.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/8005.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/8006.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578423388926.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424065129.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424084453.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424103811.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424244071.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424301099.png">
-<meta property="og:updated_time" content="2020-01-18T09:48:34.560Z">
+<meta property="og:updated_time" content="2020-01-18T09:51:35.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sudoku">
 <meta name="twitter:description" content="项目链接数独项目仓库 PSP PSP是卡耐基梅隆大学（CMU）的专家们针对软件工程师所提出的一套模型：Personal Software Process (PSP， 个人开发流程，或称个体软件过程)。  时间安排表    PSP2.1 Personal Software Process stages 预估耗时(min) 实际耗时(min)     Planning 计划 60 60   ·Esti">
@@ -780,13 +780,13 @@
 </li>
 <li><p>这时会在当前目录下生成.coverage文件，使用下面命令进行查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage report -m   <span class="comment">#查看详细信息</span></span><br></pre></td></tr></table></figure>
-<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8001.png" alt="8001"></p>
+<p><img src="/2019/12/21/Sudoku/8001.png" alt="8001"></p>
 </li>
 <li><p>生成网页详细信息图</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage html -d report1</span><br></pre></td></tr></table></figure>
 <p>这会在当前界面下生成一个report1文件夹</p>
-<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8002.png" alt="8002"></p>
-<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8003.png" alt="8003"></p>
+<p><img src="/2019/12/21/Sudoku/8002.png" alt="8002"></p>
+<p><img src="/2019/12/21/Sudoku/8003.png" alt="8003"></p>
 </li>
 </ul>
 <p>由于此时调用的是sudoku_generate.py模块，所以该部分的覆盖率是94%，而对于sudoku.py而言通过指令占用的仅仅是一部分，仅有54%。所以代码冗余还算比较合理，出现bug的机率也比较小。</p>
@@ -798,12 +798,13 @@
 </li>
 <li><p>对<code>.coverage</code>文件进行查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage report -m</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8004.png" alt="8004"></p>
+<p><img src="/2019/12/21/Sudoku/8004.png" alt="8004"></p>
 </li>
 <li><p>转成<code>html</code>进行查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage html -d report2</span><br></pre></td></tr></table></figure>
-<p>这个命令会在当前目录下，生成一个report2文件夹，进入其中<img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8005.png" alt="8005">点击index进行查看</p>
-<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8006.png" alt="8006"></p>
+<p>这个命令会在当前目录下，生成一个report2文件夹，进入其中点击index进行查看</p>
+<p><img src="/2019/12/21/Sudoku/8005.png" alt="8005"></p>
+<p><img src="/2019/12/21/Sudoku/8006.png" alt="8006"></p>
 </li>
 </ul>
 <p>此时只运行了sudo_solve部分，覆盖率达到99%，可见大部分的代码都被覆盖，bug出现几率也比较小。</p>
