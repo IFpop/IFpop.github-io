@@ -100,13 +100,19 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/2.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/solve.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8001.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8002.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8003.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8004.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8005.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/Users/X1TABLET/Desktop/8006.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578423388926.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424065129.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424084453.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424103811.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424244071.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424301099.png">
-<meta property="og:updated_time" content="2020-01-18T07:22:39.327Z">
+<meta property="og:updated_time" content="2020-01-18T09:48:34.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sudoku">
 <meta name="twitter:description" content="项目链接数独项目仓库 PSP PSP是卡耐基梅隆大学（CMU）的专家们针对软件工程师所提出的一套模型：Personal Software Process (PSP， 个人开发流程，或称个体软件过程)。  时间安排表    PSP2.1 Personal Software Process stages 预估耗时(min) 实际耗时(min)     Planning 计划 60 60   ·Esti">
@@ -389,7 +395,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6.3k 字
+                  6.8k 字
                 </span>
               
 
@@ -405,7 +411,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  26 分钟
+                  28 分钟
                 </span>
               
             </div>
@@ -762,6 +768,47 @@
 </ul>
 </li>
 </ul>
+<h1 id="单元测试以及覆盖率"><a href="#单元测试以及覆盖率" class="headerlink" title="单元测试以及覆盖率"></a>单元测试以及覆盖率</h1><h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>这里仅展示部分单元测试，具体可以去gihub仓库上进行相应查看。</p>
+<p>对sudo_solve类下的remove_know_num进行的单元测试：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">import unittest</span><br><span class="line">from sudo_solve import Solve_sudo</span><br><span class="line">from copy import deepcopy</span><br><span class="line"></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">这是测试单元测试函数，将预计结果从ans.txt中提取出来，存入Ans中，</span></span><br><span class="line"><span class="string">使用unittest进行单元测试，对结果进行比较 </span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">Ans = []</span><br><span class="line">with open(<span class="string">"ans.txt"</span>, <span class="string">'r'</span>) as f:</span><br><span class="line">    line = f.readline()</span><br><span class="line">    cur_row = 0  <span class="comment">#记录当前是否是第九行</span></span><br><span class="line">    temp = []</span><br><span class="line">    <span class="keyword">while</span> line:</span><br><span class="line">        <span class="keyword">if</span>(line[0] != <span class="string">'\n'</span> and cur_row != 9):</span><br><span class="line">            line = [int(i) <span class="keyword">for</span> i <span class="keyword">in</span> line <span class="keyword">if</span> str.isdigit(i)]</span><br><span class="line">            temp.append(deepcopy(line))</span><br><span class="line">            cur_row += 1</span><br><span class="line">            line = f.readline()</span><br><span class="line">        <span class="comment"># 已经收集了一个数独</span></span><br><span class="line">        <span class="keyword">elif</span> cur_row == 9 or line[0] == <span class="string">'\n'</span>:</span><br><span class="line">            line = f.readline()</span><br><span class="line">            Ans.append(temp)</span><br><span class="line">            cur_row = 0</span><br><span class="line">            temp = []</span><br><span class="line">    Ans.append(temp)</span><br><span class="line"></span><br><span class="line">num = 0</span><br><span class="line">class MyclassTest(unittest.TestCase):</span><br><span class="line">    def setUp(self) -&gt; None:</span><br><span class="line">        self.sudoku = Solve_sudo(str(num)+<span class="string">".txt"</span>)</span><br><span class="line"></span><br><span class="line">    def test_remove_konw_num(self):</span><br><span class="line">        ret = self.sudoku.remove_konw_num()</span><br><span class="line">        <span class="comment"># print(ret)</span></span><br><span class="line">        <span class="comment"># print(Ans[num])</span></span><br><span class="line">        self.assertEqual(ret,Ans[num]) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def start():</span><br><span class="line">    suite = unittest.TestSuite()</span><br><span class="line">    suite.addTest(MyclassTest(<span class="string">'test_remove_konw_num'</span>))</span><br><span class="line">    runner = unittest.TextTestRunner()</span><br><span class="line">    runner.run(suite)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(12):</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        num = i</span><br><span class="line">        start()</span><br></pre></td></tr></table></figure>
+<h2 id="覆盖率"><a href="#覆盖率" class="headerlink" title="覆盖率"></a>覆盖率</h2><p>这里我使用coverage进行代码覆盖率查询(coverage用法可以自己去网上进行相关查询)。</p>
+<ul>
+<li><p>生成终局</p>
+<ul>
+<li><p>在BIN目录下，执行下列命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage run sudoku.py -c 10000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这时会在当前目录下生成.coverage文件，使用下面命令进行查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage report -m   <span class="comment">#查看详细信息</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8001.png" alt="8001"></p>
+</li>
+<li><p>生成网页详细信息图</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage html -d report1</span><br></pre></td></tr></table></figure>
+<p>这会在当前界面下生成一个report1文件夹</p>
+<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8002.png" alt="8002"></p>
+<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8003.png" alt="8003"></p>
+</li>
+</ul>
+<p>由于此时调用的是sudoku_generate.py模块，所以该部分的覆盖率是94%，而对于sudoku.py而言通过指令占用的仅仅是一部分，仅有54%。所以代码冗余还算比较合理，出现bug的机率也比较小。</p>
+</li>
+<li><p>解数独</p>
+<ul>
+<li><p>同样，在BIN目录下，执行下列命令:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage run sudoku.py -s test.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对<code>.coverage</code>文件进行查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage report -m</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8004.png" alt="8004"></p>
+</li>
+<li><p>转成<code>html</code>进行查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coverage html -d report2</span><br></pre></td></tr></table></figure>
+<p>这个命令会在当前目录下，生成一个report2文件夹，进入其中<img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8005.png" alt="8005">点击index进行查看</p>
+<p><img src="/2019/12/21/Sudoku/Users\X1TABLET\Desktop\8006.png" alt="8006"></p>
+</li>
+</ul>
+<p>此时只运行了sudo_solve部分，覆盖率达到99%，可见大部分的代码都被覆盖，bug出现几率也比较小。</p>
+</li>
+</ul>
 <h1 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h1><p>数独实现，使用类进行包装，并将其分为三个函数，下面对函数进行解释。</p>
 <ul>
 <li><p>首先就是<code>sudoku.py</code>函数</p>
@@ -854,6 +901,7 @@
 <p>由于NEXT以及LAST是通过栈实现的，所以我对其边界进行了判断，如果在没有开始游戏的时候点击LAST,它会提示您尚未开始游戏，如下：</p>
 <p>[尚未开始游戏图]</p>
 <p>如果点击NEXT一直到最后一步，那么就是执行Done的功能，具体效果如下：</p>
+<p>[图片]</p>
 </li>
 </ul>
 <h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1>
@@ -1085,7 +1133,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目链接"><span class="nav-number">1.</span> <span class="nav-text">项目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PSP"><span class="nav-number">2.</span> <span class="nav-text">PSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间安排表"><span class="nav-number">2.1.</span> <span class="nav-text">时间安排表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">3.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">4.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局"><span class="nav-number">4.1.</span> <span class="nav-text">生成终局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取"><span class="nav-number">4.1.2.</span> <span class="nav-text">选取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解数独"><span class="nav-number">4.2.</span> <span class="nav-text">求解数独</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">选取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计实现过程"><span class="nav-number">5.</span> <span class="nav-text">设计实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块介绍"><span class="nav-number">5.1.</span> <span class="nav-text">模块介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主控模块"><span class="nav-number">5.1.1.</span> <span class="nav-text">主控模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局模块"><span class="nav-number">5.1.2.</span> <span class="nav-text">生成终局模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数独求解"><span class="nav-number">5.1.3.</span> <span class="nav-text">数独求解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路流程图"><span class="nav-number">5.2.</span> <span class="nav-text">思路流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能分析及优化"><span class="nav-number">6.</span> <span class="nav-text">性能分析及优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局部分性能分析及优化"><span class="nav-number">6.1.</span> <span class="nav-text">生成终局部分性能分析及优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解数独性能及优化"><span class="nav-number">6.2.</span> <span class="nav-text">解数独性能及优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码说明"><span class="nav-number">7.</span> <span class="nav-text">代码说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#界面设计"><span class="nav-number">8.</span> <span class="nav-text">界面设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面思路"><span class="nav-number">8.1.</span> <span class="nav-text">界面思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面实现效果"><span class="nav-number">8.2.</span> <span class="nav-text">界面实现效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感想"><span class="nav-number">9.</span> <span class="nav-text">感想</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目链接"><span class="nav-number">1.</span> <span class="nav-text">项目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PSP"><span class="nav-number">2.</span> <span class="nav-text">PSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间安排表"><span class="nav-number">2.1.</span> <span class="nav-text">时间安排表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">3.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">4.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局"><span class="nav-number">4.1.</span> <span class="nav-text">生成终局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取"><span class="nav-number">4.1.2.</span> <span class="nav-text">选取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解数独"><span class="nav-number">4.2.</span> <span class="nav-text">求解数独</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">选取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计实现过程"><span class="nav-number">5.</span> <span class="nav-text">设计实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块介绍"><span class="nav-number">5.1.</span> <span class="nav-text">模块介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主控模块"><span class="nav-number">5.1.1.</span> <span class="nav-text">主控模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局模块"><span class="nav-number">5.1.2.</span> <span class="nav-text">生成终局模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数独求解"><span class="nav-number">5.1.3.</span> <span class="nav-text">数独求解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路流程图"><span class="nav-number">5.2.</span> <span class="nav-text">思路流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能分析及优化"><span class="nav-number">6.</span> <span class="nav-text">性能分析及优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局部分性能分析及优化"><span class="nav-number">6.1.</span> <span class="nav-text">生成终局部分性能分析及优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解数独性能及优化"><span class="nav-number">6.2.</span> <span class="nav-text">解数独性能及优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单元测试以及覆盖率"><span class="nav-number">7.</span> <span class="nav-text">单元测试以及覆盖率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单元测试"><span class="nav-number">7.1.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖率"><span class="nav-number">7.2.</span> <span class="nav-text">覆盖率</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码说明"><span class="nav-number">8.</span> <span class="nav-text">代码说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#界面设计"><span class="nav-number">9.</span> <span class="nav-text">界面设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面思路"><span class="nav-number">9.1.</span> <span class="nav-text">界面思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面实现效果"><span class="nav-number">9.2.</span> <span class="nav-text">界面实现效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感想"><span class="nav-number">10.</span> <span class="nav-text">感想</span></a></li></ol></div>
             
 
           </div>

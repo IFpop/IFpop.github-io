@@ -50,7 +50,7 @@
     <link href="https://IFpop.github.io/2019/12/21/Sudoku/"/>
     <id>https://IFpop.github.io/2019/12/21/Sudoku/</id>
     <published>2019-12-21T12:00:22.000Z</published>
-    <updated>2020-01-18T07:22:39.327Z</updated>
+    <updated>2020-01-18T09:48:34.560Z</updated>
     
     <summary type="html">
     
@@ -190,9 +190,9 @@
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
-      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
-    
       <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
@@ -442,9 +442,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
     
   </entry>
   
