@@ -98,13 +98,15 @@
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1577338561803.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1577338458758.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/2.png">
+<meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/solve.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578423388926.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424065129.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424084453.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424103811.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424244071.png">
 <meta property="og:image" content="https://ifpop.github.io/2019/12/21/Sudoku/1578424301099.png">
-<meta property="og:updated_time" content="2020-01-08T18:10:53.352Z">
+<meta property="og:updated_time" content="2020-01-18T07:22:39.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sudoku">
 <meta name="twitter:description" content="项目链接数独项目仓库 PSP PSP是卡耐基梅隆大学（CMU）的专家们针对软件工程师所提出的一套模型：Personal Software Process (PSP， 个人开发流程，或称个体软件过程)。  时间安排表    PSP2.1 Personal Software Process stages 预估耗时(min) 实际耗时(min)     Planning 计划 60 60   ·Esti">
@@ -387,7 +389,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6.2k 字
+                  6.3k 字
                 </span>
               
 
@@ -659,12 +661,31 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">数独求解类：</span></span><br><span class="line"><span class="string">初始化函数、记录函数、检错函数、回溯函数、估值函数、排除侯选数函数、深度优先遍历</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 <h2 id="思路流程图"><a href="#思路流程图" class="headerlink" title="思路流程图"></a>思路流程图</h2><p><img src="/2019/12/21/Sudoku/1577256535140.png" alt="1577256535140"></p>
-<h1 id="性能分析及优化"><a href="#性能分析及优化" class="headerlink" title="性能分析及优化"></a>性能分析及优化</h1><h3 id="生成终局部分性能分析及优化"><a href="#生成终局部分性能分析及优化" class="headerlink" title="生成终局部分性能分析及优化"></a>生成终局部分性能分析及优化</h3><ul>
+<h1 id="性能分析及优化"><a href="#性能分析及优化" class="headerlink" title="性能分析及优化"></a>性能分析及优化</h1><h2 id="生成终局部分性能分析及优化"><a href="#生成终局部分性能分析及优化" class="headerlink" title="生成终局部分性能分析及优化"></a>生成终局部分性能分析及优化</h2><ul>
 <li><p>执行命令</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 sudoku.py -c <span class="number">1000000</span></span><br></pre></td></tr></table></figure>
-<p>| 语言   | 生成1000000个终局所耗时间 |<br>| ——— | ————————————- |<br>| python | 30.9375                   |<br>| c/c++  | 2.4605                    |</p>
 </li>
 </ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>生成1000000个终局所耗时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python</td>
+<td>30.9375</td>
+</tr>
+<tr>
+<td>c/c++</td>
+<td>2.460</td>
+</tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>模块时间分布</p>
 <blockquote>
@@ -691,24 +712,53 @@
 </li>
 <li><p>最终结果</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#执行下列命令</span></span><br><span class="line">python3 sudoku.py -c <span class="number">1000000</span></span><br></pre></td></tr></table></figure>
-<p>| 语言           | 生成1000000个终局所耗时间 |<br>| ——————— | ————————————- |<br>| python(最开始) | 30.9375                   |<br>| c/c++          | 2.4605                    |<br>| cython         | 2.6758                    |</p>
 </li>
 </ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>生成1000000个数独终局所耗时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python(最开始)</td>
+<td>30.9375</td>
+</tr>
+<tr>
+<td>c/c++</td>
+<td>2.4605</td>
+</tr>
+<tr>
+<td>cython</td>
+<td>2.6758</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="解数独性能及优化"><a href="#解数独性能及优化" class="headerlink" title="解数独性能及优化"></a>解数独性能及优化</h2><ul>
 <li><p>函数时间分布</p>
 <blockquote>
 <p>使用【调试】中的启动python分析得到</p>
 </blockquote>
-<p>[时间分布图]</p>
+<p><img src="/2019/12/21/Sudoku/2.png" alt="2"></p>
 </li>
 <li><p>时间分布图</p>
-<p>[时间分布图]</p>
-<p>[对图进行一系列分析]</p>
+<p><img src="/2019/12/21/Sudoku/solve.png" alt="solve"></p>
+<p>从上面的图中可以看出来，guess函数耗时过多，其次就是排除候选的三种算法耗时也比较多。</p>
 </li>
 <li><p>原因分析</p>
 <ul>
 <li>python语言本身的原因</li>
-<li>没有将其变为字符串一次写入</li>
+<li>没有将其变为字符串一次写入，在write上耗时过多</li>
+</ul>
+</li>
+<li><p>解决方案</p>
+<ul>
+<li>建立一个缓冲区，优化写入过程</li>
+<li>优化一下排除候选的算法</li>
 </ul>
 </li>
 </ul>
@@ -1035,7 +1085,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目链接"><span class="nav-number">1.</span> <span class="nav-text">项目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PSP"><span class="nav-number">2.</span> <span class="nav-text">PSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间安排表"><span class="nav-number">2.1.</span> <span class="nav-text">时间安排表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">3.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">4.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局"><span class="nav-number">4.1.</span> <span class="nav-text">生成终局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取"><span class="nav-number">4.1.2.</span> <span class="nav-text">选取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解数独"><span class="nav-number">4.2.</span> <span class="nav-text">求解数独</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">选取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计实现过程"><span class="nav-number">5.</span> <span class="nav-text">设计实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块介绍"><span class="nav-number">5.1.</span> <span class="nav-text">模块介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主控模块"><span class="nav-number">5.1.1.</span> <span class="nav-text">主控模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局模块"><span class="nav-number">5.1.2.</span> <span class="nav-text">生成终局模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数独求解"><span class="nav-number">5.1.3.</span> <span class="nav-text">数独求解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路流程图"><span class="nav-number">5.2.</span> <span class="nav-text">思路流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能分析及优化"><span class="nav-number">6.</span> <span class="nav-text">性能分析及优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局部分性能分析及优化"><span class="nav-number">6.0.1.</span> <span class="nav-text">生成终局部分性能分析及优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解数独性能及优化"><span class="nav-number">6.1.</span> <span class="nav-text">解数独性能及优化</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#代码说明"><span class="nav-number">7.</span> <span class="nav-text">代码说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#界面设计"><span class="nav-number">8.</span> <span class="nav-text">界面设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面思路"><span class="nav-number">8.1.</span> <span class="nav-text">界面思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面实现效果"><span class="nav-number">8.2.</span> <span class="nav-text">界面实现效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感想"><span class="nav-number">9.</span> <span class="nav-text">感想</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目链接"><span class="nav-number">1.</span> <span class="nav-text">项目链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PSP"><span class="nav-number">2.</span> <span class="nav-text">PSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间安排表"><span class="nav-number">2.1.</span> <span class="nav-text">时间安排表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">3.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">4.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局"><span class="nav-number">4.1.</span> <span class="nav-text">生成终局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取"><span class="nav-number">4.1.2.</span> <span class="nav-text">选取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解数独"><span class="nav-number">4.2.</span> <span class="nav-text">求解数独</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选取-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">选取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计实现过程"><span class="nav-number">5.</span> <span class="nav-text">设计实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块介绍"><span class="nav-number">5.1.</span> <span class="nav-text">模块介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主控模块"><span class="nav-number">5.1.1.</span> <span class="nav-text">主控模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成终局模块"><span class="nav-number">5.1.2.</span> <span class="nav-text">生成终局模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数独求解"><span class="nav-number">5.1.3.</span> <span class="nav-text">数独求解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路流程图"><span class="nav-number">5.2.</span> <span class="nav-text">思路流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能分析及优化"><span class="nav-number">6.</span> <span class="nav-text">性能分析及优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成终局部分性能分析及优化"><span class="nav-number">6.1.</span> <span class="nav-text">生成终局部分性能分析及优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解数独性能及优化"><span class="nav-number">6.2.</span> <span class="nav-text">解数独性能及优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码说明"><span class="nav-number">7.</span> <span class="nav-text">代码说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#界面设计"><span class="nav-number">8.</span> <span class="nav-text">界面设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面思路"><span class="nav-number">8.1.</span> <span class="nav-text">界面思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面实现效果"><span class="nav-number">8.2.</span> <span class="nav-text">界面实现效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感想"><span class="nav-number">9.</span> <span class="nav-text">感想</span></a></li></ol></div>
             
 
           </div>
