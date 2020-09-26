@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://IFpop.github.io/"/>
-  <updated>2020-09-26T08:03:45.613Z</updated>
+  <updated>2020-01-18T13:08:40.665Z</updated>
   <id>https://IFpop.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>aboutme</title>
-    <link href="https://IFpop.github.io/2020/09/26/aboutme/"/>
-    <id>https://IFpop.github.io/2020/09/26/aboutme/</id>
-    <published>2020-09-26T08:01:32.000Z</published>
-    <updated>2020-09-26T08:03:45.613Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-         &lt;center&gt;
-     &lt;h1&gt;简历&lt;/h1&gt;
-     &lt;div&gt;
-         &lt;span&gt;
-             &lt;img src=&quot;/2020/09/26/aboutme/phone-solid.svg&quot; width=&quot;18px&quot;&gt;
-            
-      
-    
-    </summary>
-    
-    
-      <category term="about" scheme="https://IFpop.github.io/tags/about/"/>
-    
-  </entry>
   
   <entry>
     <title>Sudoku_Study_daily</title>
@@ -212,13 +186,13 @@
       <category term="wp" scheme="https://IFpop.github.io/categories/CTF/wp/"/>
     
     
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
-    
-      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
-    
       <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
+    
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
+      <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
