@@ -186,13 +186,13 @@
       <category term="wp" scheme="https://IFpop.github.io/categories/CTF/wp/"/>
     
     
+      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
+    
       <category term="crypto" scheme="https://IFpop.github.io/tags/crypto/"/>
     
       <category term="misc" scheme="https://IFpop.github.io/tags/misc/"/>
     
       <category term="web" scheme="https://IFpop.github.io/tags/web/"/>
-    
-      <category term="pwn" scheme="https://IFpop.github.io/tags/pwn/"/>
     
       <category term="re" scheme="https://IFpop.github.io/tags/re/"/>
     
@@ -442,9 +442,9 @@
       <category term="CTF" scheme="https://IFpop.github.io/categories/CTF/"/>
     
     
-      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
-    
       <category term="CTF" scheme="https://IFpop.github.io/tags/CTF/"/>
+    
+      <category term="ISCC" scheme="https://IFpop.github.io/tags/ISCC/"/>
     
   </entry>
   

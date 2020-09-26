@@ -74,10 +74,10 @@
         <category>wp</category>
       </categories>
       <tags>
+        <tag>pwn</tag>
         <tag>crypto</tag>
         <tag>misc</tag>
         <tag>web</tag>
-        <tag>pwn</tag>
         <tag>re</tag>
       </tags>
   </entry>
@@ -193,8 +193,8 @@
         <category>CTF</category>
       </categories>
       <tags>
-        <tag>ISCC</tag>
         <tag>CTF</tag>
+        <tag>ISCC</tag>
       </tags>
   </entry>
 </search>
